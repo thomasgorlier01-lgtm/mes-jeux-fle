@@ -21,7 +21,7 @@
     .sectionhead{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:34px 0 17px}.sectionhead h2{margin:0;font-size:clamp(23px,3.3vw,31px);letter-spacing:-.025em}.sectionhead p{margin:6px 0 0;color:var(--muted);font-size:15px}.counter{font-size:14px;color:#5942a3;font-weight:760;background:#eee9fc;border:1px solid #e2d7fb;padding:8px 13px;border-radius:999px;white-space:nowrap}
     .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.game{position:relative;display:flex;flex-direction:column;min-width:0;border:2px solid transparent;border-radius:27px;padding:15px;background:white;text-decoration:none;box-shadow:var(--shadow);transition:transform .18s,border-color .18s,box-shadow .18s}.game:hover{transform:translateY(-4px);border-color:#d5c9f5;box-shadow:0 17px 42px #503a8530}.game:focus-visible{outline:4px solid #ffba61;outline-offset:3px}.art{height:clamp(168px,23vw,238px);border-radius:19px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.art.corp{background:linear-gradient(120deg,#dfd6ff,#f4eafd)}.art.vest{background:linear-gradient(120deg,#d0efff,#eaf9e9)}.art .character{font-size:clamp(86px,15vw,148px);line-height:1;filter:drop-shadow(0 9px 3px #594ba21f);position:relative;z-index:1}.art:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;border:16px solid #ffffff90;right:-55px;top:-110px}.art:after{content:"";position:absolute;width:115px;height:115px;background:#ffffff86;border-radius:50%;left:-30px;bottom:-65px}.art .bubble{position:absolute;z-index:2;background:white;padding:9px 13px;border-radius:14px;box-shadow:0 4px 14px #48317619;font-size:clamp(12px,1.5vw,16px);font-weight:850}.art .bubble.one{left:7%;top:14%;transform:rotate(-9deg)}.art .bubble.two{right:8%;bottom:10%;transform:rotate(8deg)}
     .details{padding:18px 9px 7px;display:flex;align-items:center;gap:10px}.details-content{flex:1;min-width:0}.tag{display:inline-block;color:#6a53a8;background:#f1ecff;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;margin-bottom:10px}.game h3{font-size:clamp(21px,2.8vw,27px);letter-spacing:-.022em;margin:0 0 8px}.game p{font-size:15px;color:var(--muted);margin:0;line-height:1.5}.arrow{display:grid;place-items:center;flex:0 0 45px;width:45px;height:45px;border-radius:50%;color:white;background:var(--purple);font-size:26px;font-weight:600}.game:hover .arrow{background:var(--purple-dark)}
-    .footer{margin:35px 0 0;padding:20px 24px;background:#ffffffb8;border:1px dashed #d8cdeb;border-radius:20px;display:flex;align-items:center;gap:13px;color:#655e76;font-size:14px;line-height:1.5}.footer .spark{font-size:26px}.footer strong{color:#44396f}
+    .levels{display:flex;gap:12px;flex-wrap:wrap;margin:23px 0 8px}.level{border:2px solid #e3dbf4;background:white;color:#523c99;padding:15px 21px;border-radius:18px;font-size:17px;font-weight:850;cursor:pointer;min-height:54px;flex:1;min-width:150px}.level[aria-pressed="true"]{background:#6851ae;border-color:#6851ae;color:#fff;box-shadow:0 6px 18px #6851ae30}.level:focus-visible{outline:4px solid #ffba61;outline-offset:3px}.empty{padding:32px 20px;border-radius:22px;border:2px dashed #d9ceee;background:#fff9;text-align:center;color:#635b7c;font-size:17px}.footer{margin:35px 0 0;padding:20px 24px;background:#ffffffb8;border:1px dashed #d8cdeb;border-radius:20px;display:flex;align-items:center;gap:13px;color:#655e76;font-size:14px;line-height:1.5}.footer .spark{font-size:26px}.footer strong{color:#44396f}
     .player{position:fixed;inset:0;background:#fff;z-index:100;display:none;flex-direction:column;height:100dvh}.player.open{display:flex}.playerbar{height:60px;flex:0 0 60px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px max(14px,env(safe-area-inset-right)) 8px max(14px,env(safe-area-inset-left));background:#f6f1ff;border-bottom:1px solid #e5daf8}.back{font-weight:800;background:#6851ae;color:white;border:0;border-radius:13px;padding:10px 15px;cursor:pointer;white-space:nowrap}.playertitle{font-weight:800;font-size:clamp(13px,2.4vw,18px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.extern{font-size:13px;font-weight:750;color:#523c99;white-space:nowrap}.player iframe{display:block;width:100%;flex:1;min-height:0;border:0;background:#fff}
     @media(max-width:620px){.topnote{display:none}.hero{min-height:212px}.hero-deco{font-size:88px;right:-10px;top:35%;opacity:.30}.hero-text{max-width:100%}.hero h1{max-width:330px}.hero p{max-width:310px}.grid{grid-template-columns:1fr;gap:16px}.art{height:190px}.art .character{font-size:130px}.sectionhead{align-items:center}.counter{font-size:12px}.footer{align-items:flex-start}}
     @media(prefers-reduced-motion:reduce){.game{transition:none}}
@@ -37,8 +37,16 @@
       <div class="hero-text"><span class="eyebrow">BIENVENUE ! 👋</span><h1 id="welcome">Mes jeux de français</h1><p>Choisis un jeu, observe bien les images et amuse-toi avec les mots !</p></div>
       <div class="hero-deco" aria-hidden="true">🎲</div>
     </section>
-    <div class="sectionhead"><div><h2>Choisis ton jeu</h2><p>Appuie sur une carte pour commencer.</p></div><div class="counter" id="counter">2 jeux</div></div>
-    <section class="grid" id="games" aria-label="Liste des jeux"></section>
+    <div class="sectionhead"><div><h2>Jeux</h2><p>Choisis ton niveau, puis un jeu.</p></div><div class="counter" id="counter">2 jeux</div></div>
+    <nav class="levels" aria-label="Niveaux des jeux">
+      <button class="level" type="button" data-level="Débutant" aria-pressed="true">🌱 Débutant</button>
+      <button class="level" type="button" data-level="Intermédiaire" aria-pressed="false">🌟 Intermédiaire</button>
+      <button class="level" type="button" data-level="Avancé" aria-pressed="false">🚀 Avancé</button>
+    </nav>
+    <section aria-live="polite"><div class="sectionhead"><div><h2 id="level-title">Débutant</h2><p id="level-description">Les jeux pour commencer.</p></div></div>
+      <div class="grid" id="games" aria-label="Liste des jeux"></div>
+      <div class="empty" id="empty" hidden>De nouveaux jeux arriveront bientôt dans ce niveau !</div>
+    </section>
     <aside class="footer"><span class="spark" aria-hidden="true">✨</span><span><strong>De nouveaux jeux arriveront ici !</strong> Tu retrouveras toutes les activités au même endroit.</span></aside>
   </main>
   <div class="player" id="player" aria-label="Jeu en cours">
@@ -54,6 +62,7 @@
         titre: 'Qui est-ce ? Les monstres',
         description: 'Observe les monstres et retrouve celui qui correspond à la description.',
         categorie: 'Le corps et le visage',
+        niveau: 'Débutant',
         emoji: '👾',
         couleur: 'corp',
         bulle1: '👀',
@@ -64,6 +73,7 @@
         titre: 'Qui est-ce ? Les vêtements',
         description: 'Lis les vêtements et les couleurs pour trouver le bon personnage.',
         categorie: 'Les vêtements',
+        niveau: 'Débutant',
         emoji: '🧥',
         couleur: 'vest',
         bulle1: '👟',
@@ -89,8 +99,21 @@
     window.addEventListener('popstate',()=>closeGame());
     const games = document.getElementById('games');
     const counter = document.getElementById('counter');
-    counter.textContent = JEUX.length + ' jeu' + (JEUX.length > 1 ? 'x' : '');
-    for (const jeu of JEUX) {
+    const empty = document.getElementById('empty');
+    const title = document.getElementById('level-title');
+    const description = document.getElementById('level-description');
+    const levels = Array.from(document.querySelectorAll('.level'));
+    function showLevel(level) {
+      const selected = JEUX.filter(jeu => jeu.niveau === level);
+      title.textContent = level;
+      description.textContent = level === 'Débutant' ? 'Les jeux pour commencer.' : 'De nouvelles activités seront ajoutées ici.';
+      counter.textContent = selected.length + ' jeu' + (selected.length > 1 ? 'x' : '');
+      levels.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.level === level)));
+      games.replaceChildren();
+      empty.hidden = selected.length !== 0;
+      for (const jeu of selected) createCard(jeu);
+    }
+    function createCard(jeu) {
       const card = document.createElement('a');
       card.className = 'game'; card.href = jeu.url; card.addEventListener('click', e=>{e.preventDefault();openGame(jeu);});
       // La navigation se fait dans la même fenêtre : pratique pour l'iPad.
@@ -107,6 +130,8 @@
       const arrow = document.createElement('span');arrow.className='arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='→';
       content.append(tag,h,p);details.append(content,arrow);card.append(art,details);games.append(card);
     }
+    levels.forEach(button => button.addEventListener('click', () => showLevel(button.dataset.level)));
+    showLevel('Débutant');
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
     }
