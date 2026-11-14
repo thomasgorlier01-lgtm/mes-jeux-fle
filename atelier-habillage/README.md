@@ -14,9 +14,9 @@ Les deux personnages sont les fichiers validés du kit peint, sans modification.
 
 ## Trois niveaux
 
-1. Premiers vêtements : t-shirt, pantalon, jupe, baskets et chapeau classique uniquement.
-2. Toute la garde-robe : la version complète avec les 18 catégories.
-3. Lis bien les négations : même garde-robe, mais les phrases positives et négatives sont mélangées. Les accessoires explicitement absents doivent rester retirés.
+1. Niveau 1 — Vêtements : t-shirt, pantalon, jupe, baskets et chapeau uniquement.
+2. Niveau 2 — Vêtements : la version complète avec les 18 catégories.
+3. Niveau 3 — Vêtements : même garde-robe, mais les phrases positives et négatives sont mélangées. Les accessoires explicitement absents doivent rester retirés.
 
 Chaque niveau contient dix tenues et conserve les trois essais par tenue. Le bouton « Les niveaux » permet de revenir à l’accueil. Les calques des t-shirts et robes ont été élargis pour couvrir les côtés des bras ; les pulls et chemises sont inchangés.
 

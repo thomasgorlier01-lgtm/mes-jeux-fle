@@ -146,7 +146,7 @@ export default {
     },
     {
       "id": "chapeau_classique",
-      "nom": "Chapeau classique",
+      "nom": "Chapeau",
       "emplacement": "coiffure",
       "z": 70,
       "preview": "assets/vignettes/apercu_chapeau_classique.webp",
@@ -2043,7 +2043,7 @@ export default {
     {
       "id": "chapeau_classique_rouge",
       "categorie": "chapeau_classique",
-      "nom": "Chapeau classique",
+      "nom": "Chapeau",
       "couleur": "rouge",
       "hex": "#BF635B",
       "emplacement": "coiffure",
@@ -2062,7 +2062,7 @@ export default {
     {
       "id": "chapeau_classique_vert",
       "categorie": "chapeau_classique",
-      "nom": "Chapeau classique",
+      "nom": "Chapeau",
       "couleur": "vert",
       "hex": "#7E9B68",
       "emplacement": "coiffure",
@@ -2081,7 +2081,7 @@ export default {
     {
       "id": "chapeau_classique_violet",
       "categorie": "chapeau_classique",
-      "nom": "Chapeau classique",
+      "nom": "Chapeau",
       "couleur": "violet",
       "hex": "#8E78AB",
       "emplacement": "coiffure",
@@ -2100,7 +2100,7 @@ export default {
     {
       "id": "chapeau_classique_rose",
       "categorie": "chapeau_classique",
-      "nom": "Chapeau classique",
+      "nom": "Chapeau",
       "couleur": "rose",
       "hex": "#D291AD",
       "emplacement": "coiffure",
@@ -2119,7 +2119,7 @@ export default {
     {
       "id": "chapeau_classique_jaune",
       "categorie": "chapeau_classique",
-      "nom": "Chapeau classique",
+      "nom": "Chapeau",
       "couleur": "jaune",
       "hex": "#D8BB69",
       "emplacement": "coiffure",
@@ -2138,7 +2138,7 @@ export default {
     {
       "id": "chapeau_classique_marron",
       "categorie": "chapeau_classique",
-      "nom": "Chapeau classique",
+      "nom": "Chapeau",
       "couleur": "marron",
       "hex": "#8C6853",
       "emplacement": "coiffure",
@@ -2157,7 +2157,7 @@ export default {
     {
       "id": "chapeau_classique_bleu",
       "categorie": "chapeau_classique",
-      "nom": "Chapeau classique",
+      "nom": "Chapeau",
       "couleur": "bleu",
       "hex": "#638EB5",
       "emplacement": "coiffure",

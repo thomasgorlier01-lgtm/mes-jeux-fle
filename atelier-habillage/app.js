@@ -1,5 +1,5 @@
-import catalog from './catalog.js?v=niveaux1';
-import {LEVELS,availableCategories,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=niveaux1';
+import catalog from './catalog.js?v=niveaux2';
+import {LEVELS,availableCategories,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=niveaux2';
 const $=id=>document.getElementById(id);
 let state=startGame(catalog),openedCategory=null,currentLayers='',currentLevel=2,isHome=true;
 const stage=$('stage'),categoryButtons=new Map(),menu=$('color-menu');

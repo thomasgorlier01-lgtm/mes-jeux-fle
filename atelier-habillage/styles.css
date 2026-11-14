@@ -21,3 +21,5 @@
 @media(max-width:620px){.level-home{margin-top:20px}.level-home>h2{font-size:22px}.level-subtitle{font-size:12px}.level-grid{grid-template-columns:1fr}.level-card{display:grid;grid-template-columns:100px 1fr;column-gap:18px;padding:18px}.level-number{position:absolute;top:13px;left:13px;width:24px;height:24px;font-size:12px;z-index:1}.level-art{grid-column:1;grid-row:1/5;margin:0;height:150px;gap:0;flex-wrap:wrap;padding:18px 3px 5px}.level-art img{width:46px;height:65px}.negative-art{font-size:12px;padding:7px 4px}.level-label{grid-column:2;margin:3px 0 6px}.level-card>strong{grid-column:2;font-size:19px;margin:0 0 5px}.level-description{grid-column:2;min-height:0;font-size:12px}.level-play{grid-column:2;margin-top:10px;padding-top:10px;font-size:12px}.header-actions{gap:8px}.header-actions .quiet{font-size:10px}.help summary{font-size:10px}}
 .garment-picker[data-level="1"]{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:580px){.garment-picker[data-level="1"]{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+.difficulty{color:var(--purple);font-size:.8em;letter-spacing:.08em;white-space:nowrap}

@@ -1,8 +1,8 @@
 export const SLOTS = ['coiffure','lunettes','haut','bas','robe','chaussettes','chaussures','veste','gants'];
 export const LEVELS = [
- {id:1,title:'Premiers vêtements',categories:['tshirt','pantalon','baskets','jupe','chapeau_classique']},
- {id:2,title:'Toute la garde-robe',categories:null},
- {id:3,title:'Lis bien les négations',categories:null}
+ {id:1,title:'Vêtements *',categories:['tshirt','pantalon','baskets','jupe','chapeau_classique']},
+ {id:2,title:'Vêtements **',categories:null},
+ {id:3,title:'Vêtements ***',categories:null}
 ];
 export function availableCategories(catalog,level=2){const config=LEVELS.find(x=>x.id===level);return catalog.categories.filter(x=>!config?.categories||config.categories.includes(x.id));}
 const TEMPLATES = [
@@ -63,7 +63,7 @@ export function nextRound(state){
  return {...state,round:state.round+1,lives:3,selection:{},phase:'playing',lastAttempt:null,feedback:'',feedbackType:''};
 }
 const WORDS={
- tshirt:['un t-shirt','m'],pull:['un pull','m'],chemise:['une chemise','f'],veste:['une veste','f'],pantalon:['un pantalon','m'],short:['un short','m'],jupe:['une jupe','f'],robe:['une robe','f'],chaussettes:['des chaussettes','fp'],baskets:['des baskets','fp'],sandales:['des sandales','fp'],bottes:['des bottes','fp'],casquette:['une casquette','f'],chapeau_cowboy:['un chapeau de cow-boy','m'],chapeau_classique:['un chapeau classique','m'],bonnet:['un bonnet','m'],lunettes:['des lunettes','fp'],gants:['des gants','mp']
+ tshirt:['un t-shirt','m'],pull:['un pull','m'],chemise:['une chemise','f'],veste:['une veste','f'],pantalon:['un pantalon','m'],short:['un short','m'],jupe:['une jupe','f'],robe:['une robe','f'],chaussettes:['des chaussettes','fp'],baskets:['des baskets','fp'],sandales:['des sandales','fp'],bottes:['des bottes','fp'],casquette:['une casquette','f'],chapeau_cowboy:['un chapeau de cow-boy','m'],chapeau_classique:['un chapeau','m'],bonnet:['un bonnet','m'],lunettes:['des lunettes','fp'],gants:['des gants','mp']
 };
 export function colorAdjective(color,gender){
  const feminine=gender.startsWith('f'),plural=gender.endsWith('p');
@@ -77,7 +77,7 @@ export function describeRound(round,catalog){
  const parts=items.map(describeItem),pronoun=round.avatar==='garcon'?'Il':'Elle';
  const list=parts=>parts.length>1?parts.slice(0,-1).join(', ')+' et '+parts.at(-1):parts[0];
  if(round.level!==3)return `${pronoun} porte ${list(parts)}.`;
- const negatives={coiffure:`${pronoun} ne porte rien sur la tête.`,lunettes:`${pronoun} n’a pas de lunettes.`,veste:`${pronoun} ne porte pas de veste.`,gants:`${pronoun} ne porte pas de gants.`};
+ const negatives={coiffure:`${pronoun} ne porte pas de chapeau.`,lunettes:`${pronoun} n’a pas de lunettes.`,veste:`${pronoun} ne porte pas de veste.`,gants:`${pronoun} ne porte pas de gants.`};
  const middle=Math.ceil(parts.length/2),sentences=[`${pronoun} porte ${list(parts.slice(0,middle))}.`,negatives[round.negativeSlots[0]],`${pronoun} porte ${list(parts.slice(middle))}.`];
  if(round.negativeSlots[1])sentences.push(negatives[round.negativeSlots[1]]);
  return sentences.join(' ');
