@@ -37,7 +37,7 @@ export default {
       "nom": "T-shirt",
       "emplacement": "haut",
       "z": 30,
-      "preview": "assets/vignettes/apercu_tshirt.webp",
+      "preview": "assets/vignettes/apercu_tshirt.webp?fit=2",
       "previewColor": "#D8BFA2"
     },
     {
@@ -93,7 +93,7 @@ export default {
       "nom": "Robe",
       "emplacement": "robe",
       "z": 35,
-      "preview": "assets/vignettes/apercu_robe.webp",
+      "preview": "assets/vignettes/apercu_robe.webp?fit=2",
       "previewColor": "#DDB5AB"
     },
     {
@@ -186,7 +186,7 @@ export default {
       "hex": "#BF635B",
       "emplacement": "haut",
       "z": 30,
-      "image": "assets/vetements/tshirt_rouge.png",
+      "image": "assets/vetements/tshirt_rouge.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -195,7 +195,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/tshirt_rouge.webp"
+      "thumbnail": "assets/vignettes/tshirt_rouge.webp?fit=2"
     },
     {
       "id": "tshirt_vert",
@@ -205,7 +205,7 @@ export default {
       "hex": "#7E9B68",
       "emplacement": "haut",
       "z": 30,
-      "image": "assets/vetements/tshirt_vert.png",
+      "image": "assets/vetements/tshirt_vert.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -214,7 +214,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/tshirt_vert.webp"
+      "thumbnail": "assets/vignettes/tshirt_vert.webp?fit=2"
     },
     {
       "id": "tshirt_violet",
@@ -224,7 +224,7 @@ export default {
       "hex": "#8E78AB",
       "emplacement": "haut",
       "z": 30,
-      "image": "assets/vetements/tshirt_violet.png",
+      "image": "assets/vetements/tshirt_violet.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -233,7 +233,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/tshirt_violet.webp"
+      "thumbnail": "assets/vignettes/tshirt_violet.webp?fit=2"
     },
     {
       "id": "tshirt_rose",
@@ -243,7 +243,7 @@ export default {
       "hex": "#D291AD",
       "emplacement": "haut",
       "z": 30,
-      "image": "assets/vetements/tshirt_rose.png",
+      "image": "assets/vetements/tshirt_rose.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -252,7 +252,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/tshirt_rose.webp"
+      "thumbnail": "assets/vignettes/tshirt_rose.webp?fit=2"
     },
     {
       "id": "tshirt_jaune",
@@ -262,7 +262,7 @@ export default {
       "hex": "#D8BB69",
       "emplacement": "haut",
       "z": 30,
-      "image": "assets/vetements/tshirt_jaune.png",
+      "image": "assets/vetements/tshirt_jaune.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -271,7 +271,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/tshirt_jaune.webp"
+      "thumbnail": "assets/vignettes/tshirt_jaune.webp?fit=2"
     },
     {
       "id": "tshirt_marron",
@@ -281,7 +281,7 @@ export default {
       "hex": "#8C6853",
       "emplacement": "haut",
       "z": 30,
-      "image": "assets/vetements/tshirt_marron.png",
+      "image": "assets/vetements/tshirt_marron.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -290,7 +290,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/tshirt_marron.webp"
+      "thumbnail": "assets/vignettes/tshirt_marron.webp?fit=2"
     },
     {
       "id": "tshirt_bleu",
@@ -300,7 +300,7 @@ export default {
       "hex": "#638EB5",
       "emplacement": "haut",
       "z": 30,
-      "image": "assets/vetements/tshirt_bleu.png",
+      "image": "assets/vetements/tshirt_bleu.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -309,7 +309,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/tshirt_bleu.webp"
+      "thumbnail": "assets/vignettes/tshirt_bleu.webp?fit=2"
     },
     {
       "id": "pull_rouge",
@@ -1117,7 +1117,7 @@ export default {
       "hex": "#BF635B",
       "emplacement": "robe",
       "z": 35,
-      "image": "assets/vetements/robe_rouge.png",
+      "image": "assets/vetements/robe_rouge.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -1126,7 +1126,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/robe_rouge.webp"
+      "thumbnail": "assets/vignettes/robe_rouge.webp?fit=2"
     },
     {
       "id": "robe_vert",
@@ -1136,7 +1136,7 @@ export default {
       "hex": "#7E9B68",
       "emplacement": "robe",
       "z": 35,
-      "image": "assets/vetements/robe_vert.png",
+      "image": "assets/vetements/robe_vert.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -1145,7 +1145,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/robe_vert.webp"
+      "thumbnail": "assets/vignettes/robe_vert.webp?fit=2"
     },
     {
       "id": "robe_violet",
@@ -1155,7 +1155,7 @@ export default {
       "hex": "#8E78AB",
       "emplacement": "robe",
       "z": 35,
-      "image": "assets/vetements/robe_violet.png",
+      "image": "assets/vetements/robe_violet.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -1164,7 +1164,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/robe_violet.webp"
+      "thumbnail": "assets/vignettes/robe_violet.webp?fit=2"
     },
     {
       "id": "robe_rose",
@@ -1174,7 +1174,7 @@ export default {
       "hex": "#D291AD",
       "emplacement": "robe",
       "z": 35,
-      "image": "assets/vetements/robe_rose.png",
+      "image": "assets/vetements/robe_rose.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -1183,7 +1183,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/robe_rose.webp"
+      "thumbnail": "assets/vignettes/robe_rose.webp?fit=2"
     },
     {
       "id": "robe_jaune",
@@ -1193,7 +1193,7 @@ export default {
       "hex": "#D8BB69",
       "emplacement": "robe",
       "z": 35,
-      "image": "assets/vetements/robe_jaune.png",
+      "image": "assets/vetements/robe_jaune.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -1202,7 +1202,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/robe_jaune.webp"
+      "thumbnail": "assets/vignettes/robe_jaune.webp?fit=2"
     },
     {
       "id": "robe_marron",
@@ -1212,7 +1212,7 @@ export default {
       "hex": "#8C6853",
       "emplacement": "robe",
       "z": 35,
-      "image": "assets/vetements/robe_marron.png",
+      "image": "assets/vetements/robe_marron.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -1221,7 +1221,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/robe_marron.webp"
+      "thumbnail": "assets/vignettes/robe_marron.webp?fit=2"
     },
     {
       "id": "robe_bleu",
@@ -1231,7 +1231,7 @@ export default {
       "hex": "#638EB5",
       "emplacement": "robe",
       "z": 35,
-      "image": "assets/vetements/robe_bleu.png",
+      "image": "assets/vetements/robe_bleu.png?fit=2",
       "dimensions": [
         1280,
         1920
@@ -1240,7 +1240,7 @@ export default {
         "garcon",
         "fille"
       ],
-      "thumbnail": "assets/vignettes/robe_bleu.webp"
+      "thumbnail": "assets/vignettes/robe_bleu.webp?fit=2"
     },
     {
       "id": "chaussettes_rouge",

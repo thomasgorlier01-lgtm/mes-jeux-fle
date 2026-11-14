@@ -12,6 +12,14 @@ Jeu de français : lire une description et habiller le personnage en cliquant su
 
 Les deux personnages sont les fichiers validés du kit peint, sans modification. Le bonnet a un pompon ; les bottes ont des semelles et talons bien distincts des chaussettes. Les lunettes et gants sont de nouveaux accessoires peints. Les vignettes de départ ont des couleurs pastel différentes ; elles ne font pas partie de la tenue attendue. Le bleu est une déclinaison du même modèle peint. Les petites vignettes servent seulement à la garde-robe ; le personnage utilise les PNG complets.
 
+## Trois niveaux
+
+1. Premiers vêtements : t-shirt, pantalon, jupe, baskets et chapeau classique uniquement.
+2. Toute la garde-robe : la version complète avec les 18 catégories.
+3. Lis bien les négations : même garde-robe, mais les phrases positives et négatives sont mélangées. Les accessoires explicitement absents doivent rester retirés.
+
+Chaque niveau contient dix tenues et conserve les trois essais par tenue. Le bouton « Les niveaux » permet de revenir à l’accueil. Les calques des t-shirts et robes ont été élargis pour couvrir les côtés des bras ; les pulls et chemises sont inchangés.
+
 ## Utilisation
 
 Site statique sans installation ni compilation : servir ce dossier avec un serveur HTTP ou GitHub Pages. Les fichiers doivent conserver leur organisation.

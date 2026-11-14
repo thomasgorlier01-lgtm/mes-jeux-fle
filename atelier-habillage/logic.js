@@ -1,4 +1,10 @@
 export const SLOTS = ['coiffure','lunettes','haut','bas','robe','chaussettes','chaussures','veste','gants'];
+export const LEVELS = [
+ {id:1,title:'Premiers vêtements',categories:['tshirt','pantalon','baskets','jupe','chapeau_classique']},
+ {id:2,title:'Toute la garde-robe',categories:null},
+ {id:3,title:'Lis bien les négations',categories:null}
+];
+export function availableCategories(catalog,level=2){const config=LEVELS.find(x=>x.id===level);return catalog.categories.filter(x=>!config?.categories||config.categories.includes(x.id));}
 const TEMPLATES = [
  ['casquette','tshirt','short','chaussettes','baskets','veste'],
  ['chapeau_classique','chemise','jupe','chaussettes','sandales'],
@@ -15,21 +21,27 @@ export const signature = selection => Object.values(selection).sort().join('|');
 export function shuffle(input, random=Math.random) {
  const array=[...input]; for(let i=array.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[array[i],array[j]]=[array[j],array[i]]}return array;
 }
-export function generateRounds(catalog,random=Math.random){
- const templates=shuffle(TEMPLATES,random),colors=shuffle(Object.keys(catalog.palette),random); let counter=0;
+export function generateRounds(catalog,random=Math.random,level=2){
+ if(!LEVELS.some(x=>x.id===level))throw new Error('Niveau inconnu');
+ const simple=Array.from({length:10},(_,i)=>['tshirt',i%2?'jupe':'pantalon','baskets','chapeau_classique']);
+ const templates=shuffle(level===1?simple:TEMPLATES,random),colors=shuffle(Object.keys(catalog.palette),random); let counter=0;const seen=new Set();
  return templates.map((template,index)=>{
   const categories=[...template];
-  if([0,1,4,7].includes(index))categories.push('lunettes');
-  if([2,3,6,9].includes(index))categories.push('gants');
+  if(level!==1&&[0,1,4,7].includes(index))categories.push('lunettes');
+  if(level!==1&&[2,3,6,9].includes(index))categories.push('gants');
   const expected={};
   for(const category of categories){const choices=catalog.elements.filter(x=>x.categorie===category);const color=colors[counter++%colors.length];const item=choices.find(x=>x.couleur===color)||choices[0];expected[item.emplacement]=item.id;}
-  return {avatar:index%2===0?'garcon':'fille',expected};
+  if(level===3){if(index%3===0)delete expected.coiffure;if(index%3===1)delete expected.lunettes;if(index%3===2)delete expected.gants;if(index%4===0)delete expected.veste;}
+  while(seen.has(signature(expected))){const slot=Object.keys(expected)[0],category=catalog.elements.find(x=>x.id===expected[slot]).categorie,choices=catalog.elements.filter(x=>x.categorie===category);const previous=choices.findIndex(x=>x.id===expected[slot]);expected[slot]=choices[(previous+1)%choices.length].id;}
+  seen.add(signature(expected));
+  const negativeSlots=level===3?shuffle(['coiffure','lunettes','veste','gants'].filter(slot=>!expected[slot]),random).slice(0,2):[];
+  return {avatar:index%2===0?'garcon':'fille',expected,level,negativeSlots};
  });
 }
-export function startGame(catalog,random=Math.random){return {rounds:generateRounds(catalog,random),round:0,score:0,lives:3,selection:{},phase:'playing',lastAttempt:null,feedback:'',feedbackType:''};}
+export function startGame(catalog,random=Math.random,level=2){return {level,rounds:generateRounds(catalog,random,level),round:0,score:0,lives:3,selection:{},phase:'playing',lastAttempt:null,feedback:'',feedbackType:''};}
 export function selectItem(state,catalog,id){
  if(state.phase!=='playing')return state;
- const item=catalog.elements.find(x=>x.id===id);if(!item)return state;
+ const item=catalog.elements.find(x=>x.id===id);if(!item||!availableCategories(catalog,state.level).some(x=>x.id===item.categorie))return state;
  const selection={...state.selection};
  if(selection[item.emplacement]===id)delete selection[item.emplacement];
  else {selection[item.emplacement]=id;if(item.emplacement==='robe'){delete selection.haut;delete selection.bas;}else if(item.emplacement==='haut'||item.emplacement==='bas')delete selection.robe;}
@@ -62,6 +74,11 @@ export function colorAdjective(color,gender){
 export function describeItem(item){const [word,gender]=WORDS[item.categorie];return `${word} ${colorAdjective(item.couleur,gender)}`;}
 export function describeRound(round,catalog){
  const items=SLOTS.filter(slot=>round.expected[slot]).map(slot=>catalog.elements.find(x=>x.id===round.expected[slot]));
- const parts=items.map(describeItem);const list=parts.length>1?parts.slice(0,-1).join(', ')+' et '+parts.at(-1):parts[0];
- return `${round.avatar==='garcon'?'Il':'Elle'} porte ${list}.`;
+ const parts=items.map(describeItem),pronoun=round.avatar==='garcon'?'Il':'Elle';
+ const list=parts=>parts.length>1?parts.slice(0,-1).join(', ')+' et '+parts.at(-1):parts[0];
+ if(round.level!==3)return `${pronoun} porte ${list(parts)}.`;
+ const negatives={coiffure:`${pronoun} ne porte rien sur la tête.`,lunettes:`${pronoun} n’a pas de lunettes.`,veste:`${pronoun} ne porte pas de veste.`,gants:`${pronoun} ne porte pas de gants.`};
+ const middle=Math.ceil(parts.length/2),sentences=[`${pronoun} porte ${list(parts.slice(0,middle))}.`,negatives[round.negativeSlots[0]],`${pronoun} porte ${list(parts.slice(middle))}.`];
+ if(round.negativeSlots[1])sentences.push(negatives[round.negativeSlots[1]]);
+ return sentences.join(' ');
 }

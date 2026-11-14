@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import catalog from '../catalog.js';
-import {startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem,signature} from '../logic.js';
+import {startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem,signature,availableCategories} from '../logic.js';
 const seeded=()=>{let n=123456;return ()=>((n=(n*1664525+1013904223)>>>0)/4294967296)};
 test('10 tenues uniques, alternance, tous les types et couleurs, aucune robe avec haut/bas',()=>{
  for(let i=0;i<100;i++){
@@ -36,4 +36,12 @@ test('accessoires indépendants et uniquement trois types de chaussures',()=>{
  assert.equal(catalog.categories.length,18);assert.equal(catalog.elements.length,126);assert.equal(new Set(catalog.categories.map(x=>x.previewColor)).size,18);
  let s=startGame(catalog,seeded());for(const id of ['lunettes_bleu','gants_rouge','bonnet_vert','veste_jaune'])s=selectItem(s,catalog,id);
  assert.equal(s.selection.lunettes,'lunettes_bleu');assert.equal(s.selection.gants,'gants_rouge');assert.equal(s.selection.coiffure,'bonnet_vert');assert.equal(s.selection.veste,'veste_jaune');
+});
+
+test('niveau 1 : cinq catégories seulement, dix tenues uniques et aucun accessoire avancé',()=>{
+ for(let i=0;i<100;i++){const s=startGame(catalog,Math.random,1);const allowed=['tshirt','pantalon','baskets','jupe','chapeau_classique'];assert.equal(availableCategories(catalog,1).length,5);assert.equal(new Set(s.rounds.map(r=>signature(r.expected))).size,10);for(const round of s.rounds){assert.equal(Object.keys(round.expected).length,4);assert.deepEqual(round.negativeSlots,[]);for(const id of Object.values(round.expected))assert.ok(allowed.includes(catalog.elements.find(x=>x.id===id).categorie));}assert.equal(selectItem(s,catalog,'gants_rouge'),s);}
+});
+test('niveau 3 : négations vraies, phrases alternées et refus d’un accessoire interdit',()=>{
+ for(let i=0;i<100;i++){let s=startGame(catalog,Math.random,3);for(const round of s.rounds){assert.ok(round.negativeSlots.length>=1);for(const slot of round.negativeSlots)assert.equal(round.expected[slot],undefined);const text=describeRound(round,catalog);assert.match(text,/ (ne porte|n’a)/);assert.ok(text.indexOf(' porte ')<text.indexOf(' ne porte ')||text.indexOf(' porte ')<text.indexOf(' n’a '));assert.match(text,/\. (Il|Elle) porte /);}
+ const round=s.rounds[0],slot=round.negativeSlots[0],extra=catalog.elements.find(x=>x.emplacement===slot);s={...s,selection:{...round.expected,[slot]:extra.id}};s=checkOutfit(s);assert.equal(s.phase,'playing');assert.equal(s.lives,2);s=selectItem(s,catalog,extra.id);s=checkOutfit(s);assert.equal(s.phase,'success');}
 });
