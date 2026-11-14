@@ -45,7 +45,7 @@ export default {
       "nom": "Pull",
       "emplacement": "haut",
       "z": 30,
-      "preview": "assets/vignettes/apercu_pull.webp",
+      "preview": "assets/vignettes/apercu_pull_v3.webp",
       "previewColor": "#B5CCB3"
     },
     {
@@ -53,7 +53,7 @@ export default {
       "nom": "Chemise",
       "emplacement": "haut",
       "z": 30,
-      "preview": "assets/vignettes/apercu_chemise.webp",
+      "preview": "assets/vignettes/apercu_chemise_v3.webp",
       "previewColor": "#B4C9DB"
     },
     {
@@ -61,7 +61,7 @@ export default {
       "nom": "Veste ouverte",
       "emplacement": "veste",
       "z": 60,
-      "preview": "assets/vignettes/apercu_veste.webp",
+      "preview": "assets/vignettes/apercu_veste_v3.webp",
       "previewColor": "#D6B5C6"
     },
     {
@@ -135,14 +135,6 @@ export default {
       "z": 70,
       "preview": "assets/vignettes/apercu_casquette.webp",
       "previewColor": "#AFCBCD"
-    },
-    {
-      "id": "chapeau_cowboy",
-      "nom": "Chapeau de cow-boy",
-      "emplacement": "coiffure",
-      "z": 70,
-      "preview": "assets/vignettes/apercu_chapeau_cowboy.webp",
-      "previewColor": "#D4BCA4"
     },
     {
       "id": "chapeau_classique",
@@ -1906,139 +1898,6 @@ export default {
         "fille"
       ],
       "thumbnail": "assets/vignettes/casquette_bleu.webp"
-    },
-    {
-      "id": "chapeau_cowboy_rouge",
-      "categorie": "chapeau_cowboy",
-      "nom": "Chapeau de cow-boy",
-      "couleur": "rouge",
-      "hex": "#BF635B",
-      "emplacement": "coiffure",
-      "z": 70,
-      "image": "assets/vetements/chapeau_cowboy_rouge.png",
-      "dimensions": [
-        1280,
-        1920
-      ],
-      "compatible": [
-        "garcon",
-        "fille"
-      ],
-      "thumbnail": "assets/vignettes/chapeau_cowboy_rouge.webp"
-    },
-    {
-      "id": "chapeau_cowboy_vert",
-      "categorie": "chapeau_cowboy",
-      "nom": "Chapeau de cow-boy",
-      "couleur": "vert",
-      "hex": "#7E9B68",
-      "emplacement": "coiffure",
-      "z": 70,
-      "image": "assets/vetements/chapeau_cowboy_vert.png",
-      "dimensions": [
-        1280,
-        1920
-      ],
-      "compatible": [
-        "garcon",
-        "fille"
-      ],
-      "thumbnail": "assets/vignettes/chapeau_cowboy_vert.webp"
-    },
-    {
-      "id": "chapeau_cowboy_violet",
-      "categorie": "chapeau_cowboy",
-      "nom": "Chapeau de cow-boy",
-      "couleur": "violet",
-      "hex": "#8E78AB",
-      "emplacement": "coiffure",
-      "z": 70,
-      "image": "assets/vetements/chapeau_cowboy_violet.png",
-      "dimensions": [
-        1280,
-        1920
-      ],
-      "compatible": [
-        "garcon",
-        "fille"
-      ],
-      "thumbnail": "assets/vignettes/chapeau_cowboy_violet.webp"
-    },
-    {
-      "id": "chapeau_cowboy_rose",
-      "categorie": "chapeau_cowboy",
-      "nom": "Chapeau de cow-boy",
-      "couleur": "rose",
-      "hex": "#D291AD",
-      "emplacement": "coiffure",
-      "z": 70,
-      "image": "assets/vetements/chapeau_cowboy_rose.png",
-      "dimensions": [
-        1280,
-        1920
-      ],
-      "compatible": [
-        "garcon",
-        "fille"
-      ],
-      "thumbnail": "assets/vignettes/chapeau_cowboy_rose.webp"
-    },
-    {
-      "id": "chapeau_cowboy_jaune",
-      "categorie": "chapeau_cowboy",
-      "nom": "Chapeau de cow-boy",
-      "couleur": "jaune",
-      "hex": "#D8BB69",
-      "emplacement": "coiffure",
-      "z": 70,
-      "image": "assets/vetements/chapeau_cowboy_jaune.png",
-      "dimensions": [
-        1280,
-        1920
-      ],
-      "compatible": [
-        "garcon",
-        "fille"
-      ],
-      "thumbnail": "assets/vignettes/chapeau_cowboy_jaune.webp"
-    },
-    {
-      "id": "chapeau_cowboy_marron",
-      "categorie": "chapeau_cowboy",
-      "nom": "Chapeau de cow-boy",
-      "couleur": "marron",
-      "hex": "#8C6853",
-      "emplacement": "coiffure",
-      "z": 70,
-      "image": "assets/vetements/chapeau_cowboy_marron.png",
-      "dimensions": [
-        1280,
-        1920
-      ],
-      "compatible": [
-        "garcon",
-        "fille"
-      ],
-      "thumbnail": "assets/vignettes/chapeau_cowboy_marron.webp"
-    },
-    {
-      "id": "chapeau_cowboy_bleu",
-      "categorie": "chapeau_cowboy",
-      "nom": "Chapeau de cow-boy",
-      "couleur": "bleu",
-      "hex": "#638EB5",
-      "emplacement": "coiffure",
-      "z": 70,
-      "image": "assets/vetements/chapeau_cowboy_bleu.png",
-      "dimensions": [
-        1280,
-        1920
-      ],
-      "compatible": [
-        "garcon",
-        "fille"
-      ],
-      "thumbnail": "assets/vignettes/chapeau_cowboy_bleu.webp"
     },
     {
       "id": "chapeau_classique_rouge",

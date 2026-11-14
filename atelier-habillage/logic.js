@@ -4,18 +4,18 @@ export const LEVELS = [
  {id:2,title:'Vêtements **',categories:null},
  {id:3,title:'Vêtements ***',categories:null}
 ];
-export function availableCategories(catalog,level=2){const config=LEVELS.find(x=>x.id===level);return catalog.categories.filter(x=>!config?.categories||config.categories.includes(x.id));}
+export function availableCategories(catalog,level=2,avatar=null){const config=LEVELS.find(x=>x.id===level);return catalog.categories.filter(x=>(!config?.categories||config.categories.includes(x.id))&&(avatar!=='garcon'||!['jupe','robe'].includes(x.id)));}
 const TEMPLATES = [
  ['casquette','tshirt','short','chaussettes','baskets','veste'],
  ['chapeau_classique','chemise','jupe','chaussettes','sandales'],
  ['bonnet','pull','pantalon','chaussettes','baskets'],
- ['chapeau_cowboy','robe','chaussettes','bottes','veste'],
- ['chapeau_classique','tshirt','jupe','chaussettes','sandales'],
+ ['chapeau_classique','tshirt','short','chaussettes','bottes','veste'],
+ ['chapeau_classique','tshirt','pantalon','chaussettes','sandales'],
  ['casquette','chemise','short','chaussettes','baskets','veste'],
- ['chapeau_cowboy','pull','pantalon','chaussettes','bottes'],
+ ['chapeau_classique','pull','pantalon','chaussettes','bottes'],
  ['bonnet','robe','chaussettes','sandales'],
  ['casquette','tshirt','pantalon','chaussettes','sandales','veste'],
- ['chapeau_classique','chemise','jupe','chaussettes','bottes']
+ ['chapeau_classique','chemise','pantalon','chaussettes','bottes']
 ];
 export const signature = selection => Object.values(selection).sort().join('|');
 export function shuffle(input, random=Math.random) {
@@ -23,8 +23,13 @@ export function shuffle(input, random=Math.random) {
 }
 export function generateRounds(catalog,random=Math.random,level=2){
  if(!LEVELS.some(x=>x.id===level))throw new Error('Niveau inconnu');
- const simple=Array.from({length:10},(_,i)=>['tshirt',i%2?'jupe':'pantalon','baskets','chapeau_classique']);
- const templates=shuffle(level===1?simple:TEMPLATES,random),colors=shuffle(Object.keys(catalog.palette),random); let counter=0;const seen=new Set();
+ const simple=Array.from({length:10},(_,i)=>['tshirt',i<2?'jupe':'pantalon','baskets','chapeau_classique']);
+ const source=level===1?simple:TEMPLATES;
+ const feminine=shuffle(source.filter(x=>x.includes('jupe')||x.includes('robe')),random);
+ const neutral=shuffle(source.filter(x=>!x.includes('jupe')&&!x.includes('robe')),random);
+ // Two skirt/dress outfits and three trouser/short outfits for the five girls.
+ const girlTemplates=shuffle([...feminine.slice(0,2),...neutral.splice(0,3)],random);
+ const templates=Array.from({length:10},(_,i)=>i%2?girlTemplates.pop():neutral.pop()),colors=shuffle(Object.keys(catalog.palette),random); let counter=0;const seen=new Set();
  return templates.map((template,index)=>{
   const categories=[...template];
   if(level!==1&&[0,1,4,7].includes(index))categories.push('lunettes');
@@ -41,7 +46,7 @@ export function generateRounds(catalog,random=Math.random,level=2){
 export function startGame(catalog,random=Math.random,level=2){return {level,rounds:generateRounds(catalog,random,level),round:0,score:0,lives:3,selection:{},phase:'playing',lastAttempt:null,feedback:'',feedbackType:''};}
 export function selectItem(state,catalog,id){
  if(state.phase!=='playing')return state;
- const item=catalog.elements.find(x=>x.id===id);if(!item||!availableCategories(catalog,state.level).some(x=>x.id===item.categorie))return state;
+ const item=catalog.elements.find(x=>x.id===id);if(!item||!availableCategories(catalog,state.level,state.rounds[state.round].avatar).some(x=>x.id===item.categorie))return state;
  const selection={...state.selection};
  if(selection[item.emplacement]===id)delete selection[item.emplacement];
  else {selection[item.emplacement]=id;if(item.emplacement==='robe'){delete selection.haut;delete selection.bas;}else if(item.emplacement==='haut'||item.emplacement==='bas')delete selection.robe;}
@@ -63,7 +68,7 @@ export function nextRound(state){
  return {...state,round:state.round+1,lives:3,selection:{},phase:'playing',lastAttempt:null,feedback:'',feedbackType:''};
 }
 const WORDS={
- tshirt:['un t-shirt','m'],pull:['un pull','m'],chemise:['une chemise','f'],veste:['une veste','f'],pantalon:['un pantalon','m'],short:['un short','m'],jupe:['une jupe','f'],robe:['une robe','f'],chaussettes:['des chaussettes','fp'],baskets:['des baskets','fp'],sandales:['des sandales','fp'],bottes:['des bottes','fp'],casquette:['une casquette','f'],chapeau_cowboy:['un chapeau de cow-boy','m'],chapeau_classique:['un chapeau','m'],bonnet:['un bonnet','m'],lunettes:['des lunettes','fp'],gants:['des gants','mp']
+ tshirt:['un t-shirt','m'],pull:['un pull','m'],chemise:['une chemise','f'],veste:['une veste','f'],pantalon:['un pantalon','m'],short:['un short','m'],jupe:['une jupe','f'],robe:['une robe','f'],chaussettes:['des chaussettes','fp'],baskets:['des baskets','fp'],sandales:['des sandales','fp'],bottes:['des bottes','fp'],casquette:['une casquette','f'],chapeau_classique:['un chapeau','m'],bonnet:['un bonnet','m'],lunettes:['des lunettes','fp'],gants:['des gants','mp']
 };
 export function colorAdjective(color,gender){
  const feminine=gender.startsWith('f'),plural=gender.endsWith('p');

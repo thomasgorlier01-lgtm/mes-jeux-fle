@@ -1,5 +1,5 @@
-import catalog from './catalog.js?v=niveaux2';
-import {LEVELS,availableCategories,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=niveaux2';
+import catalog from './catalog.js?v=tenues3';
+import {LEVELS,availableCategories,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=tenues3';
 const $=id=>document.getElementById(id);
 let state=startGame(catalog),openedCategory=null,currentLayers='',currentLevel=2,isHome=true;
 const stage=$('stage'),categoryButtons=new Map(),menu=$('color-menu');
@@ -21,7 +21,7 @@ function openColors(category){
 }
 function wardrobe(){
  categoryButtons.clear();$('garment-picker').replaceChildren();$('garment-picker').dataset.level=currentLevel;
- for(const category of availableCategories(catalog,currentLevel)){
+ for(const category of availableCategories(catalog,currentLevel,state.rounds[state.round].avatar)){
   const button=document.createElement('button');button.className='garment-choice';button.type='button';button.dataset.category=category.id;button.setAttribute('aria-label',category.nom+' : choisir la couleur');button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-controls','color-menu');button.setAttribute('aria-expanded','false');button.setAttribute('aria-pressed','false');
   const img=new Image();img.src=category.preview;img.alt='';img.width=128;img.height=128;img.decoding='async';const check=document.createElement('span');check.className='garment-check';check.textContent='✓';check.setAttribute('aria-hidden','true');button.append(img,check);button.addEventListener('click',()=>openColors(category));categoryButtons.set(category.id,button);$('garment-picker').append(button);
  }
@@ -36,7 +36,8 @@ function render(){
  $('level-home').hidden=!isHome;$('score-card').hidden=isHome;$('progress-track').hidden=isHome;$('choose-level').hidden=isHome;$('restart').hidden=isHome;
  if(isHome){$('game').hidden=true;$('finish').hidden=true;$('intro').textContent='Choisis ton niveau pour commencer.';return;}
  $('intro').textContent=`Niveau ${currentLevel} · ${LEVELS.find(x=>x.id===currentLevel).title}`;
- const finished=state.phase==='finished',round=state.rounds[state.round];$('game').hidden=finished;$('finish').hidden=!finished;
+ const finished=state.phase==='finished',round=state.rounds[state.round];
+ if($('garment-picker').dataset.avatar!==round.avatar){wardrobe();$('garment-picker').dataset.avatar=round.avatar;}$('game').hidden=finished;$('finish').hidden=!finished;
  $('score').textContent=`${state.score} / ${state.rounds.length}`;$('progress-bar').style.width=`${(finished?10:state.round)/state.rounds.length*100}%`;
  if(finished){$('finish-summary').textContent=`Tu as trouvé ${state.score} tenue${state.score>1?'s':''} sur ${state.rounds.length}. Une nouvelle partie t’attend avec d’autres couleurs !`;$('play-again').focus();return;}
  $('round').textContent=`TENUE ${state.round+1} / ${state.rounds.length}`;$('character-title').textContent=`Habille ${round.avatar==='garcon'?'Léo':'Lina'}`;
@@ -44,7 +45,7 @@ function render(){
  $('description').textContent=describeRound(round,catalog);$('feedback').textContent=state.feedback;$('feedback').dataset.type=state.feedbackType;
  $('check').hidden=state.phase!=='playing';$('check').disabled=!canCheck(state);$('clear').disabled=state.phase!=='playing'||!Object.keys(state.selection).length;
  $('reveal').hidden=state.phase!=='out-of-lives';$('next').hidden=!['success','solution'].includes(state.phase);$('next').textContent=state.round===9?'Voir mon résultat →':'Personnage suivant →';
- for(const category of availableCategories(catalog,currentLevel)){const button=categoryButtons.get(category.id),selected=catalog.elements.find(x=>x.id===state.selection[category.emplacement]&&x.categorie===category.id);button.setAttribute('aria-pressed',String(!!selected));button.disabled=state.phase!=='playing';button.querySelector('img').src=selected?selected.thumbnail:category.preview;}
+ for(const category of availableCategories(catalog,currentLevel,state.rounds[state.round].avatar)){const button=categoryButtons.get(category.id),selected=catalog.elements.find(x=>x.id===state.selection[category.emplacement]&&x.categorie===category.id);button.setAttribute('aria-pressed',String(!!selected));button.disabled=state.phase!=='playing';button.querySelector('img').src=selected?selected.thumbnail:category.preview;}
  drawCharacter();
 }
 function startLevel(level){closeColors();currentLevel=level;isHome=false;state=startGame(catalog,Math.random,level);currentLayers='';wardrobe();render();$('character-title').scrollIntoView({block:'nearest',behavior:'smooth'});}
