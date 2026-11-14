@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#f8f3e9"><meta name="description" content="Lis la description et habille le personnage. Un jeu de français pour apprendre les vêtements et les couleurs.">
+ <title>L’atelier des vêtements — Jeu de français</title>
+ <link rel="stylesheet" href="styles.css"><script type="module" src="app.js"></script>
+</head>
+<body>
+ <main class="shell">
+  <header class="header">
+   <a class="brand" href="../" aria-label="Retour aux jeux de français"><span class="brand-symbol" aria-hidden="true">✦</span><span>Mes jeux de français</span></a>
+   <div class="header-actions"><details class="help"><summary>Comment jouer ?</summary><div>Lis la description. Clique sur l’image d’un vêtement, puis choisis sa couleur. Pour l’enlever, ouvre à nouveau ses couleurs et clique sur « Retirer ». Une robe remplace le haut et le bas. Tu as trois essais pour chaque tenue.</div></details><button id="restart" class="quiet" type="button">↻ Recommencer</button></div>
+  </header>
+  <div class="title-row"><div><p class="eyebrow">LES VÊTEMENTS & LES COULEURS</p><h1>L’atelier des vêtements<span class="title-dot">.</span></h1><p class="intro">Lis, choisis… et habille le personnage !</p></div><div class="score-card"><span class="score-star" aria-hidden="true">★</span><div><strong id="score">0 / 10</strong><span>tenues réussies</span></div></div></div>
+  <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+  <section id="game" class="game-layout" aria-label="Atelier d’habillage">
+    <section class="character-card" aria-labelledby="character-title">
+     <div class="card-top"><span class="round-pill" id="round">TENUE 1 / 10</span><span class="lives" id="lives" role="img" aria-label="3 essais restants"></span></div>
+     <h2 id="character-title">Habille Léo</h2>
+     <div class="stage" id="stage" role="img" aria-label="Personnage à habiller"></div>
+     <div class="stage-footer"><span class="stage-note">À toi de choisir sa tenue</span><button id="clear" class="clear" type="button">Tout retirer</button></div>
+    </section>
+   <div class="outfit-controls">
+    <section class="instruction-card" aria-labelledby="instruction-title"><div class="instruction-heading"><span aria-hidden="true">✎</span><h2 id="instruction-title">La tenue à trouver</h2></div><p id="description"></p><p class="instruction-note">Mets uniquement les vêtements décrits.</p></section>
+    <section class="picker-card" aria-label="Choisir les vêtements"><p class="picker-note">Choisis un vêtement, puis sa couleur.</p><div class="garment-picker" id="garment-picker"></div></section>
+    <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="action-row"><button id="check" class="primary" type="button"><span aria-hidden="true">✓</span> Vérifier ma tenue</button><button id="reveal" class="primary secondary" type="button" hidden>Voir la solution</button><button id="next" class="primary" type="button" hidden>Personnage suivant <span aria-hidden="true">→</span></button></div>
+   </div>
+  </section>
+  <section class="finish-card" id="finish" hidden aria-labelledby="finish-title"><span class="finish-star" aria-hidden="true">✦</span><p class="eyebrow">PARTIE TERMINÉE</p><h2 id="finish-title">Bravo pour ton travail !</h2><p id="finish-summary"></p><button class="primary" id="play-again" type="button">Jouer une nouvelle partie <span aria-hidden="true">↻</span></button></section>
+  <footer class="footer"><span>Un peu de lecture, beaucoup de couleurs.</span><span>10 tenues · 3 essais par tenue</span></footer>
+ </main>
+ <div id="color-menu" class="color-menu" role="dialog" aria-label="Choisir une couleur" hidden><div class="color-menu-header"><strong>Choisis une couleur</strong><button id="close-colors" type="button" aria-label="Fermer les couleurs">×</button></div><div id="color-options" class="color-options"></div><button id="remove-item" class="remove-item" type="button" hidden>Retirer</button></div>
+ <noscript><p>Active JavaScript pour jouer à l’atelier des vêtements.</p></noscript>
+</body></html>

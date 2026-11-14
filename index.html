@@ -37,7 +37,7 @@
       <div class="hero-text"><span class="eyebrow">BIENVENUE ! 👋</span><h1 id="welcome">Mes jeux de français</h1><p>Choisis un jeu, observe bien les images et amuse-toi avec les mots !</p></div>
       <div class="hero-deco" aria-hidden="true">🎲</div>
     </section>
-    <div class="sectionhead"><div><h2>Jeux</h2><p>Choisis ton niveau, puis un jeu.</p></div><div class="counter" id="counter">3 jeux</div></div>
+    <div class="sectionhead"><div><h2>Jeux</h2><p>Choisis ton niveau, puis un jeu.</p></div><div class="counter" id="counter">4 jeux</div></div>
     <nav class="levels" aria-label="Niveaux des jeux">
       <button class="level" type="button" data-level="Débutant" aria-pressed="true">🌱 Débutant</button>
       <button class="level" type="button" data-level="Intermédiaire" aria-pressed="false">🌟 Intermédiaire</button>
@@ -58,6 +58,17 @@
     // changer le titre, la description, la catégorie, l'emoji et l'URL.
     // Ne pas oublier la virgule entre les jeux.
     const JEUX = [
+      {
+        titre: 'L’atelier des vêtements',
+        description: 'Lis la description et habille Léo ou Lina avec les bons vêtements et les bonnes couleurs.',
+        categorie: 'Les vêtements et les couleurs',
+        niveau: 'Débutant',
+        emoji: '👕',
+        couleur: 'vest',
+        bulle1: '🎨',
+        bulle2: '✓',
+        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/atelier-habillage/'
+      },
       {
         titre: 'Qui est-ce ? Les monstres',
         description: 'Observe les monstres et retrouve celui qui correspond à la description.',
