@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#f8f3e9"><meta name="description" content="Lis la description et habille le personnage. Un jeu de français pour apprendre les traits du visage et les couleurs.">
+ <title>L’atelier des visages — Jeu de français</title>
+ <link rel="stylesheet" href="styles.css?v=1"><script type="module" src="app.js?v=1"></script>
+</head>
+<body>
+ <main class="shell">
+  <header class="header">
+   <a class="brand" href="../" aria-label="Retour aux jeux de français"><span class="brand-symbol" aria-hidden="true">✦</span><span>Mes jeux de français</span></a>
+   <div class="header-actions"><button id="choose-level" class="quiet" type="button" hidden>← Les niveaux</button><details class="help"><summary>Comment jouer ?</summary><div>Lis la description, puis clique sur les images pour choisir les yeux, les cheveux, le nez, les oreilles et la bouche. Les couleurs et les tailles apparaissent au clic. Au niveau 2, ajoute les accessoires décrits. Au niveau 3, attention aux négations ! Tu as trois essais par visage.</div></details><button id="restart" class="quiet" type="button" hidden>↻ Recommencer</button></div>
+  </header>
+  <div class="title-row"><div><p class="eyebrow">LE VISAGE & LES COULEURS</p><h1>L’atelier des visages<span class="title-dot">.</span></h1><p class="intro" id="intro">Choisis ton niveau pour commencer.</p></div><div class="score-card" id="score-card" hidden><span class="score-star" aria-hidden="true">★</span><div><strong id="score">0 / 10</strong><span>visages réussis</span></div></div></div>
+  <section id="level-home" class="level-home" aria-labelledby="level-title"><h2 id="level-title">À toi de choisir !</h2><p class="level-subtitle">Trois niveaux pour jouer avec les traits du visage et les couleurs.</p><div class="level-grid">
+   <button class="level-card" type="button" data-level="1"><span class="level-number">1</span><span class="level-art" aria-hidden="true"><img src="assets/preview_yeux.webp" alt=""><img src="assets/preview_cheveux.webp" alt=""></span><span class="level-label">NIVEAU 1</span><strong>Visages <span class="difficulty" aria-label="difficulté 1 sur 3">*</span></strong><span class="level-description">Les yeux, les cheveux, le nez, les oreilles et la bouche.</span><span class="level-play">C’est parti <span aria-hidden="true">→</span></span></button>
+   <button class="level-card" type="button" data-level="2"><span class="level-number">2</span><span class="level-art" aria-hidden="true"><img src="assets/preview_lunettes.webp" alt=""><img src="assets/preview_chapeau.webp" alt=""></span><span class="level-label">NIVEAU 2</span><strong>Visages <span class="difficulty" aria-label="difficulté 2 sur 3">**</span></strong><span class="level-description">Les traits du visage, les lunettes, les chapeaux et les boucles d’oreilles.</span><span class="level-play">C’est parti <span aria-hidden="true">→</span></span></button>
+   <button class="level-card" type="button" data-level="3"><span class="level-number">3</span><span class="level-art" aria-hidden="true"><img src="assets/preview_boucles.webp" alt=""><span class="negative-art">ne… pas</span></span><span class="level-label">NIVEAU 3</span><strong>Visages <span class="difficulty" aria-label="difficulté 3 sur 3">***</span></strong><span class="level-description">Attention aux négations.</span><span class="level-play">C’est parti <span aria-hidden="true">→</span></span></button>
+  </div></section>
+  <div class="progress-track" id="progress-track" aria-hidden="true" hidden><span id="progress-bar"></span></div>
+  <section id="game" class="game-layout" aria-label="Atelier des visages" hidden>
+    <section class="character-card" aria-labelledby="character-title">
+     <div class="card-top"><span class="round-pill" id="round">VISAGE 1 / 10</span><span class="lives" id="lives" role="img" aria-label="3 essais restants"></span></div>
+     <h2 id="character-title">Crée le visage de Léo</h2>
+     <div class="stage" id="stage" role="img" aria-label="Visage à créer"></div>
+     <div class="stage-footer"><span class="stage-note">À toi de créer son visage</span><button id="clear" class="clear" type="button">Tout retirer</button></div>
+    </section>
+   <div class="outfit-controls">
+    <section class="instruction-card" aria-labelledby="instruction-title"><div class="instruction-heading"><span aria-hidden="true">✎</span><h2 id="instruction-title">Le visage à créer</h2></div><p id="description"></p><p class="instruction-note">Ajoute uniquement les éléments décrits.</p></section>
+    <section class="picker-card" aria-label="Choisir les traits du visage"><p class="picker-note">Choisis un élément, puis sa couleur ou sa taille.</p><div class="garment-picker" id="garment-picker"></div></section>
+    <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div class="action-row"><button id="check" class="primary" type="button"><span aria-hidden="true">✓</span> Vérifier mon visage</button><button id="reveal" class="primary secondary" type="button" hidden>Voir la solution</button><button id="next" class="primary" type="button" hidden>Personnage suivant <span aria-hidden="true">→</span></button></div>
+   </div>
+  </section>
+  <section class="finish-card" id="finish" hidden aria-labelledby="finish-title"><span class="finish-star" aria-hidden="true">✦</span><p class="eyebrow">PARTIE TERMINÉE</p><h2 id="finish-title">Bravo pour ton travail !</h2><p id="finish-summary"></p><button class="primary" id="play-again" type="button">Jouer une nouvelle partie <span aria-hidden="true">↻</span></button></section>
+  <footer class="footer"><span>Un peu de lecture, beaucoup de couleurs.</span><span>10 visages · 3 essais par visage</span></footer>
+ </main>
+ <div id="color-menu" class="color-menu" role="dialog" aria-label="Choisir une variante" hidden><div class="color-menu-header"><strong>Choisis une variante</strong><button id="close-colors" type="button" aria-label="Fermer les variantes">×</button></div><div id="color-options" class="color-options"></div><button id="remove-item" class="remove-item" type="button" hidden>Retirer</button></div>
+ <noscript><p>Active JavaScript pour jouer à l’atelier des vêtements.</p></noscript>
+<script src="../fullscreen.js?v=1" data-fle-fullscreen-script defer></script>
+</body></html>
