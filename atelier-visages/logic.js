@@ -30,13 +30,13 @@ export function nextRound(state){if(!['success','solution'].includes(state.phase
 export const describeItem=item=>item.description;
 const list=a=>a.length>1?a.slice(0,-1).join(', ')+' et '+a.at(-1):a[0];
 export function describeRound(round,catalog){
- const p=round.avatar==='garcon'?'Il':'Elle',get=slot=>catalog.elements.find(x=>x.id===round.expected[slot])?.description,basics=BASIC.map(get),positiveSlots=['chapeau','lunettes','boucles'].filter(s=>round.expected[s]),accessories=positiveSlots.map(get);
+ const p=round.avatar==='garcon'?'Il':'Elle',get=slot=>catalog.elements.find(x=>x.id===round.expected[slot])?.description,basics=BASIC.map(slot=>slot==='bouche'&&round.level===3?get(slot).match(/^une (?:petite|grande) bouche/)[0]:get(slot)),positiveSlots=['chapeau','lunettes','boucles'].filter(s=>round.expected[s]),accessories=positiveSlots.map(get);
  const description=`${p} a ${list(basics)}.`;
  if(round.level!==3)return description+(accessories.length?` ${p} porte ${list(accessories)}.`:'');
  const negatives={chapeau:'n’a pas de chapeau',lunettes:'n’a pas de lunettes',boucles:'n’a pas de boucles d’oreilles'};
  const present=`a ${list(accessories)}`,absent=negatives[round.negativeSlots[0]],contrast=round.negativeFirst?`${p} ${absent}, mais ${p.toLowerCase()} ${present}.`:`${p} ${present}, mais ${p.toLowerCase()} ${absent}.`;
  const emotion=catalog.elements.find(x=>x.id===round.expected.bouche)?.emotion,words={content:round.avatar==='fille'?'contente':'content',triste:'triste',fache:round.avatar==='fille'?'fâchée':'fâché',malade:'malade',surpris:round.avatar==='fille'?'surprise':'surpris'};
- const sentences=[description,`${p} est ${words[emotion]}.`,contrast];
+ const sentences=[`${description.slice(0,-1)}, ${p.toLowerCase()} est ${words[emotion]}.`,contrast];
  if(round.negativeSlots[1])sentences.push(`${p} ${negatives[round.negativeSlots[1]]}.`);
  return sentences.join(' ');
 }
