@@ -1,5 +1,5 @@
-import catalog from './catalog.js?v=1';
-import {LEVELS,availableCategories,availableItems,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=1';
+import catalog from './catalog.js?v=2';
+import {LEVELS,availableCategories,availableItems,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=2';
 const $=id=>document.getElementById(id);
 let state=startGame(catalog),openedCategory=null,currentLayers='',currentLevel=1,isHome=true;
 const stage=$('stage'),categoryButtons=new Map(),menu=$('color-menu');
@@ -10,7 +10,7 @@ function openColors(category){
  if(openedCategory===category.id){closeColors();return;}closeColors();openedCategory=category.id;
  const selected=catalog.elements.find(x=>x.id===state.selection[category.emplacement]&&x.categorie===category.id);
  $('color-options').replaceChildren();
- for(const item of availableItems(catalog,category.id,state.rounds[state.round].avatar)){
+ for(const item of availableItems(catalog,category.id,state.rounds[state.round].avatar,currentLevel)){
   const button=document.createElement('button');button.className='color-option';button.type='button';button.dataset.item=item.id;button.setAttribute('aria-label',describeItem(item));button.setAttribute('aria-pressed',String(selected?.id===item.id));
   const img=new Image();img.src=item.thumbnail;img.alt='';img.width=128;img.height=128;
   button.append(img);
@@ -28,7 +28,7 @@ function wardrobe(){
 }
 function drawCharacter(){
  const round=state.rounds[state.round],key=round.avatar+'|'+Object.values(state.selection).sort().join('|');if(key===currentLayers)return;currentLayers=key;
- const layers=[{image:'assets/base.webp',box:[170,200,460,500],z:5},...Object.values(state.selection).flatMap(id=>{const item=catalog.elements.find(x=>x.id===id);return item.frontFringe?[item,{...item,image:item.image.replace('_longs_','_courts_'),box:[140,150,520,300],z:30}]:[item]})].sort((a,b)=>a.z-b.z);
+ const layers=[{image:'assets/base.webp',box:[170,200,460,500],z:5},...Object.values(state.selection).flatMap(id=>{const item=catalog.elements.find(x=>x.id===id);return item.frontFringe?[item,{...item,image:item.frontImage||item.image.replace('_longs_','_courts_'),box:[140,150,520,300],z:30}]:[item]})].sort((a,b)=>a.z-b.z);
  stage.replaceChildren();for(const layer of layers){const img=new Image();img.src=layer.image;img.alt='';img.draggable=false;img.decoding='async';const [x,y,w,h]=layer.box;Object.assign(img.style,{left:x/8+'%',top:y/9+'%',width:w/8+'%',height:h/9+'%',clipPath:layer.clip||'none'});stage.append(img)}
  stage.setAttribute('aria-label',`${round.avatar==='garcon'?'Léo, un garçon':'Lina, une fille'}, ${Object.values(state.selection).length?Object.values(state.selection).map(id=>describeItem(catalog.elements.find(x=>x.id===id))).join(', '):'visage vierge à compléter'}`);
 }

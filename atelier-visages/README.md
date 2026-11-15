@@ -3,10 +3,10 @@
 Jeu de lecture en français, dans le canevas de l’atelier des vêtements : dix portraits par partie, trois essais, alternance garçon-fille, score, solution après trois erreurs, plein écran et interface adaptée au mobile.
 
 1. Visages * : yeux bleus, verts, marron ou noirs ; cheveux blonds, bruns, noirs ou roux ; nez, oreilles et bouche de deux tailles.
-2. Visages ** : mêmes traits, plus lunettes, chapeau/casquette/bonnet et boucles d’oreilles, en sept couleurs.
-3. Visages *** : mêmes éléments, descriptions positives et négatives mélangées. Les accessoires absents doivent rester retirés.
+2. Visages ** : mêmes traits, avec deux ou trois accessoires à chaque portrait : lunettes, chapeau/casquette/bonnet et boucles d’oreilles, en sept couleurs.
+3. Visages *** : cinq états de la bouche (content, triste, fâché, malade avec thermomètre, surpris), chacun en deux tailles. Un ou deux accessoires présents par portrait, opposés à une absence dans une phrase avec « mais », dans les deux ordres. Les accessoires absents doivent rester retirés.
 
-Garçons : cheveux courts. Filles : cheveux courts ou longs, avec les deux longueurs proposées à chaque partie. Visage vierge au départ. Choix par images ; aucun nom ni indication « petit/grand » affiché dans les menus. Les descriptions et les libellés accessibles restent écrits.
+Garçons et filles : cheveux courts ou longs, avec des modèles distincts et les deux longueurs proposées à chaque partie. Visage vierge au départ. Choix par images ; aucun nom ni indication « petit/grand » affiché dans les menus. Les descriptions et les libellés accessibles restent écrits.
 
 Les cheveux longs comprennent les longueurs derrière le visage et la frange au premier plan. Oreilles et boucles sont au-dessus des cheveux ; le nez et la bouche restent dégagés. Les vignettes utilisent un cadre commun pour distinguer visuellement les tailles.
 

@@ -115,150 +115,6 @@ export default {
       "optionLabel": "noirs"
     },
     {
-      "id": "cheveux_courts_blonds",
-      "categorie": "cheveux",
-      "emplacement": "cheveux",
-      "image": "assets/cheveux_courts_blonds.webp",
-      "thumbnail": "assets/thumb_cheveux_courts_blonds.webp",
-      "box": [
-        140,
-        150,
-        520,
-        300
-      ],
-      "z": 30,
-      "description": "des cheveux courts blonds",
-      "optionLabel": "blonds · courts",
-      "longueur": "courts",
-      "frontFringe": false
-    },
-    {
-      "id": "cheveux_courts_bruns",
-      "categorie": "cheveux",
-      "emplacement": "cheveux",
-      "image": "assets/cheveux_courts_bruns.webp",
-      "thumbnail": "assets/thumb_cheveux_courts_bruns.webp",
-      "box": [
-        140,
-        150,
-        520,
-        300
-      ],
-      "z": 30,
-      "description": "des cheveux courts bruns",
-      "optionLabel": "bruns · courts",
-      "longueur": "courts",
-      "frontFringe": false
-    },
-    {
-      "id": "cheveux_courts_noirs",
-      "categorie": "cheveux",
-      "emplacement": "cheveux",
-      "image": "assets/cheveux_courts_noirs.webp",
-      "thumbnail": "assets/thumb_cheveux_courts_noirs.webp",
-      "box": [
-        140,
-        150,
-        520,
-        300
-      ],
-      "z": 30,
-      "description": "des cheveux courts noirs",
-      "optionLabel": "noirs · courts",
-      "longueur": "courts",
-      "frontFringe": false
-    },
-    {
-      "id": "cheveux_courts_roux",
-      "categorie": "cheveux",
-      "emplacement": "cheveux",
-      "image": "assets/cheveux_courts_roux.webp",
-      "thumbnail": "assets/thumb_cheveux_courts_roux.webp",
-      "box": [
-        140,
-        150,
-        520,
-        300
-      ],
-      "z": 30,
-      "description": "des cheveux courts roux",
-      "optionLabel": "roux · courts",
-      "longueur": "courts",
-      "frontFringe": false
-    },
-    {
-      "id": "cheveux_longs_blonds",
-      "categorie": "cheveux",
-      "emplacement": "cheveux",
-      "image": "assets/cheveux_longs_blonds.webp",
-      "thumbnail": "assets/thumb_cheveux_longs_blonds.webp",
-      "box": [
-        90,
-        145,
-        620,
-        690
-      ],
-      "z": 1,
-      "description": "des cheveux longs blonds",
-      "optionLabel": "blonds · longs",
-      "longueur": "longs",
-      "frontFringe": true
-    },
-    {
-      "id": "cheveux_longs_bruns",
-      "categorie": "cheveux",
-      "emplacement": "cheveux",
-      "image": "assets/cheveux_longs_bruns.webp",
-      "thumbnail": "assets/thumb_cheveux_longs_bruns.webp",
-      "box": [
-        90,
-        145,
-        620,
-        690
-      ],
-      "z": 1,
-      "description": "des cheveux longs bruns",
-      "optionLabel": "bruns · longs",
-      "longueur": "longs",
-      "frontFringe": true
-    },
-    {
-      "id": "cheveux_longs_noirs",
-      "categorie": "cheveux",
-      "emplacement": "cheveux",
-      "image": "assets/cheveux_longs_noirs.webp",
-      "thumbnail": "assets/thumb_cheveux_longs_noirs.webp",
-      "box": [
-        90,
-        145,
-        620,
-        690
-      ],
-      "z": 1,
-      "description": "des cheveux longs noirs",
-      "optionLabel": "noirs · longs",
-      "longueur": "longs",
-      "frontFringe": true
-    },
-    {
-      "id": "cheveux_longs_roux",
-      "categorie": "cheveux",
-      "emplacement": "cheveux",
-      "image": "assets/cheveux_longs_roux.webp",
-      "thumbnail": "assets/thumb_cheveux_longs_roux.webp",
-      "box": [
-        90,
-        145,
-        620,
-        690
-      ],
-      "z": 1,
-      "description": "des cheveux longs roux",
-      "optionLabel": "roux · longs",
-      "longueur": "longs",
-      "frontFringe": true
-    },
-    {
       "id": "nez_petit",
       "categorie": "nez",
       "emplacement": "nez",
@@ -305,7 +161,11 @@ export default {
       ],
       "z": 25,
       "description": "une petite bouche",
-      "optionLabel": "Petite"
+      "optionLabel": "Petite",
+      "levels": [
+        1,
+        2
+      ]
     },
     {
       "id": "nez_grand",
@@ -354,7 +214,11 @@ export default {
       ],
       "z": 25,
       "description": "une grande bouche",
-      "optionLabel": "Grande"
+      "optionLabel": "Grande",
+      "levels": [
+        1,
+        2
+      ]
     },
     {
       "id": "boucles_rouge",
@@ -922,6 +786,522 @@ export default {
       "z": 50,
       "description": "un bonnet bleu",
       "optionLabel": "Bonnet · bleu"
+    },
+    {
+      "id": "cheveux_garcon_courts_blonds",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_courts_blonds.webp",
+      "thumbnail": "assets/thumb_cheveux_courts_blonds.webp",
+      "box": [
+        140,
+        150,
+        520,
+        300
+      ],
+      "z": 30,
+      "description": "des cheveux courts blonds",
+      "optionLabel": "blonds · courts",
+      "longueur": "courts",
+      "frontFringe": false,
+      "avatar": "garcon"
+    },
+    {
+      "id": "cheveux_garcon_courts_bruns",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_courts_bruns.webp",
+      "thumbnail": "assets/thumb_cheveux_courts_bruns.webp",
+      "box": [
+        140,
+        150,
+        520,
+        300
+      ],
+      "z": 30,
+      "description": "des cheveux courts bruns",
+      "optionLabel": "bruns · courts",
+      "longueur": "courts",
+      "frontFringe": false,
+      "avatar": "garcon"
+    },
+    {
+      "id": "cheveux_garcon_courts_noirs",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_courts_noirs.webp",
+      "thumbnail": "assets/thumb_cheveux_courts_noirs.webp",
+      "box": [
+        140,
+        150,
+        520,
+        300
+      ],
+      "z": 30,
+      "description": "des cheveux courts noirs",
+      "optionLabel": "noirs · courts",
+      "longueur": "courts",
+      "frontFringe": false,
+      "avatar": "garcon"
+    },
+    {
+      "id": "cheveux_garcon_courts_roux",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_courts_roux.webp",
+      "thumbnail": "assets/thumb_cheveux_courts_roux.webp",
+      "box": [
+        140,
+        150,
+        520,
+        300
+      ],
+      "z": 30,
+      "description": "des cheveux courts roux",
+      "optionLabel": "roux · courts",
+      "longueur": "courts",
+      "frontFringe": false,
+      "avatar": "garcon"
+    },
+    {
+      "id": "cheveux_garcon_longs_blonds",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_garcon_longs_blonds.webp",
+      "thumbnail": "assets/thumb_cheveux_garcon_longs_blonds.webp",
+      "box": [
+        115,
+        150,
+        570,
+        600
+      ],
+      "z": 1,
+      "description": "des cheveux longs blonds",
+      "optionLabel": "blonds · longs",
+      "longueur": "longs",
+      "frontFringe": true,
+      "avatar": "garcon",
+      "frontImage": "assets/cheveux_courts_blonds.webp"
+    },
+    {
+      "id": "cheveux_garcon_longs_bruns",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_garcon_longs_bruns.webp",
+      "thumbnail": "assets/thumb_cheveux_garcon_longs_bruns.webp",
+      "box": [
+        115,
+        150,
+        570,
+        600
+      ],
+      "z": 1,
+      "description": "des cheveux longs bruns",
+      "optionLabel": "bruns · longs",
+      "longueur": "longs",
+      "frontFringe": true,
+      "avatar": "garcon",
+      "frontImage": "assets/cheveux_courts_bruns.webp"
+    },
+    {
+      "id": "cheveux_garcon_longs_noirs",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_garcon_longs_noirs.webp",
+      "thumbnail": "assets/thumb_cheveux_garcon_longs_noirs.webp",
+      "box": [
+        115,
+        150,
+        570,
+        600
+      ],
+      "z": 1,
+      "description": "des cheveux longs noirs",
+      "optionLabel": "noirs · longs",
+      "longueur": "longs",
+      "frontFringe": true,
+      "avatar": "garcon",
+      "frontImage": "assets/cheveux_courts_noirs.webp"
+    },
+    {
+      "id": "cheveux_garcon_longs_roux",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_garcon_longs_roux.webp",
+      "thumbnail": "assets/thumb_cheveux_garcon_longs_roux.webp",
+      "box": [
+        115,
+        150,
+        570,
+        600
+      ],
+      "z": 1,
+      "description": "des cheveux longs roux",
+      "optionLabel": "roux · longs",
+      "longueur": "longs",
+      "frontFringe": true,
+      "avatar": "garcon",
+      "frontImage": "assets/cheveux_courts_roux.webp"
+    },
+    {
+      "id": "cheveux_fille_courts_blonds",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_fille_courts_blonds.webp",
+      "thumbnail": "assets/thumb_cheveux_fille_courts_blonds.webp",
+      "box": [
+        130,
+        150,
+        540,
+        460
+      ],
+      "z": 1,
+      "description": "des cheveux courts blonds",
+      "optionLabel": "blonds · courts",
+      "longueur": "courts",
+      "frontFringe": true,
+      "avatar": "fille",
+      "frontImage": "assets/cheveux_courts_blonds.webp"
+    },
+    {
+      "id": "cheveux_fille_courts_bruns",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_fille_courts_bruns.webp",
+      "thumbnail": "assets/thumb_cheveux_fille_courts_bruns.webp",
+      "box": [
+        130,
+        150,
+        540,
+        460
+      ],
+      "z": 1,
+      "description": "des cheveux courts bruns",
+      "optionLabel": "bruns · courts",
+      "longueur": "courts",
+      "frontFringe": true,
+      "avatar": "fille",
+      "frontImage": "assets/cheveux_courts_bruns.webp"
+    },
+    {
+      "id": "cheveux_fille_courts_noirs",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_fille_courts_noirs.webp",
+      "thumbnail": "assets/thumb_cheveux_fille_courts_noirs.webp",
+      "box": [
+        130,
+        150,
+        540,
+        460
+      ],
+      "z": 1,
+      "description": "des cheveux courts noirs",
+      "optionLabel": "noirs · courts",
+      "longueur": "courts",
+      "frontFringe": true,
+      "avatar": "fille",
+      "frontImage": "assets/cheveux_courts_noirs.webp"
+    },
+    {
+      "id": "cheveux_fille_courts_roux",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_fille_courts_roux.webp",
+      "thumbnail": "assets/thumb_cheveux_fille_courts_roux.webp",
+      "box": [
+        130,
+        150,
+        540,
+        460
+      ],
+      "z": 1,
+      "description": "des cheveux courts roux",
+      "optionLabel": "roux · courts",
+      "longueur": "courts",
+      "frontFringe": true,
+      "avatar": "fille",
+      "frontImage": "assets/cheveux_courts_roux.webp"
+    },
+    {
+      "id": "cheveux_fille_longs_blonds",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_longs_blonds.webp",
+      "thumbnail": "assets/thumb_cheveux_longs_blonds.webp",
+      "box": [
+        90,
+        145,
+        620,
+        690
+      ],
+      "z": 1,
+      "description": "des cheveux longs blonds",
+      "optionLabel": "blonds · longs",
+      "longueur": "longs",
+      "frontFringe": true,
+      "avatar": "fille",
+      "frontImage": "assets/cheveux_courts_blonds.webp"
+    },
+    {
+      "id": "cheveux_fille_longs_bruns",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_longs_bruns.webp",
+      "thumbnail": "assets/thumb_cheveux_longs_bruns.webp",
+      "box": [
+        90,
+        145,
+        620,
+        690
+      ],
+      "z": 1,
+      "description": "des cheveux longs bruns",
+      "optionLabel": "bruns · longs",
+      "longueur": "longs",
+      "frontFringe": true,
+      "avatar": "fille",
+      "frontImage": "assets/cheveux_courts_bruns.webp"
+    },
+    {
+      "id": "cheveux_fille_longs_noirs",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_longs_noirs.webp",
+      "thumbnail": "assets/thumb_cheveux_longs_noirs.webp",
+      "box": [
+        90,
+        145,
+        620,
+        690
+      ],
+      "z": 1,
+      "description": "des cheveux longs noirs",
+      "optionLabel": "noirs · longs",
+      "longueur": "longs",
+      "frontFringe": true,
+      "avatar": "fille",
+      "frontImage": "assets/cheveux_courts_noirs.webp"
+    },
+    {
+      "id": "cheveux_fille_longs_roux",
+      "categorie": "cheveux",
+      "emplacement": "cheveux",
+      "image": "assets/cheveux_longs_roux.webp",
+      "thumbnail": "assets/thumb_cheveux_longs_roux.webp",
+      "box": [
+        90,
+        145,
+        620,
+        690
+      ],
+      "z": 1,
+      "description": "des cheveux longs roux",
+      "optionLabel": "roux · longs",
+      "longueur": "longs",
+      "frontFringe": true,
+      "avatar": "fille",
+      "frontImage": "assets/cheveux_courts_roux.webp"
+    },
+    {
+      "id": "bouche_petit_content",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_petit_content.webp",
+      "thumbnail": "assets/thumb_bouche_petit_content.webp",
+      "box": [
+        355,
+        580,
+        90,
+        30
+      ],
+      "z": 25,
+      "description": "une petite bouche souriante",
+      "optionLabel": "content",
+      "emotion": "content",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_grand_content",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_grand_content.webp",
+      "thumbnail": "assets/thumb_bouche_grand_content.webp",
+      "box": [
+        315,
+        575,
+        170,
+        55
+      ],
+      "z": 25,
+      "description": "une grande bouche souriante",
+      "optionLabel": "content",
+      "emotion": "content",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_petit_triste",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_petit_triste.webp",
+      "thumbnail": "assets/thumb_bouche_petit_triste.webp",
+      "box": [
+        355,
+        580,
+        90,
+        30
+      ],
+      "z": 25,
+      "description": "une petite bouche triste",
+      "optionLabel": "triste",
+      "emotion": "triste",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_grand_triste",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_grand_triste.webp",
+      "thumbnail": "assets/thumb_bouche_grand_triste.webp",
+      "box": [
+        315,
+        575,
+        170,
+        55
+      ],
+      "z": 25,
+      "description": "une grande bouche triste",
+      "optionLabel": "triste",
+      "emotion": "triste",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_petit_fache",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_petit_fache.webp",
+      "thumbnail": "assets/thumb_bouche_petit_fache.webp",
+      "box": [
+        350,
+        580,
+        100,
+        42
+      ],
+      "z": 25,
+      "description": "une petite bouche aux dents serrées",
+      "optionLabel": "fache",
+      "emotion": "fache",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_grand_fache",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_grand_fache.webp",
+      "thumbnail": "assets/thumb_bouche_grand_fache.webp",
+      "box": [
+        315,
+        570,
+        170,
+        70
+      ],
+      "z": 25,
+      "description": "une grande bouche aux dents serrées",
+      "optionLabel": "fache",
+      "emotion": "fache",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_petit_malade",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_petit_malade.webp",
+      "thumbnail": "assets/thumb_bouche_petit_malade.webp",
+      "box": [
+        340,
+        575,
+        150,
+        72
+      ],
+      "z": 25,
+      "description": "une petite bouche avec un thermomètre",
+      "optionLabel": "malade",
+      "emotion": "malade",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_grand_malade",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_grand_malade.webp",
+      "thumbnail": "assets/thumb_bouche_grand_malade.webp",
+      "box": [
+        305,
+        565,
+        210,
+        100
+      ],
+      "z": 25,
+      "description": "une grande bouche avec un thermomètre",
+      "optionLabel": "malade",
+      "emotion": "malade",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_petit_surpris",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_petit_surpris.webp",
+      "thumbnail": "assets/thumb_bouche_petit_surpris.webp",
+      "box": [
+        373,
+        575,
+        54,
+        60
+      ],
+      "z": 25,
+      "description": "une petite bouche ouverte en « O »",
+      "optionLabel": "surpris",
+      "emotion": "surpris",
+      "levels": [
+        3
+      ]
+    },
+    {
+      "id": "bouche_grand_surpris",
+      "categorie": "bouche",
+      "emplacement": "bouche",
+      "image": "assets/bouche_grand_surpris.webp",
+      "thumbnail": "assets/thumb_bouche_grand_surpris.webp",
+      "box": [
+        350,
+        555,
+        100,
+        110
+      ],
+      "z": 25,
+      "description": "une grande bouche ouverte en « O »",
+      "optionLabel": "surpris",
+      "emotion": "surpris",
+      "levels": [
+        3
+      ]
     }
   ]
 };
