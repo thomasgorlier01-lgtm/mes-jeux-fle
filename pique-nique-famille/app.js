@@ -1,9 +1,9 @@
-import {FOODS,UTENSILS,PEOPLE,key,sentence,matches,newOrders} from './logic.js?v=2';
+import {FOODS,UTENSILS,PEOPLE,key,sentence,matches,newOrders} from './logic.js?v=3';
 const $=id=>document.getElementById(id);
 let mode='home',series=0,selectedWord=null,solved=new Map(),round=0,orders=[],plates=[[],[],[],[]],locked=false,audioData={},playingButton=null;
 let audioContext=null,audioSource=null,audioGeneration=0;
 const audioBuffers=new Map();
-const ready=fetch('assets/audio-v2.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>audioData=d).catch(()=>message('L’audio n’a pas pu être chargé. Recharge la page pour réessayer.',false));
+const ready=fetch('assets/audio-v3.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>audioData=d).catch(()=>message('L’audio n’a pas pu être chargé. Recharge la page pour réessayer.',false));
 function stopAudio(){
  audioGeneration++;
  if(audioSource){audioSource.onended=null;try{audioSource.stop();}catch{}audioSource.disconnect();audioSource=null;}
@@ -42,8 +42,9 @@ function answer(id,x,y){if(mode!=='words'||!selectedWord)return;if(selectedWord!
 function startOrders(){mode='orders';round=0;orders=newOrders();plates=[[],[],[],[]];locked=false;initView();renderOrder();}
 function renderOrder(){stopAudio();locked=false;$('next').hidden=true;$('verify').hidden=false;$('verify').disabled=false;$('clear').hidden=false;$('clear').disabled=false;const p=PEOPLE[round];$('progress').textContent=`${p.name} · Sandwich ${round+1} / 4`;$('commandText').textContent=sentence(orders[round]);$('command').setAttribute('aria-label','Écouter : '+sentence(orders[round]));requestAnimationFrame(updateTail);$('speaker').style.cssText=`left:${p.x}%;top:62.2%;`;$('instruction').textContent='Clique sur les aliments pour les ajouter. Clique à nouveau pour les enlever.';message('Écoute la commande, puis prépare le sandwich.');renderPlates();}
 function toggle(id){if(locked)return;const arr=plates[round],index=arr.indexOf(id);if(index>=0)arr.splice(index,1);else if(arr.length<4)arr.push(id);else{message('Tu peux mettre quatre ingrédients au maximum. Clique sur un ingrédient pour l’enlever.',false);return;}message('Tu peux réécouter la commande avant de vérifier.');renderPlates();}
-function renderPlates(){$('fillings').replaceChildren();plates.forEach((ids,person)=>{const sorted=FOODS.filter(f=>ids.includes(f.id));sorted.forEach((f,i)=>{const im=document.createElement('img');im.className='filling';im.src=`assets/garniture-${f.id}.webp`;im.alt='';// Offset each filling so every requested ingredient remains visible.
- im.style.cssText=`left:${PEOPLE[person].bread+(i%2)*4.8-1.3}%;top:${59.7+Math.floor(i/2)*4.3}%;`;im.dataset.food=f.id;im.dataset.person=person;$('fillings').append(im);});});document.querySelectorAll('.food').forEach(b=>{b.classList.toggle('chosen',plates[round].includes(b.dataset.id));b.setAttribute('aria-pressed',String(plates[round].includes(b.dataset.id)));b.disabled=locked;});}
+function renderPlates(){$('fillings').replaceChildren();plates.forEach((ids,person)=>{const sorted=FOODS.filter(f=>ids.includes(f.id));sorted.forEach((f,i)=>{const im=document.createElement('img');im.className='filling';im.src=`assets/garniture-${f.id}-v3.webp`;im.alt='';// Generous portions spread across the two open bread halves.
+ const positions=sorted.length===3?[[0,59],[6,59],[3,64]]:[[0,59.2],[6,59.2],[0,64],[6,64]];
+ const [dx,y]=positions[i];im.style.cssText=`left:${PEOPLE[person].bread+dx}%;top:${y}%;`;im.dataset.food=f.id;im.dataset.person=person;$('fillings').append(im);});});document.querySelectorAll('.food').forEach(b=>{b.classList.toggle('chosen',plates[round].includes(b.dataset.id));b.setAttribute('aria-pressed',String(plates[round].includes(b.dataset.id)));b.disabled=locked;});}
 $('discover').onclick=startWords;$('sandwich').onclick=startOrders;
 $('back').onclick=()=>{stopAudio();mode='home';$('play').hidden=true;$('home').hidden=false;document.body.classList.remove('command-mode');};
 $('question').onclick=()=>speak('question',$('question'));$('command').onclick=()=>speak(PEOPLE[round].voice+':'+key(orders[round]),$('command'));
