@@ -10,7 +10,15 @@ export function generateRounds(foods,random=Math.random,level=1){
  });
 }
 export const question=round=>`Que veut-${round.avatar==='fille'?'elle':'il'} ${round.level===3?'manger et boire':'manger'} ?`;
-export function describeRound(round,foods){const parts=round.expected.map(id=>foods.find(f=>f.id===id).phrase);return `Je voudrais ${parts.slice(0,-1).join(', ')} et ${parts.at(-1)}.`;}
+export function describeRound(round,foods){
+ const items=round.expected.map(id=>foods.find(f=>f.id===id));
+ const meal=items.filter(f=>!f.level).map(f=>f.phrase);
+ const list=parts=>parts.length>1?parts.slice(0,-1).join(', ')+' et '+parts.at(-1):parts[0];
+ const sentences=[`Je voudrais ${list(meal)}.`];
+ for(const dessert of items.filter(f=>f.group==='dessert'))sentences.push(`Je voudrais ${dessert.phrase} en dessert.`);
+ for(const drink of items.filter(f=>f.group==='boisson'))sentences.push(`Je voudrais boire ${drink.phrase}.`);
+ return sentences.join(' ');
+}
 export const startGame=(foods,random=Math.random,level=1)=>({level,rounds:generateRounds(foods,random,level),round:0,score:0,lives:3,selection:[],phase:'playing',lastAttempt:null,feedback:'',feedbackType:''});
 export function toggleFood(state,foods,id){if(state.phase!=='playing'||!availableFoods(foods,state.level).some(f=>f.id===id))return state;return {...state,selection:state.selection.includes(id)?state.selection.filter(x=>x!==id):[...state.selection,id],feedback:'',feedbackType:''};}
 export const clearPlate=state=>state.phase==='playing'?{...state,selection:[],feedback:'',feedbackType:''}:state;

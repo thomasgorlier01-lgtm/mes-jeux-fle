@@ -1,6 +1,6 @@
 # À table !
 
-Jeu de lecture à la cantine. Un garçon et une fille alternent, chacun tenant un plateau avec les deux mains, une grande assiette, une fourchette, un couteau et une cuillère. La question emploie « il » ou « elle » ; la commande est à la première personne : « Je voudrais du poulet, du riz, des tomates et du fromage. »
+Jeu de lecture à la cantine. Un garçon et une fille alternent, chacun tenant un plateau avec les deux mains, une grande assiette, une fourchette, un couteau et une cuillère. La question emploie « il » ou « elle ». La commande sépare le plat, le dessert et la boisson : « Je voudrais du poulet, du riz, des tomates et du fromage. Je voudrais un kiwi en dessert. Je voudrais boire de l’eau. »
 
 Trois niveaux :
 1. Le repas : quatre aliments dans l’assiette, parmi douze illustrations (poulet, steak, poisson, riz, pâtes, pommes de terre, frites, carottes, tomates, salade, œufs, fromage).
@@ -14,3 +14,5 @@ Dix plateaux différents par partie, tous les aliments du niveau représentés a
 Les illustrations des enfants reprennent les personnages validés de l’atelier des vêtements, adaptés avec le plateau en mains à partir de leurs références. Les images sont générées avec l’outil intégré puis découpées en sprites transparents WebP. La table de la première ébauche est remplacée par un plateau de cantine ; assiettes et couverts sont dessinés dans l’interface.
 
 Site statique, sans compte ni transmission des réponses. Plein écran, clavier, mobile, messages accessibles. Tests : `node --test tests/core.test.mjs`.
+
+L’assiette du plat est réduite et les portions occupent davantage son intérieur. Le dessert et le verre restent dans la surface du plateau, avec des couverts agrandis, poignées vers le personnage et pointes vers le bas de l’image.

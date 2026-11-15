@@ -13,7 +13,7 @@ export default [
  {id:'fromage',phrase:'du fromage',image:'assets/fromage.webp',group:'complement'},
  {id:'kiwi',phrase:'un kiwi',image:'assets/kiwi.webp',group:'dessert',level:2},
  {id:'yaourt',phrase:'un yaourt',image:'assets/yaourt.webp',group:'dessert',level:2},
- {id:'gateau',phrase:'du gâteau au chocolat',image:'assets/gateau.webp',group:'dessert',level:2},
+ {id:'gateau',phrase:'un gâteau au chocolat',image:'assets/gateau.webp',group:'dessert',level:2},
  {id:'glace',phrase:'une glace à la vanille et au chocolat',image:'assets/glace.webp',group:'dessert',level:2},
  {id:'eau',phrase:'de l’eau',image:'assets/eau.webp',group:'boisson',level:3},
  {id:'jus-orange',phrase:'du jus d’orange',image:'assets/jus-orange.webp',group:'boisson',level:3},
