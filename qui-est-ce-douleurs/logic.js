@@ -1,4 +1,4 @@
-const LOCATIONS={'tête':'à la tête','œil':'à l’œil','bras':'au bras','genou':'aux genoux','jambe':'à la jambe','pied':'aux pieds','main':'à la main','doigt':'aux doigts','ventre':'au ventre','nez':'au nez','oreille':'à l’oreille'};
+const LOCATIONS={'tête':'à la tête','œil':'à l’œil','bras':'au bras','genou':'au genou','jambe':'à la jambe','pied':'au pied','main':'à la main','doigt':'au doigt','ventre':'au ventre','nez':'au nez','oreille':'à l’oreille'};
 export const painKey=pains=>[...pains].sort().join('|');
 export function validateCharacters(characters){if(characters.length!==15)throw Error('La planche doit contenir 15 personnages');const keys=new Set(),ids=new Set();for(const c of characters){if(ids.has(c.id)||c.pains.length!==3||new Set(c.pains).size!==3||c.pains.some(x=>!LOCATIONS[x])||!['Il','Elle'].includes(c.pronoun))throw Error('Personnage invalide');const key=painKey(c.pains);if(keys.has(key))throw Error('Combinaison de douleurs en double');ids.add(c.id);keys.add(key);}return true;}
 export function shuffle(input,random=Math.random){const a=[...input];for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}

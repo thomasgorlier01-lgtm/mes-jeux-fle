@@ -1,6 +1,6 @@
 # Qui est-ce ? Les douleurs
 
-Un seul niveau. Les quinze portraits de la planche validée restent affichés. Chaque partie propose dix personnages différents à retrouver en lisant une phrase qui réunit leurs trois douleurs : « Il a mal aux genoux, à la tête et aux doigts. »
+Un seul niveau. Les quinze portraits de la planche validée restent affichés. Chaque partie propose dix personnages différents à retrouver en lisant une phrase qui réunit leurs trois douleurs : « Il a mal au genou, à la tête et au doigt. »
 
 Les pronoms suivent les personnages de la planche : numéros impairs « Il », numéros pairs « Elle ». Chaque combinaison de trois douleurs est unique, indépendamment du pronom. Les quinze correspondances proviennent du tableau d’origine et ont été vérifiées visuellement sur le PDF.
 
