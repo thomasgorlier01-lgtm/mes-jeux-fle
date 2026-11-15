@@ -1,6 +1,6 @@
 export default [
  {id:'poulet',phrase:'du poulet',image:'assets/poulet.webp',group:'proteine'},
- {id:'steak',phrase:'du steak',image:'assets/steak.webp',group:'proteine'},
+ {id:'steak',phrase:'de la viande',image:'assets/steak.webp',group:'proteine'},
  {id:'poisson',phrase:'du poisson',image:'assets/poisson.webp',group:'proteine'},
  {id:'riz',phrase:'du riz',image:'assets/riz.webp',group:'accompagnement'},
  {id:'pates',phrase:'des pâtes',image:'assets/pates.webp',group:'accompagnement'},
