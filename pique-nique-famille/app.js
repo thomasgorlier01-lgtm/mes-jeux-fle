@@ -1,3 +1,4 @@
+import {shuffleVocabulary} from '../word-order.js?v=1';
 import {FOODS,UTENSILS,PEOPLE,key,sentence,matches,newOrders} from './logic.js?v=3';
 const $=id=>document.getElementById(id);
 let mode='home',series=0,selectedWord=null,solved=new Map(),round=0,orders=[],plates=[[],[],[],[]],locked=false,audioData={},playingButton=null;
@@ -32,7 +33,7 @@ function foodButtons(){const box=$('ingredients');box.replaceChildren();FOODS.fo
 function initView(){stopAudio();$('home').hidden=true;$('play').hidden=false;$('labels').replaceChildren();$('targets').replaceChildren();$('fillings').replaceChildren();$('next').hidden=true;$('dialogue').hidden=mode!=='orders';$('words').hidden=mode!=='words';$('verify').hidden=mode!=='orders';$('clear').hidden=mode!=='orders';$('speaker').hidden=mode!=='orders';document.body.classList.toggle('command-mode',mode==='orders');message('');foodButtons();}
 function startWords(){mode='words';series=0;solved=new Map();selectedWord=null;plates=[[],[],[],[]];initView();renderSeries();}
 function renderSeries(){stopAudio();selectedWord=null;solved=new Map();$('labels').replaceChildren();$('targets').replaceChildren();$('next').hidden=true;$('words').replaceChildren();const list=series?FOODS:UTENSILS;
- list.forEach(w=>{const b=document.createElement('button');b.className='word';b.dataset.id=w.id;b.innerHTML=`<span aria-hidden="true">🔊</span><span>${w.word}</span><span class="state"></span>`;b.onclick=()=>{speak('word-'+w.id,b);if(solved.has(w.id))return;selectedWord=w.id;document.querySelectorAll('.word').forEach(x=>x.classList.toggle('selected',x===b));message('Clique maintenant sur l’image correspondante.');};$('words').append(b);});
+ shuffleVocabulary(list).forEach(w=>{const b=document.createElement('button');b.className='word';b.dataset.id=w.id;b.innerHTML=`<span aria-hidden="true">🔊</span><span>${w.word}</span><span class="state"></span>`;b.onclick=()=>{speak('word-'+w.id,b);if(solved.has(w.id))return;selectedWord=w.id;document.querySelectorAll('.word').forEach(x=>x.classList.toggle('selected',x===b));message('Clique maintenant sur l’image correspondante.');};$('words').append(b);});
  $('progress').textContent=series?'Les aliments · 0 / 6':'Les objets de table · 0 / 5';$('instruction').textContent='Clique sur un mot pour l’entendre, puis retrouve-le sur la nappe.';message('Choisis un mot à écouter.');
  if(!series){[['fourchette',9.4,85.7,5,20],['couteau',13.1,85.7,4.3,20],['cuillere',17.8,85.7,5,20]].forEach(args=>$('targets').append(rect(...args)));[7.1,30.3,53.1,76.2].forEach(x=>$('targets').append(rect('verre',x,61.8,5.6,13)));PEOPLE.forEach(p=>$('targets').append(rect('assiette',p.x,62.6,19.5,14)));}
  // Foods stay visible in both series, with the same scene throughout.

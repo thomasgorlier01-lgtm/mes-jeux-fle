@@ -1,3 +1,4 @@
+import {shuffleVocabulary} from '../word-order.js?v=1';
 import {FRUITS,fruitById,limit,orderItems,orderText,orderAudio,matches,adjust,newOrders} from './logic.js?v=1';
 import {SpeechPlayer} from './audio.js?v=1';
 const $=id=>document.getElementById(id);
@@ -12,7 +13,7 @@ function renderTargets(){
 function startWords(){series=0;solved=new Set();allLabels=new Set();basket={};selectedWord=null;showPlay('words');renderSeries();}
 function renderSeries(){
  speech.stop();selectedWord=null;solved=new Set();$('words').replaceChildren();$('next').hidden=true;
- FRUITS.slice(series*5,series*5+5).forEach(f=>{const b=document.createElement('button');b.className='word';b.dataset.id=f.id;b.innerHTML=`<span aria-hidden="true">🔊</span><span>${f.word}</span><span class="state"></span>`;b.onclick=()=>{speech.play(['word-'+f.id],b);if(solved.has(f.id))return;selectedWord=f.id;document.querySelectorAll('.word').forEach(x=>x.classList.toggle('selected',x===b));message('Clique sur le fruit correspondant dans l’étal.');};$('words').append(b);});
+ shuffleVocabulary(FRUITS.slice(series*5,series*5+5)).forEach(f=>{const b=document.createElement('button');b.className='word';b.dataset.id=f.id;b.innerHTML=`<span aria-hidden="true">🔊</span><span>${f.word}</span><span class="state"></span>`;b.onclick=()=>{speech.play(['word-'+f.id],b);if(solved.has(f.id))return;selectedWord=f.id;document.querySelectorAll('.word').forEach(x=>x.classList.toggle('selected',x===b));message('Clique sur le fruit correspondant dans l’étal.');};$('words').append(b);});
  $('progress').textContent=`Série ${series+1} / 2 · 0 / 5`;$('instruction').textContent='Clique sur un mot pour l’entendre, puis retrouve le fruit dans sa cagette.';message('Choisis un mot à écouter.');renderLabels();
 }
 function answer(id){
