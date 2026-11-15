@@ -7,7 +7,7 @@ export const FOODS=[
  {id:'oeufs',word:'les œufs',part:'des œufs'}
 ];
 export const UTENSILS=[{id:'couteau',word:'le couteau'},{id:'fourchette',word:'la fourchette'},{id:'cuillere',word:'la cuillère'},{id:'verre',word:'le verre'},{id:'assiette',word:'l’assiette'}];
-export const PEOPLE=[{name:'Le garçon',x:17.3,bread:14.2},{name:'Le papa',x:40.5,bread:37.2},{name:'La maman',x:63.2,bread:60},{name:'La fille',x:86.5,bread:83.2}];
+export const PEOPLE=[{name:'Le garçon',voice:'boy',x:17.3,bread:14.2},{name:'Le papa',voice:'father',x:40.5,bread:37.2},{name:'La maman',voice:'mother',x:63.2,bread:60},{name:'La fille',voice:'girl',x:86.5,bread:83.2}];
 export const key=ids=>FOODS.filter(f=>ids.includes(f.id)).map(f=>f.id).join('+');
 export const sentence=ids=>{const list=FOODS.filter(f=>ids.includes(f.id)).map(f=>f.part);return 'Bonjour, dans mon sandwich, je voudrais '+(list.length===1?list[0]:list.slice(0,-1).join(', ')+' et '+list.at(-1))+'.';};
 export const matches=(selected,expected)=>selected.length===expected.length&&expected.every(id=>selected.includes(id));
