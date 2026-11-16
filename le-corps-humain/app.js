@@ -30,7 +30,7 @@ const JEUX = [
     "couleur": "corp",
     "bulle1": "👀",
     "bulle2": "🎨",
-    "url": "../atelier-visages/?visages=5"
+    "url": "../atelier-visages/?visages=6"
   }
 ];
 const games=document.getElementById('games'),player=document.getElementById('player'),frame=document.getElementById('frame'),playertitle=document.getElementById('playertitle'),extern=document.getElementById('extern');

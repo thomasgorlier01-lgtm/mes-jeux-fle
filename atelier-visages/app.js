@@ -1,4 +1,4 @@
-import {DescriptionAudio} from './audio.js?v=1';
+import {DescriptionAudio} from './audio.js?v=2';
 import catalog from './catalog.js?v=2';
 import {LEVELS,availableCategories,availableItems,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=3';
 const $=id=>document.getElementById(id);
@@ -67,3 +67,5 @@ $('description').addEventListener('click',listenDescription);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)descriptionAudio.stop();});
 render();
 
+
+window.addEventListener('pagehide',()=>descriptionAudio.close());
