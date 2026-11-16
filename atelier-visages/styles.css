@@ -38,3 +38,7 @@
 @media(max-width:600px){.garment-picker{grid-template-columns:repeat(4,minmax(0,1fr))}.stage{width:min(100%,350px)}.color-option img{height:52px}}
 
 .color-option img{height:90px;width:100%;object-fit:contain}.color-option{min-height:108px;padding:8px}.color-options{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:600px){.color-option img{height:70px}.color-option{min-height:86px}}
+
+/* Visible, replayable descriptions for non-readers at all three levels. */
+.description-audio{display:flex;flex-direction:column;gap:5px;margin:10px 0 13px}.listen-description{display:inline-flex;justify-content:center;align-items:center;gap:10px;align-self:flex-start;min-height:46px;padding:9px 15px;border:1.5px solid #c9b5dc;border-radius:13px;background:#eee7f5;color:#654d80;font-weight:750;font-size:15px;line-height:1.3}.listen-description #listen-icon{font-size:24px;line-height:1}.listen-description:hover{background:#e7dcf0}.listen-description.is-playing{background:#77618f;border-color:#77618f;color:white}.audio-status{font-size:12px;line-height:1.4;color:#8b5663}.audio-status:empty{display:none}#description{cursor:pointer}.listen-description:focus-visible{outline:3px solid #b47e27;outline-offset:3px}
+@media(max-width:580px){.description-audio{margin:8px 0 10px}.listen-description{width:100%;font-size:12px;min-height:44px;padding:8px 9px;gap:7px}.listen-description #listen-icon{font-size:22px}.audio-status{font-size:11px}}

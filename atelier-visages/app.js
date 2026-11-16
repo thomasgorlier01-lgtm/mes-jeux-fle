@@ -1,6 +1,9 @@
+import {DescriptionAudio} from './audio.js?v=1';
 import catalog from './catalog.js?v=2';
 import {LEVELS,availableCategories,availableItems,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=3';
 const $=id=>document.getElementById(id);
+const descriptionAudio=new DescriptionAudio(status=>{const active=status==='loading'||status==='playing';$('listen-description').classList.toggle('is-playing',active);$('listen-description').setAttribute('aria-pressed',String(active));$('listen-description').setAttribute('aria-label',active?'Arrêter la lecture audio':'Écouter la description');$('listen-icon').textContent=active?'⏹':'🔊';$('listen-label').textContent=active?'Arrêter l’écoute':'Écouter la description';$('audio-status').textContent=status==='loading'?'Préparation de l’audio…':status==='error'?'Le son n’a pas pu être lu. Clique à nouveau sur 🔊 pour réessayer.':'';});
+function listenDescription(){if(!isHome&&state.phase!=='finished')descriptionAudio.play(describeRound(state.rounds[state.round],catalog),state.rounds[state.round].avatar);}
 let state=startGame(catalog),openedCategory=null,currentLayers='',currentLevel=1,isHome=true;
 const stage=$('stage'),categoryButtons=new Map(),menu=$('color-menu');
 function closeColors(restoreFocus=false){const old=openedCategory;openedCategory=null;menu.hidden=true;for(const button of categoryButtons.values())button.setAttribute('aria-expanded','false');if(restoreFocus&&old)categoryButtons.get(old)?.focus();}
@@ -49,14 +52,17 @@ function render(){
  for(const category of availableCategories(catalog,currentLevel,state.rounds[state.round].avatar)){const button=categoryButtons.get(category.id),selected=catalog.elements.find(x=>x.id===state.selection[category.emplacement]&&x.categorie===category.id);button.setAttribute('aria-pressed',String(!!selected));button.disabled=state.phase!=='playing';button.querySelector('img').src=selected?selected.thumbnail:category.preview;}
  drawCharacter();
 }
-function startLevel(level){closeColors();currentLevel=level;isHome=false;state=startGame(catalog,Math.random,level);currentLayers='';wardrobe();render();$('character-title').scrollIntoView({block:'nearest',behavior:'smooth'});}
+function startLevel(level){descriptionAudio.stop();closeColors();currentLevel=level;isHome=false;state=startGame(catalog,Math.random,level);currentLayers='';wardrobe();render();$('character-title').scrollIntoView({block:'nearest',behavior:'smooth'});}
 function restart(){startLevel(currentLevel);}
-$('check').addEventListener('click',()=>{closeColors();state=checkOutfit(state);render();const card=document.querySelector('.character-card');card.classList.remove('shake','celebrate');void card.offsetWidth;card.classList.add(state.phase==='success'?'celebrate':'shake');if(state.phase==='success')$('next').focus();else if(state.phase==='out-of-lives')$('reveal').focus();});
-$('reveal').addEventListener('click',()=>{state=revealSolution(state);render();$('next').focus()});
-$('next').addEventListener('click',()=>{closeColors();state=nextRound(state);render();if(state.phase!=='finished'){$('check').focus();$('character-title').scrollIntoView({block:'nearest',behavior:'smooth'})}});
+$('check').addEventListener('click',()=>{descriptionAudio.stop();closeColors();state=checkOutfit(state);render();const card=document.querySelector('.character-card');card.classList.remove('shake','celebrate');void card.offsetWidth;card.classList.add(state.phase==='success'?'celebrate':'shake');if(state.phase==='success')$('next').focus();else if(state.phase==='out-of-lives')$('reveal').focus();});
+$('reveal').addEventListener('click',()=>{descriptionAudio.stop();state=revealSolution(state);render();$('next').focus()});
+$('next').addEventListener('click',()=>{descriptionAudio.stop();closeColors();state=nextRound(state);render();if(state.phase!=='finished'){$('check').focus();$('character-title').scrollIntoView({block:'nearest',behavior:'smooth'})}});
 $('clear').addEventListener('click',()=>{closeColors();state=clearOutfit(state);render()});$('restart').addEventListener('click',restart);$('play-again').addEventListener('click',restart);
 $('close-colors').addEventListener('click',()=>closeColors(true));document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){event.preventDefault();closeColors(true)}});
 document.addEventListener('pointerdown',event=>{if(!menu.hidden&&!menu.contains(event.target)&&!event.target.closest('.garment-choice'))closeColors()});window.addEventListener('resize',positionColors);window.addEventListener('scroll',positionColors,{passive:true});
-$('choose-level').addEventListener('click',()=>{closeColors();isHome=true;render();document.querySelector('[data-level="1"]').focus()});
+$('choose-level').addEventListener('click',()=>{descriptionAudio.stop();closeColors();isHome=true;render();document.querySelector('[data-level="1"]').focus()});
 document.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>startLevel(Number(button.dataset.level))));
+$('listen-description').addEventListener('click',()=>{if(descriptionAudio.active)descriptionAudio.stop();else listenDescription();});
+$('description').addEventListener('click',listenDescription);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)descriptionAudio.stop();});
 render();
