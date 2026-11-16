@@ -59,96 +59,65 @@
     // Ne pas oublier la virgule entre les jeux.
     const JEUX = [
       {
-        titre: 'Qui est-ce ? Les 24 monstres',
-        description: 'Retourne les cartes en classe ou écoute dix descriptions avec trois cœurs en autonomie.',
-        categorie: 'Le corps, le visage et les accessoires',
-        niveau: 'Débutant',
-        emoji: '👾',
-        couleur: 'corp',
-        bulle1: '👥',
-        bulle2: '🔊',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/qui-est-ce-monstres/'
+            "titre": "Le corps humain",
+            "description": "Trois jeux pour découvrir le corps, les douleurs et le visage.",
+            "categorie": "Dossier · 3 jeux",
+            "niveau": "Débutant",
+            "emoji": "📁",
+            "couleur": "corp",
+            "bulle1": "👀",
+            "bulle2": "🩹",
+            "dossier": true,
+            "nbJeux": 3,
+            "url": "./le-corps-humain/"
       },
       {
-        titre: 'La nourriture',
-        description: 'Cinq jeux pour écouter, lire et préparer des commandes : pique-nique, marché, café, cantine et repas.',
-        categorie: 'Dossier · 5 jeux',
-        niveau: 'Débutant',
-        emoji: '📁',
-        couleur: 'vest',
-        bulle1: '🍎',
-        bulle2: '🍽️',
-        dossier: true,
-        nbJeux: 5,
-        url: './la-nourriture/'
+            "titre": "La nourriture",
+            "description": "Cinq jeux pour écouter, lire et préparer des commandes : pique-nique, marché, café, cantine et repas.",
+            "categorie": "Dossier · 5 jeux",
+            "niveau": "Débutant",
+            "emoji": "📁",
+            "couleur": "vest",
+            "bulle1": "🍎",
+            "bulle2": "🍽️",
+            "dossier": true,
+            "nbJeux": 5,
+            "url": "./la-nourriture/"
       },
       {
-        titre: 'Qui est-ce ? Les douleurs',
-        description: 'Lis les trois douleurs et retrouve le bon personnage parmi les quinze portraits.',
-        categorie: 'Le corps et les douleurs',
-        niveau: 'Débutant',
-        emoji: '🩹',
-        couleur: 'corp',
-        bulle1: '🤕',
-        bulle2: '✓',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/qui-est-ce-douleurs/'
+            "titre": "L’atelier des vêtements",
+            "description": "Lis la description et habille Léo ou Lina avec les bons vêtements et les bonnes couleurs.",
+            "categorie": "Les vêtements et les couleurs",
+            "niveau": "Débutant",
+            "emoji": "👕",
+            "couleur": "vest",
+            "bulle1": "🎨",
+            "bulle2": "✓",
+            "url": "https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/atelier-habillage/"
       },
       {
-        titre: 'L’atelier des visages',
-        description: 'Écoute ou lis la description et crée le visage de Léo ou Lina : traits, couleurs et accessoires, en trois niveaux.',
-        categorie: 'Le visage et les couleurs',
-        niveau: 'Débutant',
-        emoji: '🙂',
-        couleur: 'corp',
-        bulle1: '👀',
-        bulle2: '🎨',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/atelier-visages/?visages=4'
+            "titre": "Qui est-ce ? Les vêtements",
+            "description": "Lis les vêtements et les couleurs pour trouver le bon personnage.",
+            "categorie": "Les vêtements",
+            "niveau": "Débutant",
+            "emoji": "🧥",
+            "couleur": "vest",
+            "bulle1": "👟",
+            "bulle2": "👒",
+            "url": "https://thomasgorlier01-lgtm.github.io/quiestcevetements/"
       },
       {
-        titre: 'L’atelier des vêtements',
-        description: 'Lis la description et habille Léo ou Lina avec les bons vêtements et les bonnes couleurs.',
-        categorie: 'Les vêtements et les couleurs',
-        niveau: 'Débutant',
-        emoji: '👕',
-        couleur: 'vest',
-        bulle1: '🎨',
-        bulle2: '✓',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/atelier-habillage/'
-      },
-      {
-        titre: 'Qui est-ce ? Les monstres',
-        description: 'Observe les monstres et retrouve celui qui correspond à la description.',
-        categorie: 'Le corps et le visage',
-        niveau: 'Débutant',
-        emoji: '👾',
-        couleur: 'corp',
-        bulle1: '👀',
-        bulle2: '👂',
-        url: 'https://thomasgorlier01-lgtm.github.io/quiestmonstrecorps/'
-      },
-      {
-        titre: 'Qui est-ce ? Les vêtements',
-        description: 'Lis les vêtements et les couleurs pour trouver le bon personnage.',
-        categorie: 'Les vêtements',
-        niveau: 'Débutant',
-        emoji: '🧥',
-        couleur: 'vest',
-        bulle1: '👟',
-        bulle2: '👒',
-        url: 'https://thomasgorlier01-lgtm.github.io/quiestcevetements/'
-      },
-      {
-        titre: 'Visage de monstre',
-        description: 'Observe les visages et retrouve le bon monstre dans trois niveaux progressifs.',
-        categorie: 'Le visage',
-        niveau: 'Débutant',
-        emoji: '👹',
-        couleur: 'corp',
-        bulle1: '👁️',
-        bulle2: '👂',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/visage-de-monstre/'
+            "titre": "Visage de monstre",
+            "description": "Observe les visages et retrouve le bon monstre dans trois niveaux progressifs.",
+            "categorie": "Le visage",
+            "niveau": "Débutant",
+            "emoji": "👹",
+            "couleur": "corp",
+            "bulle1": "👁️",
+            "bulle2": "👂",
+            "url": "https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/visage-de-monstre/"
       }
-    ];
+];
     const player = document.getElementById('player');
     const frame = document.getElementById('frame');
     const back = document.getElementById('back');
