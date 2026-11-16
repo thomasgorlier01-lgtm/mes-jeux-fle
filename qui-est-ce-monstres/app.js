@@ -1,4 +1,4 @@
-import { CHARACTERS } from './data.js';
+import { CHARACTERS } from './data.js?v=3';
 import { newGame, answer } from './logic.js';
 const $ = id => document.getElementById(id);
 let mode = 'class', state = null, locked = false, timer = null, player = null, audioToken = 0;
@@ -8,10 +8,12 @@ function stopTransition() { clearTimeout(timer); timer = null; locked = false; s
 function message(text, type = '') { $('message').textContent = text; $('message').className = type; }
 for (const c of CHARACTERS) {
   const button = document.createElement('button'); button.className = 'card'; button.type = 'button'; button.dataset.id = c.id;
-  const image = document.createElement('img'); image.src = `assets/${String(c.id).padStart(2,'0')}.svg`; image.alt = ''; image.draggable = false;
-  const number = document.createElement('span'); number.className='number'; number.textContent=String(c.id).padStart(2,'0');
+  const ns='http://www.w3.org/2000/svg';
+  const image = document.createElementNS(ns,'svg'); image.classList.add('portrait'); image.setAttribute('viewBox',c.crop.join(' ')); image.setAttribute('aria-hidden','true'); image.setAttribute('focusable','false');
+  const clip=document.createElementNS(ns,'clipPath'); clip.id=`portrait-clip-${c.id}`; const rect=document.createElementNS(ns,'rect'); ['x','y','width','height'].forEach((key,i)=>rect.setAttribute(key,c.crop[i])); clip.append(rect); image.append(clip);
+  const artwork=document.createElementNS(ns,'image'); artwork.setAttribute('clip-path',`url(#${clip.id})`); artwork.setAttribute('href','assets/monstres-reference.jpg?v=2'); artwork.setAttribute('width','1926'); artwork.setAttribute('height','1260'); image.append(artwork);
   const name = document.createElement('span'); name.className='name'; name.textContent=c.name;
-  button.append(image, number, name); button.setAttribute('aria-label', `Retourner la carte ${c.name}`); button.setAttribute('aria-pressed','false');
+  button.append(image, name); button.setAttribute('aria-label', `Retourner la carte ${c.name}`); button.setAttribute('aria-pressed','false');
   button.addEventListener('click', () => choose(c.id)); cards.set(c.id,button); $('grid').append(button);
 }
 function cleanCards() { cards.forEach((b,id) => { b.className='card'; b.disabled=false; b.setAttribute('aria-label', `${mode==='class'?'Retourner la carte':'Choisir'} ${CHARACTERS[id-1].name}`); if(mode==='class') b.setAttribute('aria-pressed','false'); else b.removeAttribute('aria-pressed'); }); $('remaining').textContent='24 cartes visibles'; }
@@ -31,7 +33,7 @@ function choose(id) {
 }
 function finish(target) { stopTransition(); locked=true; cards.forEach(b=>b.disabled=true); if(state.status==='won') { $('progress').textContent='10/10 · Bravo !'; $('description-text').textContent='Tu as retrouvé les 10 monstres !'; message('🎉 Victoire ! Tu peux rejouer.', 'ok'); } else { cards.get(target.id).classList.add('answer'); $('description-text').textContent=`Le monstre à trouver était ${target.name}. ${target.description}`; message('Les trois cœurs sont utilisés. Rejoue pour essayer à nouveau !','bad'); } $('description').disabled=state.status==='won'; $('audio-status').textContent=state.status==='won'?'Les dix descriptions sont résolues.':'La carte verte montre la réponse. Tu peux réécouter sa description.'; }
 async function listen() {
-  if(!state || state.status==='won') return; stopAudio(); const token=audioToken; const target=state.targets[state.round]; const audio=new Audio(`audio/${String(target.id).padStart(2,'0')}.m4a`); audio.playbackRate=.75; audio.preservesPitch=true; player=audio; $('description').setAttribute('aria-busy','true'); $('audio-status').textContent='Lecture en cours…';
+  if(!state || state.status==='won') return; stopAudio(); const token=audioToken; const target=state.targets[state.round]; const audio=new Audio(`audio/${String(target.id).padStart(2,'0')}-reference-v3.m4a`); audio.playbackRate=.75; audio.preservesPitch=true; player=audio; $('description').setAttribute('aria-busy','true'); $('audio-status').textContent='Lecture en cours…';
   const ended=()=>{if(token!==audioToken)return; $('description').setAttribute('aria-busy','false');$('audio-status').textContent='Touche la description pour réécouter.';}; audio.onended=ended;
   const fallback=()=>{if(token!==audioToken)return;audio.onerror=null;audio.pause();if('speechSynthesis' in window){const u=new SpeechSynthesisUtterance(target.description);u.lang='fr-FR';u.rate=.75;u.voice=speechSynthesis.getVoices().find(v=>v.lang==='fr-FR')||null;u.onend=ended;u.onerror=()=>{$('audio-status').textContent='Lecture audio indisponible. Réessaie en touchant la description.';$('description').setAttribute('aria-busy','false');};speechSynthesis.speak(u);}else{$('audio-status').textContent='Lecture audio indisponible. Réessaie en touchant la description.';$('description').setAttribute('aria-busy','false');}};
   audio.onerror=fallback; try { await audio.play(); } catch { fallback(); }

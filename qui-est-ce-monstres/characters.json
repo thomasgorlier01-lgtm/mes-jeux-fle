@@ -5,207 +5,312 @@
     "eyes": 1,
     "arms": 2,
     "legs": 2,
+    "hairColor": "blonds",
     "hairLength": "courts",
-    "hairColor": "bruns",
-    "nose": "petit",
-    "ears": "petites",
-    "accessory": "aucun",
-    "description": "Il a un œil, deux bras et deux jambes. Il a les cheveux courts et bruns, un petit nez et de petites oreilles."
+    "accessories": [],
+    "facialHair": "",
+    "crop": [
+      0,
+      0,
+      252,
+      424
+    ],
+    "description": "Il a un œil, deux bras et deux jambes. Il a les cheveux blonds."
   },
   {
     "id": 2,
     "name": "Lila",
     "eyes": 2,
-    "arms": 2,
+    "arms": 4,
     "legs": 2,
+    "hairColor": "bruns",
     "hairLength": "courts",
-    "hairColor": "blonds",
-    "nose": "petit",
-    "ears": "petites",
-    "accessory": "lunettes",
-    "description": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux courts et blonds, un petit nez et de petites oreilles. Il porte des lunettes."
+    "accessories": [
+      "des lunettes"
+    ],
+    "facialHair": "une moustache brune",
+    "crop": [
+      257,
+      0,
+      236,
+      424
+    ],
+    "description": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux bruns. Il a une moustache brune. Il porte des lunettes."
   },
   {
     "id": 3,
     "name": "Noé",
     "eyes": 3,
-    "arms": 2,
+    "arms": 4,
     "legs": 2,
-    "hairLength": "courts",
     "hairColor": "roux",
-    "nose": "grand",
-    "ears": "petites",
-    "accessory": "chapeau",
-    "description": "Il a trois yeux, deux bras et deux jambes. Il a les cheveux courts et roux, un grand nez et de petites oreilles. Il porte un chapeau."
+    "hairLength": "longs",
+    "accessories": [
+      "un chapeau vert",
+      "des boucles d’oreilles"
+    ],
+    "facialHair": "",
+    "crop": [
+      497,
+      0,
+      250,
+      424
+    ],
+    "description": "Il a trois yeux, quatre bras et deux jambes. Il a les cheveux longs et roux. Il porte un chapeau vert et des boucles d’oreilles."
   },
   {
     "id": 4,
     "name": "Zélie",
-    "eyes": 1,
-    "arms": 4,
-    "legs": 2,
+    "eyes": 2,
+    "arms": 2,
+    "legs": 3,
+    "hairColor": "bruns",
     "hairLength": "courts",
-    "hairColor": "blonds",
-    "nose": "grand",
-    "ears": "petites",
-    "accessory": "boucles",
-    "description": "Il a un œil, quatre bras et deux jambes. Il a les cheveux courts et blonds, un grand nez et de petites oreilles. Il porte des boucles d’oreilles."
+    "accessories": [],
+    "facialHair": "une barbe brune",
+    "crop": [
+      751,
+      0,
+      226,
+      424
+    ],
+    "description": "Il a deux yeux, deux bras et trois jambes. Il a les cheveux bruns. Il a une barbe brune."
   },
   {
     "id": 5,
     "name": "Nino",
-    "eyes": 2,
-    "arms": 4,
-    "legs": 2,
+    "eyes": 1,
+    "arms": 2,
+    "legs": 4,
+    "hairColor": "noirs",
     "hairLength": "courts",
-    "hairColor": "roux",
-    "nose": "petit",
-    "ears": "grandes",
-    "accessory": "aucun",
-    "description": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux courts et roux, un petit nez et de grandes oreilles."
+    "accessories": [
+      "une casquette violette"
+    ],
+    "facialHair": "",
+    "crop": [
+      981,
+      0,
+      231,
+      424
+    ],
+    "description": "Il a un œil, deux bras et quatre jambes. Il a les cheveux noirs. Il porte une casquette violette."
   },
   {
     "id": 6,
     "name": "Alma",
-    "eyes": 3,
-    "arms": 4,
+    "eyes": 2,
+    "arms": 2,
     "legs": 2,
-    "hairLength": "courts",
-    "hairColor": "noirs",
-    "nose": "petit",
-    "ears": "grandes",
-    "accessory": "lunettes",
-    "description": "Il a trois yeux, quatre bras et deux jambes. Il a les cheveux courts et noirs, un petit nez et de grandes oreilles. Il porte des lunettes."
+    "hairColor": "blonds",
+    "hairLength": "longs",
+    "accessories": [
+      "des lunettes",
+      "des boucles d’oreilles"
+    ],
+    "facialHair": "",
+    "crop": [
+      1217,
+      0,
+      226,
+      424
+    ],
+    "description": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux longs et blonds. Il porte des lunettes et des boucles d’oreilles."
   },
   {
     "id": 7,
     "name": "Sacha",
-    "eyes": 1,
-    "arms": 2,
+    "eyes": 3,
+    "arms": 4,
     "legs": 3,
+    "hairColor": "bruns",
     "hairLength": "courts",
-    "hairColor": "roux",
-    "nose": "grand",
-    "ears": "grandes",
-    "accessory": "chapeau",
-    "description": "Il a un œil, deux bras et trois jambes. Il a les cheveux courts et roux, un grand nez et de grandes oreilles. Il porte un chapeau."
+    "accessories": [],
+    "facialHair": "",
+    "crop": [
+      1447,
+      0,
+      235,
+      424
+    ],
+    "description": "Il a trois yeux, quatre bras et trois jambes. Il a les cheveux bruns."
   },
   {
     "id": 8,
     "name": "Iris",
     "eyes": 2,
     "arms": 2,
-    "legs": 3,
+    "legs": 2,
+    "hairColor": "roux",
     "hairLength": "courts",
-    "hairColor": "noirs",
-    "nose": "grand",
-    "ears": "grandes",
-    "accessory": "boucles",
-    "description": "Il a deux yeux, deux bras et trois jambes. Il a les cheveux courts et noirs, un grand nez et de grandes oreilles. Il porte des boucles d’oreilles."
+    "accessories": [
+      "un chapeau jaune"
+    ],
+    "facialHair": "une barbe rousse",
+    "crop": [
+      1686,
+      0,
+      240,
+      424
+    ],
+    "description": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux roux. Il a une barbe rousse. Il porte un chapeau jaune."
   },
   {
     "id": 9,
     "name": "Malo",
-    "eyes": 3,
+    "eyes": 2,
     "arms": 2,
-    "legs": 3,
-    "hairLength": "courts",
-    "hairColor": "bruns",
-    "nose": "petit",
-    "ears": "petites",
-    "accessory": "aucun",
-    "description": "Il a trois yeux, deux bras et trois jambes. Il a les cheveux courts et bruns, un petit nez et de petites oreilles."
+    "legs": 2,
+    "hairColor": "noirs",
+    "hairLength": "longs",
+    "accessories": [
+      "des boucles d’oreilles"
+    ],
+    "facialHair": "",
+    "crop": [
+      0,
+      448,
+      252,
+      389
+    ],
+    "description": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux longs et noirs. Il porte des boucles d’oreilles."
   },
   {
     "id": 10,
     "name": "Zoé",
-    "eyes": 1,
+    "eyes": 3,
     "arms": 4,
-    "legs": 3,
+    "legs": 2,
+    "hairColor": "blonds",
     "hairLength": "courts",
-    "hairColor": "noirs",
-    "nose": "petit",
-    "ears": "petites",
-    "accessory": "lunettes",
-    "description": "Il a un œil, quatre bras et trois jambes. Il a les cheveux courts et noirs, un petit nez et de petites oreilles. Il porte des lunettes."
+    "accessories": [],
+    "facialHair": "",
+    "crop": [
+      257,
+      448,
+      236,
+      389
+    ],
+    "description": "Il a trois yeux, quatre bras et deux jambes. Il a les cheveux blonds."
   },
   {
     "id": 11,
     "name": "Lino",
-    "eyes": 2,
-    "arms": 4,
+    "eyes": 1,
+    "arms": 2,
     "legs": 3,
-    "hairLength": "courts",
     "hairColor": "bruns",
-    "nose": "grand",
-    "ears": "petites",
-    "accessory": "chapeau",
-    "description": "Il a deux yeux, quatre bras et trois jambes. Il a les cheveux courts et bruns, un grand nez et de petites oreilles. Il porte un chapeau."
+    "hairLength": "courts",
+    "accessories": [
+      "un chapeau noir",
+      "des boucles d’oreilles"
+    ],
+    "facialHair": "une moustache brune",
+    "crop": [
+      497,
+      448,
+      250,
+      389
+    ],
+    "description": "Il a un œil, deux bras et trois jambes. Il a les cheveux bruns. Il a une moustache brune. Il porte un chapeau noir et des boucles d’oreilles."
   },
   {
     "id": 12,
     "name": "Nora",
-    "eyes": 3,
+    "eyes": 2,
     "arms": 4,
-    "legs": 3,
+    "legs": 2,
+    "hairColor": "bruns",
     "hairLength": "courts",
-    "hairColor": "blonds",
-    "nose": "grand",
-    "ears": "petites",
-    "accessory": "boucles",
-    "description": "Il a trois yeux, quatre bras et trois jambes. Il a les cheveux courts et blonds, un grand nez et de petites oreilles. Il porte des boucles d’oreilles."
+    "accessories": [
+      "des lunettes"
+    ],
+    "facialHair": "une barbe brune",
+    "crop": [
+      751,
+      448,
+      226,
+      389
+    ],
+    "description": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux bruns. Il a une barbe brune. Il porte des lunettes."
   },
   {
     "id": 13,
     "name": "Élio",
-    "eyes": 1,
+    "eyes": 3,
     "arms": 2,
-    "legs": 2,
-    "hairLength": "longs",
-    "hairColor": "bruns",
-    "nose": "petit",
-    "ears": "grandes",
-    "accessory": "aucun",
-    "description": "Il a un œil, deux bras et deux jambes. Il a les cheveux longs et bruns, un petit nez et de grandes oreilles."
+    "legs": 3,
+    "hairColor": "blonds",
+    "hairLength": "courts",
+    "accessories": [],
+    "facialHair": "",
+    "crop": [
+      981,
+      448,
+      231,
+      389
+    ],
+    "description": "Il a trois yeux, deux bras et trois jambes. Il a les cheveux blonds."
   },
   {
     "id": 14,
     "name": "Rose",
     "eyes": 2,
     "arms": 2,
-    "legs": 2,
-    "hairLength": "longs",
-    "hairColor": "blonds",
-    "nose": "petit",
-    "ears": "grandes",
-    "accessory": "lunettes",
-    "description": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux longs et blonds, un petit nez et de grandes oreilles. Il porte des lunettes."
+    "legs": 4,
+    "hairColor": "bruns",
+    "hairLength": "courts",
+    "accessories": [
+      "une casquette bleue"
+    ],
+    "facialHair": "",
+    "crop": [
+      1217,
+      448,
+      226,
+      389
+    ],
+    "description": "Il a deux yeux, deux bras et quatre jambes. Il a les cheveux bruns. Il porte une casquette bleue."
   },
   {
     "id": 15,
     "name": "Tao",
-    "eyes": 3,
-    "arms": 2,
+    "eyes": 1,
+    "arms": 6,
     "legs": 2,
-    "hairLength": "longs",
     "hairColor": "roux",
-    "nose": "grand",
-    "ears": "grandes",
-    "accessory": "chapeau",
-    "description": "Il a trois yeux, deux bras et deux jambes. Il a les cheveux longs et roux, un grand nez et de grandes oreilles. Il porte un chapeau."
+    "hairLength": "courts",
+    "accessories": [
+      "des boucles d’oreilles"
+    ],
+    "facialHair": "",
+    "crop": [
+      1447,
+      448,
+      235,
+      389
+    ],
+    "description": "Il a un œil, six bras et deux jambes. Il a les cheveux roux. Il porte des boucles d’oreilles."
   },
   {
     "id": 16,
     "name": "Maya",
-    "eyes": 1,
-    "arms": 4,
-    "legs": 2,
-    "hairLength": "longs",
-    "hairColor": "blonds",
-    "nose": "grand",
-    "ears": "grandes",
-    "accessory": "boucles",
-    "description": "Il a un œil, quatre bras et deux jambes. Il a les cheveux longs et blonds, un grand nez et de grandes oreilles. Il porte des boucles d’oreilles."
+    "eyes": 2,
+    "arms": 2,
+    "legs": 3,
+    "hairColor": "bruns",
+    "hairLength": "courts",
+    "accessories": [
+      "des lunettes"
+    ],
+    "facialHair": "une moustache brune",
+    "crop": [
+      1686,
+      448,
+      240,
+      389
+    ],
+    "description": "Il a deux yeux, deux bras et trois jambes. Il a les cheveux bruns. Il a une moustache brune. Il porte des lunettes."
   },
   {
     "id": 17,
@@ -213,102 +318,154 @@
     "eyes": 2,
     "arms": 4,
     "legs": 2,
+    "hairColor": "bruns",
     "hairLength": "longs",
-    "hairColor": "roux",
-    "nose": "petit",
-    "ears": "petites",
-    "accessory": "aucun",
-    "description": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux longs et roux, un petit nez et de petites oreilles."
+    "accessories": [
+      "un chapeau jaune",
+      "des boucles d’oreilles"
+    ],
+    "facialHair": "",
+    "crop": [
+      0,
+      860,
+      252,
+      400
+    ],
+    "description": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux longs et bruns. Il porte un chapeau jaune et des boucles d’oreilles."
   },
   {
     "id": 18,
     "name": "Inès",
     "eyes": 3,
-    "arms": 4,
+    "arms": 2,
     "legs": 2,
-    "hairLength": "longs",
-    "hairColor": "noirs",
-    "nose": "petit",
-    "ears": "petites",
-    "accessory": "lunettes",
-    "description": "Il a trois yeux, quatre bras et deux jambes. Il a les cheveux longs et noirs, un petit nez et de petites oreilles. Il porte des lunettes."
+    "hairColor": "blonds",
+    "hairLength": "courts",
+    "accessories": [],
+    "facialHair": "une barbe blonde",
+    "crop": [
+      257,
+      860,
+      236,
+      400
+    ],
+    "description": "Il a trois yeux, deux bras et deux jambes. Il a les cheveux blonds. Il a une barbe blonde."
   },
   {
     "id": 19,
     "name": "Sami",
-    "eyes": 1,
+    "eyes": 2,
     "arms": 2,
     "legs": 3,
-    "hairLength": "longs",
-    "hairColor": "roux",
-    "nose": "grand",
-    "ears": "petites",
-    "accessory": "chapeau",
-    "description": "Il a un œil, deux bras et trois jambes. Il a les cheveux longs et roux, un grand nez et de petites oreilles. Il porte un chapeau."
+    "hairColor": "bruns",
+    "hairLength": "courts",
+    "accessories": [
+      "des lunettes"
+    ],
+    "facialHair": "",
+    "crop": [
+      497,
+      860,
+      250,
+      400
+    ],
+    "description": "Il a deux yeux, deux bras et trois jambes. Il a les cheveux bruns. Il porte des lunettes."
   },
   {
     "id": 20,
     "name": "Jade",
-    "eyes": 2,
+    "eyes": 1,
     "arms": 2,
-    "legs": 3,
-    "hairLength": "longs",
+    "legs": 4,
     "hairColor": "noirs",
-    "nose": "grand",
-    "ears": "petites",
-    "accessory": "boucles",
-    "description": "Il a deux yeux, deux bras et trois jambes. Il a les cheveux longs et noirs, un grand nez et de petites oreilles. Il porte des boucles d’oreilles."
+    "hairLength": null,
+    "accessories": [
+      "des boucles d’oreilles"
+    ],
+    "facialHair": "",
+    "crop": [
+      751,
+      860,
+      226,
+      400
+    ],
+    "description": "Il a un œil, deux bras et quatre jambes. Il a les cheveux noirs. Il porte des boucles d’oreilles."
   },
   {
     "id": 21,
     "name": "Tomi",
-    "eyes": 3,
-    "arms": 2,
-    "legs": 3,
-    "hairLength": "longs",
-    "hairColor": "bruns",
-    "nose": "petit",
-    "ears": "grandes",
-    "accessory": "aucun",
-    "description": "Il a trois yeux, deux bras et trois jambes. Il a les cheveux longs et bruns, un petit nez et de grandes oreilles."
+    "eyes": 2,
+    "arms": 4,
+    "legs": 2,
+    "hairColor": "roux",
+    "hairLength": "courts",
+    "accessories": [],
+    "facialHair": "une moustache rousse",
+    "crop": [
+      981,
+      860,
+      231,
+      400
+    ],
+    "description": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux roux. Il a une moustache rousse."
   },
   {
     "id": 22,
     "name": "Nina",
-    "eyes": 1,
-    "arms": 4,
+    "eyes": 3,
+    "arms": 2,
     "legs": 3,
-    "hairLength": "longs",
-    "hairColor": "noirs",
-    "nose": "petit",
-    "ears": "grandes",
-    "accessory": "lunettes",
-    "description": "Il a un œil, quatre bras et trois jambes. Il a les cheveux longs et noirs, un petit nez et de grandes oreilles. Il porte des lunettes."
+    "hairColor": "bruns",
+    "hairLength": null,
+    "accessories": [],
+    "facialHair": "une barbe brune",
+    "crop": [
+      1217,
+      860,
+      226,
+      400
+    ],
+    "description": "Il a trois yeux, deux bras et trois jambes. Il a les cheveux bruns. Il a une barbe brune."
   },
   {
     "id": 23,
     "name": "Rémi",
     "eyes": 2,
-    "arms": 4,
-    "legs": 3,
-    "hairLength": "longs",
-    "hairColor": "bruns",
-    "nose": "grand",
-    "ears": "grandes",
-    "accessory": "chapeau",
-    "description": "Il a deux yeux, quatre bras et trois jambes. Il a les cheveux longs et bruns, un grand nez et de grandes oreilles. Il porte un chapeau."
+    "arms": 2,
+    "legs": 2,
+    "hairColor": "blonds",
+    "hairLength": "courts",
+    "accessories": [
+      "un chapeau bleu",
+      "des lunettes"
+    ],
+    "facialHair": "",
+    "crop": [
+      1447,
+      860,
+      235,
+      400
+    ],
+    "description": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux blonds. Il porte un chapeau bleu et des lunettes."
   },
   {
     "id": 24,
     "name": "Lou",
-    "eyes": 3,
+    "eyes": 1,
     "arms": 4,
     "legs": 3,
-    "hairLength": "longs",
-    "hairColor": "blonds",
-    "nose": "grand",
-    "ears": "grandes",
-    "accessory": "boucles",
-    "description": "Il a trois yeux, quatre bras et trois jambes. Il a les cheveux longs et blonds, un grand nez et de grandes oreilles. Il porte des boucles d’oreilles."
+    "hairColor": "roux",
+    "hairLength": "courts",
+    "accessories": [
+      "des boucles d’oreilles"
+    ],
+    "facialHair": "",
+    "crop": [
+      1686,
+      860,
+      240,
+      400
+    ],
+    "description": "Il a un œil, quatre bras et trois jambes. Il a les cheveux roux. Il porte des boucles d’oreilles."
   }
 ]
