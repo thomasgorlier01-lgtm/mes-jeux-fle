@@ -9,12 +9,25 @@ Jeu statique sans dépendance. Ouvrir via HTTP (par exemple `python3 -m http.ser
 
 `characters.json` constitue la matrice des attributs et des descriptions. `data.js` contient la même matrice pour le navigateur. Les 24 personnages sont ceux de la planche fournie par l’utilisateur le 16 novembre 2026. `assets/monstres-reference.jpg` conserve le dessin d’origine ; chaque carte affiche sa case dans une fenêtre SVG, sans générer ni redessiner le personnage. Les numéros de la planche restent visibles.
 
-Les descriptions ont été réécrites après observation de la planche : yeux, bras, jambes, cheveux, barbe/moustache et accessoires. Les longueurs de cheveux sont mentionnées seulement lorsqu’elles sont nettes. Les tailles du nez et des oreilles ne sont pas utilisées comme indices dans cette version : la planche ne présente pas deux catégories assez distinctes pour tous les personnages. Les anciennes illustrations géométriques ne sont plus utilisées.
+Les descriptions ont été réécrites après observation agrandie des 24 personnages : yeux, bras, jambes, cheveux, barbe/moustache et accessoires autorisés (chapeaux, casquettes, lunettes, boucles d’oreilles). Les mentions de peau, fleurs, nœuds papillon et vêtements sont exclues. Les couleurs de cheveux intermédiaires et les longueurs peu nettes ne sont pas utilisées comme indices. Les tailles du nez et des oreilles ne sont pas utilisées comme indices dans cette version : la planche ne présente pas deux catégories assez distinctes pour tous les personnages. Les anciennes illustrations géométriques ne sont plus utilisées.
 
 Les noms et numéros servent uniquement au repérage ; ils ne sont jamais employés comme indice dans une question.
 
 ## Vérification effectuée avant publication
 
-24 descriptions distinctes et 24 combinaisons d’attributs uniques. Attributs relus sur la planche de référence ; 24 nouveaux fichiers audio `NN-reference-v3.m4a`, non vides et décodables. La mécanique des dix questions et des trois vies est conservée.
+Chaque fiche possède des `traits` relus sur l’image et des `clues` réellement annoncés dans sa description. Une valeur multiple dans `traits` signale un détail visuel ambigu : le contrôle conserve toutes ses possibilités. Aucun détail ambigu n’est sélectionné comme indice pour sa propre carte.
+
+Le contrôle compare les indices de chaque description aux **24 fiches**, et impose exactement une correspondance : son propre personnage. Une simple différence de texte entre les descriptions ne suffit pas. Les exclusions nécessaires sont explicites, par exemple « Il n’a ni barbe ni moustache » pour le 19, ou « mais pas de barbe » pour les personnages à moustache seule.
+
+Corrections anatomiques après relecture en grand : le 15 possède **4 bras**, le 22 possède **4 jambes**. Les 24 descriptions et les audios `NN-audit-v4.m4a` ont été reconstruits. `audio/transcripts-v4.json` conserve pour chaque fichier le texte exact et son empreinte SHA-256.
+
+Pour reconstruire les textes et lancer le contrôle :
+
+```sh
+node tools/build-descriptions.mjs
+node tests/check-descriptions.mjs
+```
+
+Les tests vérifient le relevé des yeux/bras/jambes, le périmètre des indices, l’accord entre texte et indices, l’unicité parmi les 24 et deux cas d’ambiguïté qui doivent être détectés (16/19 et 12/21).
 
 Navigateur : retournement et rétablissement, remise à zéro, dix réponses distinctes jusqu’à la victoire, trois erreurs jusqu’à la défaite, redémarrage, déclenchement audio, changements de modes et plein écran. Mise en page contrôlée aux formats étroit et grand écran. Le matériel iPad réel n’a pas été utilisé pour ces tests.

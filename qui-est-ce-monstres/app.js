@@ -1,4 +1,4 @@
-import { CHARACTERS } from './data.js?v=3';
+import { CHARACTERS } from './data.js?v=4';
 import { newGame, answer } from './logic.js';
 const $ = id => document.getElementById(id);
 let mode = 'class', state = null, locked = false, timer = null, player = null, audioToken = 0;
@@ -33,7 +33,7 @@ function choose(id) {
 }
 function finish(target) { stopTransition(); locked=true; cards.forEach(b=>b.disabled=true); if(state.status==='won') { $('progress').textContent='10/10 · Bravo !'; $('description-text').textContent='Tu as retrouvé les 10 monstres !'; message('🎉 Victoire ! Tu peux rejouer.', 'ok'); } else { cards.get(target.id).classList.add('answer'); $('description-text').textContent=`Le monstre à trouver était ${target.name}. ${target.description}`; message('Les trois cœurs sont utilisés. Rejoue pour essayer à nouveau !','bad'); } $('description').disabled=state.status==='won'; $('audio-status').textContent=state.status==='won'?'Les dix descriptions sont résolues.':'La carte verte montre la réponse. Tu peux réécouter sa description.'; }
 async function listen() {
-  if(!state || state.status==='won') return; stopAudio(); const token=audioToken; const target=state.targets[state.round]; const audio=new Audio(`audio/${String(target.id).padStart(2,'0')}-reference-v3.m4a`); audio.playbackRate=.75; audio.preservesPitch=true; player=audio; $('description').setAttribute('aria-busy','true'); $('audio-status').textContent='Lecture en cours…';
+  if(!state || state.status==='won') return; stopAudio(); const token=audioToken; const target=state.targets[state.round]; const audio=new Audio(`audio/${String(target.id).padStart(2,'0')}-audit-v4.m4a`); audio.playbackRate=.75; audio.preservesPitch=true; player=audio; $('description').setAttribute('aria-busy','true'); $('audio-status').textContent='Lecture en cours…';
   const ended=()=>{if(token!==audioToken)return; $('description').setAttribute('aria-busy','false');$('audio-status').textContent='Touche la description pour réécouter.';}; audio.onended=ended;
   const fallback=()=>{if(token!==audioToken)return;audio.onerror=null;audio.pause();if('speechSynthesis' in window){const u=new SpeechSynthesisUtterance(target.description);u.lang='fr-FR';u.rate=.75;u.voice=speechSynthesis.getVoices().find(v=>v.lang==='fr-FR')||null;u.onend=ended;u.onerror=()=>{$('audio-status').textContent='Lecture audio indisponible. Réessaie en touchant la description.';$('description').setAttribute('aria-busy','false');};speechSynthesis.speak(u);}else{$('audio-status').textContent='Lecture audio indisponible. Réessaie en touchant la description.';$('description').setAttribute('aria-busy','false');}};
   audio.onerror=fallback; try { await audio.play(); } catch { fallback(); }

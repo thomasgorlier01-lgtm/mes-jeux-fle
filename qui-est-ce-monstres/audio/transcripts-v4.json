@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "text": "Il a un œil, deux bras et deux jambes. Il a les cheveux blonds.",
+    "file": "01-audit-v4.m4a",
+    "duration": 3.793,
+    "sha256": "72ef6c11023b0fb229ea7c427b6b43817e54db52a61fa2950d168a37a701ebe3"
+  },
+  {
+    "id": 2,
+    "text": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux bruns. Il a une moustache, mais pas de barbe. Il porte des lunettes.",
+    "file": "02-audit-v4.m4a",
+    "duration": 8.449,
+    "sha256": "5a60d28ec5c3d478029908f01f0abd5ad3ac668e7686585362063607e7ea88f6"
+  },
+  {
+    "id": 3,
+    "text": "Il a trois yeux, quatre bras et deux jambes. Il a les cheveux longs et roux. Il porte un chapeau vert et des boucles d’oreilles.",
+    "file": "03-audit-v4.m4a",
+    "duration": 7.137,
+    "sha256": "6335b63b27e2208a756d352df3d03c9c5d944bd61715a5c6e88b6bcc2c7f85d2"
+  },
+  {
+    "id": 4,
+    "text": "Il a deux yeux, deux bras et trois jambes. Il a une barbe.",
+    "file": "04-audit-v4.m4a",
+    "duration": 3.758,
+    "sha256": "2832e2bac06a6dd7a0a6396c2bd8662d3ba05bd43f84d6b343d3034f6d2fe662"
+  },
+  {
+    "id": 5,
+    "text": "Il a un œil, deux bras et quatre jambes. Il porte une casquette violette.",
+    "file": "05-audit-v4.m4a",
+    "duration": 4.815,
+    "sha256": "edb7306c525cf4618db27e5f11ecf18ea4d3f23776202dd9f39b09c373398290"
+  },
+  {
+    "id": 6,
+    "text": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux longs et blonds. Il porte des lunettes et des boucles d’oreilles.",
+    "file": "06-audit-v4.m4a",
+    "duration": 6.835,
+    "sha256": "ffbb1e8eed578906634a57274846e0815be4a9c25614610fd0ae8ae8c64b65b6"
+  },
+  {
+    "id": 7,
+    "text": "Il a trois yeux, quatre bras et trois jambes.",
+    "file": "07-audit-v4.m4a",
+    "duration": 2.76,
+    "sha256": "2ac8fac38480a666efd130ed30056bb7c6ac17f29fcdef120dcac5fa57c716e8"
+  },
+  {
+    "id": 8,
+    "text": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux roux. Il a une barbe. Il porte un chapeau jaune.",
+    "file": "08-audit-v4.m4a",
+    "duration": 6.87,
+    "sha256": "0084c358bfa864ed7f99646ee6e6c024ecd20d2e600d1a6623b55b19b404452e"
+  },
+  {
+    "id": 9,
+    "text": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux longs et noirs. Il porte des boucles d’oreilles.",
+    "file": "09-audit-v4.m4a",
+    "duration": 6.486,
+    "sha256": "1a05f93102ebd0f33e84bdec1e4e2e73b2fa9f698addd40f37900a9d62fe1556"
+  },
+  {
+    "id": 10,
+    "text": "Il a trois yeux, quatre bras et deux jambes. Il a les cheveux blonds.",
+    "file": "10-audit-v4.m4a",
+    "duration": 4.06,
+    "sha256": "3a713baa1a278f1efb2754ad0c81b28a8a3c872c30d848ce9d5e022d58ca65fb"
+  },
+  {
+    "id": 11,
+    "text": "Il a un œil, deux bras et trois jambes. Il a une moustache, mais pas de barbe. Il porte un chapeau noir et des boucles d’oreilles.",
+    "file": "11-audit-v4.m4a",
+    "duration": 8.089,
+    "sha256": "1e2b9e9c425a8accbf44157f1046ce12c108de4a6b2b7889d339441ec8f018e5"
+  },
+  {
+    "id": 12,
+    "text": "Il a deux yeux, quatre bras et deux jambes. Il a une barbe. Il porte des lunettes.",
+    "file": "12-audit-v4.m4a",
+    "duration": 5.523,
+    "sha256": "f66dfb81b6093698dca9d1cd7b143842dd6c7354f99049762cede7720ca4481d"
+  },
+  {
+    "id": 13,
+    "text": "Il a trois yeux, deux bras et trois jambes. Il a les cheveux blonds.",
+    "file": "13-audit-v4.m4a",
+    "duration": 3.909,
+    "sha256": "9a64bbc9c06c9790b7d2246da2eee16e99c7880a0d29d2659dd85482a035a7fd"
+  },
+  {
+    "id": 14,
+    "text": "Il a deux yeux, deux bras et quatre jambes. Il a les cheveux bruns. Il porte une casquette bleue.",
+    "file": "14-audit-v4.m4a",
+    "duration": 5.941,
+    "sha256": "96437d76eb1692d725a54693a2a403c13f12a2d86a50f0e34fd6ec38f1610ca9"
+  },
+  {
+    "id": 15,
+    "text": "Il a un œil, quatre bras et deux jambes. Il a les cheveux roux. Il porte des boucles d’oreilles.",
+    "file": "15-audit-v4.m4a",
+    "duration": 5.918,
+    "sha256": "aa2aa47b33fb58aa3b054a97138dc520e4207614f2f0e4c479848fc9584e556f"
+  },
+  {
+    "id": 16,
+    "text": "Il a deux yeux, deux bras et trois jambes. Il a les cheveux bruns. Il a une moustache, mais pas de barbe. Il porte des lunettes.",
+    "file": "16-audit-v4.m4a",
+    "duration": 8.286,
+    "sha256": "651b27526922cb8512705027453415ec7a8eb0eafde431d185aa462fa57a5d29"
+  },
+  {
+    "id": 17,
+    "text": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux longs et bruns. Il porte un chapeau jaune et des boucles d’oreilles.",
+    "file": "17-audit-v4.m4a",
+    "duration": 7.334,
+    "sha256": "da051cdde83ea5ebdb22a0dab3eaa7dcef3bf7dc0493c719e0d5095ae20eee88"
+  },
+  {
+    "id": 18,
+    "text": "Il a trois yeux, deux bras et deux jambes. Il a les cheveux blonds. Il a une barbe.",
+    "file": "18-audit-v4.m4a",
+    "duration": 5.047,
+    "sha256": "16d50f900ab9beec98204724ee640348b95b228766b49542c1570bdeadab565b"
+  },
+  {
+    "id": 19,
+    "text": "Il a deux yeux, deux bras et trois jambes. Il a les cheveux bruns. Il n’a ni barbe ni moustache. Il porte des lunettes.",
+    "file": "19-audit-v4.m4a",
+    "duration": 7.647,
+    "sha256": "2d26253bd10d0fb720463a78f8519021e2a7269bbe945e22b529dc392a562edd"
+  },
+  {
+    "id": 20,
+    "text": "Il a un œil, deux bras et quatre jambes. Il a les cheveux noirs. Il porte des boucles d’oreilles.",
+    "file": "20-audit-v4.m4a",
+    "duration": 6.231,
+    "sha256": "5490bcaa9581aa36c3940640bae4e8dbda628ced1cd377320789e96e2f02ebb5"
+  },
+  {
+    "id": 21,
+    "text": "Il a deux yeux, quatre bras et deux jambes. Il a les cheveux roux. Il a une moustache, mais pas de barbe.",
+    "file": "21-audit-v4.m4a",
+    "duration": 6.765,
+    "sha256": "f7fa09fe5d74d957f7fbc635e58905609f1978e7dfad3500ca17f07a7b54541d"
+  },
+  {
+    "id": 22,
+    "text": "Il a trois yeux, deux bras et quatre jambes. Il a une barbe.",
+    "file": "22-audit-v4.m4a",
+    "duration": 3.874,
+    "sha256": "fde29872b4338efa5a7f1d264de97f9810c6a749c32c1784c86445baa6c61f4c"
+  },
+  {
+    "id": 23,
+    "text": "Il a deux yeux, deux bras et deux jambes. Il a les cheveux blonds. Il porte un chapeau bleu et des lunettes.",
+    "file": "23-audit-v4.m4a",
+    "duration": 6.312,
+    "sha256": "4e6da14dec3df74cd2d99cd48bf78c8dc4b020710433c6e1272d360dcc2b558e"
+  },
+  {
+    "id": 24,
+    "text": "Il a un œil, quatre bras et trois jambes. Il a les cheveux roux. Il porte des boucles d’oreilles.",
+    "file": "24-audit-v4.m4a",
+    "duration": 5.964,
+    "sha256": "c57b14ba7a612954f672c7ae0666722627dfcf716f47399bdd7d5aabcb1f14cf"
+  }
+]
