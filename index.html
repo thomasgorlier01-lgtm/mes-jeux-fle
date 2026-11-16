@@ -37,7 +37,7 @@
       <div class="hero-text"><span class="eyebrow">BIENVENUE ! 👋</span><h1 id="welcome">Mes jeux de français</h1><p>Choisis un jeu, observe bien les images et amuse-toi avec les mots !</p></div>
       <div class="hero-deco" aria-hidden="true">🎲</div>
     </section>
-    <div class="sectionhead"><div><h2>Jeux</h2><p>Choisis ton niveau, puis un jeu.</p></div><div class="counter" id="counter">4 jeux</div></div>
+    <div class="sectionhead"><div><h2>Jeux</h2><p>Choisis ton niveau, puis un jeu ou un dossier.</p></div><div class="counter" id="counter">11 jeux</div></div>
     <nav class="levels" aria-label="Niveaux des jeux">
       <button class="level" type="button" data-level="Débutant" aria-pressed="true">🌱 Débutant</button>
       <button class="level" type="button" data-level="Intermédiaire" aria-pressed="false">🌟 Intermédiaire</button>
@@ -59,59 +59,17 @@
     // Ne pas oublier la virgule entre les jeux.
     const JEUX = [
       {
-        titre: 'A la cantine',
-        description: 'Écoute la commande des enfants et prépare dix plateaux complets : un plat, un dessert et une boisson.',
-        categorie: 'Les repas · Séquence niveau 4',
+        titre: 'La nourriture',
+        description: 'Cinq jeux pour écouter, lire et préparer des commandes : pique-nique, marché, café, cantine et repas.',
+        categorie: 'Dossier · 5 jeux',
         niveau: 'Débutant',
-        emoji: '🍽️',
-        couleur: 'vest',
-        bulle1: '🥦',
-        bulle2: '🔊',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/cantine-menus/'
-      },
-      {
-        titre: 'Au café — les boissons',
-        description: 'Écoute les huit boissons, puis sers les deux parents pendant cinq tournées.',
-        categorie: 'Les boissons · Séquence niveau 3',
-        niveau: 'Débutant',
-        emoji: '☕',
-        couleur: 'vest',
-        bulle1: '🥛',
-        bulle2: '🔊',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/cafe-boissons/?cafe=2'
-      },
-      {
-        titre: 'Au marché des fruits',
-        description: 'Écoute les fruits, associe les mots aux cagettes et prépare dix paniers avec les bonnes quantités.',
-        categorie: 'Les aliments · Séquence niveau 2',
-        niveau: 'Débutant',
-        emoji: '🧺',
+        emoji: '📁',
         couleur: 'vest',
         bulle1: '🍎',
-        bulle2: '🔊',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/marche-fruits/?marche=3'
-      },
-      {
-        titre: 'Le pique-nique en famille',
-        description: 'Écoute les mots, retrouve les objets et prépare les sandwichs de la famille.',
-        categorie: 'Les aliments et les objets de table',
-        niveau: 'Débutant',
-        emoji: '🥪',
-        couleur: 'vest',
-        bulle1: '🔊',
-        bulle2: '✓',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/pique-nique-famille/?pique-nique=4'
-      },
-      {
-        titre: 'À table !',
-        description: 'Lis la commande de Léo ou Lina et prépare son plateau : repas, desserts et boissons en trois niveaux.',
-        categorie: 'Les aliments et les repas',
-        niveau: 'Débutant',
-        emoji: '🍽️',
-        couleur: 'vest',
-        bulle1: '🥕',
-        bulle2: '✓',
-        url: 'https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/atelier-repas/'
+        bulle2: '🍽️',
+        dossier: true,
+        nbJeux: 5,
+        url: './la-nourriture/'
       },
       {
         titre: 'Qui est-ce ? Les douleurs',
@@ -194,7 +152,7 @@
       document.body.style.overflow='hidden';
       history.pushState({game:true},'',location.pathname+location.search+'#jeu');
     }
-    back.addEventListener('click',()=>{if(history.state?.game)history.back();else closeGame();});
+    back.addEventListener('click',()=>{closeGame();history.replaceState(null,'',location.pathname+location.search);});
     window.addEventListener('popstate',()=>closeGame());
     const games = document.getElementById('games');
     const counter = document.getElementById('counter');
@@ -206,7 +164,8 @@
       const selected = JEUX.filter(jeu => jeu.niveau === level);
       title.textContent = level;
       description.textContent = level === 'Débutant' ? 'Les jeux pour commencer.' : 'De nouvelles activités seront ajoutées ici.';
-      counter.textContent = selected.length + ' jeu' + (selected.length > 1 ? 'x' : '');
+      const total = selected.reduce((sum, jeu) => sum + (jeu.nbJeux || 1), 0);
+      counter.textContent = total + ' jeu' + (total > 1 ? 'x' : '');
       levels.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.level === level)));
       games.replaceChildren();
       empty.hidden = selected.length !== 0;
@@ -214,7 +173,8 @@
     }
     function createCard(jeu) {
       const card = document.createElement('a');
-      card.className = 'game'; card.href = jeu.url; card.addEventListener('click', e=>{e.preventDefault();openGame(jeu);});
+      card.className = 'game'; card.href = jeu.url;
+      if (!jeu.dossier) card.addEventListener('click', e=>{e.preventDefault();openGame(jeu);});
       // La navigation se fait dans la même fenêtre : pratique pour l'iPad.
       const art = document.createElement('div'); art.className = 'art ' + (jeu.couleur || 'corp');
       const ch = document.createElement('span'); ch.className = 'character'; ch.textContent = jeu.emoji || '🎯'; art.append(ch);
