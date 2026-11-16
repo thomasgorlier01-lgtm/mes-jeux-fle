@@ -1,0 +1,18 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#71608e"><title>À la cantine — mon menu</title><link rel="stylesheet" href="styles.css?v=1"></head><body>
+<header><a href="../" aria-label="Mes jeux de français">← Mes jeux</a><h1>À la cantine — mon menu</h1><span class="badge">Niveau 4</span></header>
+<main>
+ <section id="home" class="welcome"><span class="eyebrow">J’écoute · Je lis · Je prépare</span><h2>Bienvenue à la cantine !</h2><p>Prépare le plateau du garçon, puis celui de la fille.</p><div class="home-picture"><img src="assets/garcon-plateau.webp" alt="Le garçon tient son plateau."><img src="assets/fille-plateau.webp" alt="La fille tient son plateau."></div><p>Un plat, un dessert et une boisson. Dix commandes différentes à écouter et à lire.</p><button id="start" class="primary start">Je prépare les plateaux →</button><p><a class="previous" href="../cafe-boissons/?cafe=2">← Revoir le café</a></p></section>
+ <section id="play" hidden>
+  <div class="topline"><button id="back" class="quiet">← L’accueil</button><strong id="progress"></strong></div>
+  <div class="game-layout">
+   <section class="character-card"><h2 id="character-title"></h2><div id="scene" class="scene"><img id="character" class="character" alt=""><button id="listen-child" class="listen-child" aria-label="Écouter la commande de l’enfant"><span aria-hidden="true">🔊</span></button>
+    <div class="plate" role="group" aria-label="Le plat dans l’assiette"><div id="plate-foods" class="plate-foods"></div></div>
+    <svg class="cutlery" viewBox="0 0 64 130" preserveAspectRatio="none" aria-hidden="true"><g fill="#d5d3cc" stroke="#8e8a80" stroke-width="1.6" stroke-linejoin="round"><path d="M7 8v24h12V8h-3v18h-2V8h-3v18H9V8zM11 32h5l2 86q-4 6-8 0z"/><path d="M29 8q12 5 10 48l-5 8 1 53q-4 7-7 0z"/><ellipse cx="51" cy="28" rx="9" ry="20"/><path d="M49 47h4l2 70q-4 7-8 0z"/></g></svg>
+    <div id="dessert-zone" class="dessert-zone" role="group" aria-label="Le dessert sur le plateau"></div><div id="drink-zone" class="drink-zone" role="group" aria-label="La boisson sur le plateau"></div>
+   </div><div class="stage-footer"><span id="tray-count">0 / 5 éléments</span><button id="clear" class="quiet">Vider le plateau</button></div><p class="stage-hint">🔊 Clique sur l’enfant pour l’écouter.</p></section>
+   <div class="controls"><section class="menu-card"><h2>Menu de la cantine</h2><div id="menu"></div></section>
+    <button id="command" class="bubble" aria-label="Écouter la commande"><span class="audio-icon" aria-hidden="true">🔊</span><span id="commandText"></span></button>
+   </div>
+  </div><div class="bottom"><p id="feedback" role="status" aria-live="polite"></p><div class="actions"><button id="verify" class="primary">Vérifier mon plateau</button><button id="next" class="primary" hidden>Le plateau suivant →</button></div></div>
+ </section>
+</main><footer>Prends ton temps. Clique sur 🔊 pour écouter autant de fois que tu veux.</footer><script type="module" src="app.js?v=1"></script><script src="../fullscreen.js?v=1" defer></script></body></html>
