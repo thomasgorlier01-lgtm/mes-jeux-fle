@@ -2,7 +2,7 @@ import {DescriptionAudio} from './audio.js?v=1';
 import catalog from './catalog.js?v=2';
 import {LEVELS,availableCategories,availableItems,startGame,selectItem,clearOutfit,checkOutfit,revealSolution,nextRound,canCheck,describeRound,describeItem} from './logic.js?v=3';
 const $=id=>document.getElementById(id);
-const descriptionAudio=new DescriptionAudio(status=>{const active=status==='loading'||status==='playing';$('listen-description').classList.toggle('is-playing',active);$('listen-description').setAttribute('aria-pressed',String(active));$('listen-description').setAttribute('aria-label',active?'Arrêter la lecture audio':'Écouter la description');$('listen-icon').textContent=active?'⏹':'🔊';$('listen-label').textContent=active?'Arrêter l’écoute':'Écouter la description';$('audio-status').textContent=status==='loading'?'Préparation de l’audio…':status==='error'?'Le son n’a pas pu être lu. Clique à nouveau sur 🔊 pour réessayer.':'';});
+const descriptionAudio=new DescriptionAudio(status=>{const active=status==='loading'||status==='playing';$('listen-description').classList.toggle('is-playing',active);$('listen-description').setAttribute('aria-pressed',String(active));$('listen-description').setAttribute('aria-label',active?'Arrêter la lecture audio':'Écouter la description physique');$('listen-icon').textContent=active?'⏹':'🔊';$('listen-label').textContent=active?'Arrêter l’écoute':'Écouter la description physique';$('audio-status').textContent=status==='loading'?'Préparation de l’audio…':status==='playing'?'Lecture en cours…':status==='error'?'Le son n’a pas pu être lu. Clique à nouveau sur 🔊 pour réessayer.':'';});
 function listenDescription(){if(!isHome&&state.phase!=='finished')descriptionAudio.play(describeRound(state.rounds[state.round],catalog),state.rounds[state.round].avatar);}
 let state=startGame(catalog),openedCategory=null,currentLayers='',currentLevel=1,isHome=true;
 const stage=$('stage'),categoryButtons=new Map(),menu=$('color-menu');
@@ -66,3 +66,4 @@ $('listen-description').addEventListener('click',()=>{if(descriptionAudio.active
 $('description').addEventListener('click',listenDescription);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)descriptionAudio.stop();});
 render();
+

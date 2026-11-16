@@ -4,7 +4,7 @@
  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="theme-color" content="#f8f3e9"><meta name="description" content="Écoute ou lis la description et crée le visage. Un jeu de français pour apprendre les traits du visage et les couleurs.">
  <title>L’atelier des visages — Jeu de français</title>
- <link rel="stylesheet" href="styles.css?v=2"><script type="module" src="app.js?v=4"></script>
+ <link rel="stylesheet" href="styles.css?v=2"><script type="module" src="app.js?v=5"></script>
 </head>
 <body>
  <main class="shell">
@@ -27,7 +27,7 @@
      <div class="stage-footer"><span class="stage-note">À toi de créer son visage</span><button id="clear" class="clear" type="button">Tout retirer</button></div>
     </section>
    <div class="outfit-controls">
-    <section class="instruction-card" aria-labelledby="instruction-title"><div class="instruction-heading"><span aria-hidden="true">✎</span><h2 id="instruction-title">Le visage à créer</h2></div><div class="description-audio"><button id="listen-description" class="listen-description" type="button" aria-label="Écouter la description" aria-pressed="false"><span id="listen-icon" aria-hidden="true">🔊</span><span id="listen-label">Écouter la description</span></button><span id="audio-status" class="audio-status" role="status" aria-live="polite"></span></div><p id="description" title="Cliquer pour écouter la description"></p><p class="instruction-note">Lis ou écoute, puis ajoute uniquement les éléments décrits.</p></section>
+    <section class="instruction-card" aria-labelledby="instruction-title"><div class="instruction-heading"><span aria-hidden="true">✎</span><h2 id="instruction-title">Le visage à créer</h2></div><div class="description-audio"><button id="listen-description" class="listen-description" type="button" aria-label="Écouter la description physique" aria-pressed="false"><span id="listen-icon" aria-hidden="true">🔊</span><span id="listen-label">Écouter la description physique</span></button><span id="audio-status" class="audio-status" role="status" aria-live="polite"></span></div><p id="description" title="Cliquer pour écouter la description physique"></p><p class="instruction-note">Lis ou écoute, puis ajoute uniquement les éléments décrits.</p></section>
     <section class="picker-card" aria-label="Choisir les traits du visage"><p class="picker-note">Choisis un élément, puis sa couleur ou sa taille.</p><div class="garment-picker" id="garment-picker"></div></section>
     <div class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
     <div class="action-row"><button id="check" class="primary" type="button"><span aria-hidden="true">✓</span> Vérifier mon visage</button><button id="reveal" class="primary secondary" type="button" hidden>Voir la solution</button><button id="next" class="primary" type="button" hidden>Personnage suivant <span aria-hidden="true">→</span></button></div>
