@@ -1,0 +1,387 @@
+{
+  "line-001": {
+    "text": "Il a des yeux verts.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 0.0,
+    "end": 1.1006802721088436,
+    "voice": "Thomas"
+  },
+  "line-002": {
+    "text": "Il a une petite bouche.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 1.4006802721088436,
+    "end": 2.6755102040816325,
+    "voice": "Thomas"
+  },
+  "line-003": {
+    "text": "Il a des petites oreilles.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 2.975510204081633,
+    "end": 4.261904761904762,
+    "voice": "Thomas"
+  },
+  "line-004": {
+    "text": "Il a un grand nez.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 4.561904761904762,
+    "end": 5.3723356009070296,
+    "voice": "Thomas"
+  },
+  "line-005": {
+    "text": "Il a des cheveux courts.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 5.672335600907029,
+    "end": 6.91233560090703,
+    "voice": "Thomas"
+  },
+  "line-011": {
+    "text": "Il a des yeux marron.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 7.212335600907029,
+    "end": 8.220136054421769,
+    "voice": "Thomas"
+  },
+  "line-012": {
+    "text": "Il a une grande bouche.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 8.52013605442177,
+    "end": 9.687619047619048,
+    "voice": "Thomas"
+  },
+  "line-013": {
+    "text": "Il a des grandes oreilles.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 9.987619047619047,
+    "end": 11.169569160997732,
+    "voice": "Thomas"
+  },
+  "line-014": {
+    "text": "Il a un petit nez.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 11.469569160997732,
+    "end": 12.384489795918368,
+    "voice": "Thomas"
+  },
+  "line-019": {
+    "text": "Il a des yeux bleus.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 12.684489795918367,
+    "end": 13.622630385487529,
+    "voice": "Thomas"
+  },
+  "line-021": {
+    "text": "Il a des yeux noirs.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 13.922630385487528,
+    "end": 15.104580498866213,
+    "voice": "Thomas"
+  },
+  "line-022": {
+    "text": "Il a des cheveux courts et blonds.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 15.404580498866213,
+    "end": 16.86517006802721,
+    "voice": "Thomas"
+  },
+  "line-023": {
+    "text": "Il a un chapeau.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 17.165170068027212,
+    "end": 18.010430839002268,
+    "voice": "Thomas"
+  },
+  "line-026": {
+    "text": "Il a des cheveux courts et bruns.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 18.31043083900227,
+    "end": 19.78263038548753,
+    "voice": "Thomas"
+  },
+  "line-027": {
+    "text": "Il a une moustache brune.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 20.08263038548753,
+    "end": 21.41551020408163,
+    "voice": "Thomas"
+  },
+  "line-028": {
+    "text": "Il a une barbe brune.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 21.71551020408163,
+    "end": 22.920680272108843,
+    "voice": "Thomas"
+  },
+  "line-029": {
+    "text": "Il a des lunettes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 23.220680272108844,
+    "end": 24.14721088435374,
+    "voice": "Thomas"
+  },
+  "line-032": {
+    "text": "Il a des cheveux courts et roux.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 24.44721088435374,
+    "end": 25.849750566893423,
+    "voice": "Thomas"
+  },
+  "line-033": {
+    "text": "Il a une moustache rousse.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 26.149750566893424,
+    "end": 27.56390022675737,
+    "voice": "Thomas"
+  },
+  "line-036": {
+    "text": "Il a des cheveux courts et noirs.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 27.86390022675737,
+    "end": 29.568299319727892,
+    "voice": "Thomas"
+  },
+  "line-038": {
+    "text": "Il a une moustache.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 29.868299319727893,
+    "end": 30.95596371882086,
+    "voice": "Thomas"
+  },
+  "line-039": {
+    "text": "Il a une barbe.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 31.255963718820862,
+    "end": 32.15922902494331,
+    "voice": "Thomas"
+  },
+  "line-041": {
+    "text": "Il a une moustache noire.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 32.45922902494331,
+    "end": 33.94303854875283,
+    "voice": "Thomas"
+  },
+  "line-042": {
+    "text": "Il a une barbe noire.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 34.243038548752835,
+    "end": 35.57591836734694,
+    "voice": "Thomas"
+  },
+  "line-043": {
+    "text": "Il a un chapeau, mais il n’a pas de lunettes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 35.87591836734694,
+    "end": 38.40471655328798,
+    "voice": "Thomas"
+  },
+  "line-045": {
+    "text": "Il a des lunettes, mais il n’a pas de chapeau.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 38.70471655328798,
+    "end": 41.198684807256235,
+    "voice": "Thomas"
+  },
+  "line-047": {
+    "text": "Il a une moustache rousse, mais il n’a pas de lunettes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 41.49868480725623,
+    "end": 44.51510204081632,
+    "voice": "Thomas"
+  },
+  "line-049": {
+    "text": "Il a une barbe, mais il n’a pas de lunettes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 44.81510204081633,
+    "end": 47.355600907029476,
+    "voice": "Thomas"
+  },
+  "line-050": {
+    "text": "Il a des cheveux courts et bruns, mais il n’a pas de lunettes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 47.65560090702948,
+    "end": 50.7881179138322,
+    "voice": "Thomas"
+  },
+  "line-052": {
+    "text": "Il a une moustache, mais il n’a pas de lunettes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 51.0881179138322,
+    "end": 53.802086167800454,
+    "voice": "Thomas"
+  },
+  "line-053": {
+    "text": "Il a des cheveux courts, mais il n’a pas de lunettes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 54.10208616780045,
+    "end": 56.967573696145124,
+    "voice": "Thomas"
+  },
+  "line-054": {
+    "text": "Il est chauve.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 57.26757369614513,
+    "end": 58.00825396825397,
+    "voice": "Thomas"
+  },
+  "line-006": {
+    "text": "Elle a des yeux bleus.",
+    "file": "assets/indices-fille.m4a",
+    "start": 0.0,
+    "end": 0.8324716553287982,
+    "voice": "Amélie"
+  },
+  "line-007": {
+    "text": "Elle a une grande bouche.",
+    "file": "assets/indices-fille.m4a",
+    "start": 1.1324716553287981,
+    "end": 2.2087528344671203,
+    "voice": "Amélie"
+  },
+  "line-008": {
+    "text": "Elle a des petites oreilles.",
+    "file": "assets/indices-fille.m4a",
+    "start": 2.50875283446712,
+    "end": 3.770793650793651,
+    "voice": "Amélie"
+  },
+  "line-009": {
+    "text": "Elle a un petit nez.",
+    "file": "assets/indices-fille.m4a",
+    "start": 4.070793650793651,
+    "end": 4.9845351473922905,
+    "voice": "Amélie"
+  },
+  "line-010": {
+    "text": "Elle a des cheveux longs.",
+    "file": "assets/indices-fille.m4a",
+    "start": 5.28453514739229,
+    "end": 6.2214965986394555,
+    "voice": "Amélie"
+  },
+  "line-015": {
+    "text": "Elle a des yeux noirs.",
+    "file": "assets/indices-fille.m4a",
+    "start": 6.521496598639456,
+    "end": 7.5397278911564625,
+    "voice": "Amélie"
+  },
+  "line-016": {
+    "text": "Elle a une petite bouche.",
+    "file": "assets/indices-fille.m4a",
+    "start": 7.839727891156462,
+    "end": 9.008888888888889,
+    "voice": "Amélie"
+  },
+  "line-017": {
+    "text": "Elle a des grandes oreilles.",
+    "file": "assets/indices-fille.m4a",
+    "start": 9.30888888888889,
+    "end": 10.42,
+    "voice": "Amélie"
+  },
+  "line-018": {
+    "text": "Elle a un grand nez.",
+    "file": "assets/indices-fille.m4a",
+    "start": 10.72,
+    "end": 11.540861678004536,
+    "voice": "Amélie"
+  },
+  "line-020": {
+    "text": "Elle a des yeux verts.",
+    "file": "assets/indices-fille.m4a",
+    "start": 11.840861678004535,
+    "end": 12.789433106575963,
+    "voice": "Amélie"
+  },
+  "line-024": {
+    "text": "Elle a des cheveux longs et roux.",
+    "file": "assets/indices-fille.m4a",
+    "start": 13.089433106575964,
+    "end": 14.328253968253968,
+    "voice": "Amélie"
+  },
+  "line-025": {
+    "text": "Elle a des boucles d’oreilles.",
+    "file": "assets/indices-fille.m4a",
+    "start": 14.628253968253969,
+    "end": 15.843854875283446,
+    "voice": "Amélie"
+  },
+  "line-030": {
+    "text": "Elle a des cheveux noirs.",
+    "file": "assets/indices-fille.m4a",
+    "start": 16.143854875283445,
+    "end": 17.3362358276644,
+    "voice": "Amélie"
+  },
+  "line-031": {
+    "text": "Elle a un chapeau.",
+    "file": "assets/indices-fille.m4a",
+    "start": 17.6362358276644,
+    "end": 18.503537414965987,
+    "voice": "Amélie"
+  },
+  "line-034": {
+    "text": "Elle a des cheveux longs et bruns.",
+    "file": "assets/indices-fille.m4a",
+    "start": 18.803537414965987,
+    "end": 20.088798185941044,
+    "voice": "Amélie"
+  },
+  "line-035": {
+    "text": "Elle a des lunettes.",
+    "file": "assets/indices-fille.m4a",
+    "start": 20.38879818594104,
+    "end": 21.30253968253968,
+    "voice": "Amélie"
+  },
+  "line-037": {
+    "text": "Elle a des yeux marron.",
+    "file": "assets/indices-fille.m4a",
+    "start": 21.602539682539682,
+    "end": 22.50467120181406,
+    "voice": "Amélie"
+  },
+  "line-040": {
+    "text": "Elle a des cheveux longs et blonds.",
+    "file": "assets/indices-fille.m4a",
+    "start": 22.80467120181406,
+    "end": 24.089931972789117,
+    "voice": "Amélie"
+  },
+  "line-044": {
+    "text": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+    "file": "assets/indices-fille.m4a",
+    "start": 24.389931972789114,
+    "end": 27.068390022675736,
+    "voice": "Amélie"
+  },
+  "line-046": {
+    "text": "Elle a un chapeau, mais elle n’a pas de lunettes.",
+    "file": "assets/indices-fille.m4a",
+    "start": 27.368390022675737,
+    "end": 29.721768707482994,
+    "voice": "Amélie"
+  },
+  "line-048": {
+    "text": "Elle a des lunettes, mais elle n’a pas de chapeau.",
+    "file": "assets/indices-fille.m4a",
+    "start": 30.021768707482995,
+    "end": 32.37514739229025,
+    "voice": "Amélie"
+  },
+  "line-051": {
+    "text": "Elle a des lunettes, mais elle n’a pas de boucles d’oreilles.",
+    "file": "assets/indices-fille.m4a",
+    "start": 32.67514739229025,
+    "end": 35.36521541950113,
+    "voice": "Amélie"
+  },
+  "line-055": {
+    "text": "Elle est chauve.",
+    "file": "assets/indices-fille.m4a",
+    "start": 35.66521541950113,
+    "end": 36.381451247165536,
+    "voice": "Amélie"
+  }
+}

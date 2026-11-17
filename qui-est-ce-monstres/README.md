@@ -1,9 +1,9 @@
-# Qui est-ce ? Les 24 monstres
+# Qui est-ce ? Corps de monstres
 
 Jeu statique sans dépendance. Ouvrir via HTTP (par exemple `python3 -m http.server`).
 
 - **Classe** : 24 cartes, grille 6 × 4 sur grand écran ; clic pour retourner et rétablir ; remise à zéro. Aucun score ni cœur.
-- **Autonomie** : 10 cibles tirées sans répétition parmi les 24 ; 3 vies pour toute la partie ; aucune limite de temps. Chaque erreur sur une nouvelle carte coûte une vie. Une carte déjà erronée est désactivée pour éviter de perdre plusieurs vies par double clic. Les cartes sont rétablies à la question suivante.
+- **Autonomie** : 10 cibles tirées sans répétition parmi les 24 ; 5 vies pour toute la partie ; aucune limite de temps. Chaque erreur sur une nouvelle carte coûte une vie. Une carte déjà erronée est désactivée pour éviter de perdre plusieurs vies par double clic. Les cartes sont rétablies à la question suivante.
 - **Audio** : description complète en français (voix système Thomas), AAC M4A intégré et lecture à 0,75 avec conservation de la hauteur. Clic sur toute la description ; répétition gratuite. Synthèse vocale française de secours si le fichier ne peut pas être lu. La lecture cesse au changement de mode, à la bonne réponse et au redémarrage.
 - **Plein écran** : script commun du portail, avec solution agrandie de secours et conservation de la partie.
 
@@ -30,4 +30,4 @@ node tests/check-descriptions.mjs
 
 Les tests vérifient le relevé des yeux/bras/jambes, le périmètre des indices, l’accord entre texte et indices, l’unicité parmi les 24 et deux cas d’ambiguïté qui doivent être détectés (16/19 et 12/21).
 
-Navigateur : retournement et rétablissement, remise à zéro, dix réponses distinctes jusqu’à la victoire, trois erreurs jusqu’à la défaite, redémarrage, déclenchement audio, changements de modes et plein écran. Mise en page contrôlée aux formats étroit et grand écran. Le matériel iPad réel n’a pas été utilisé pour ces tests.
+Navigateur : retournement et rétablissement, remise à zéro, dix réponses distinctes jusqu’à la victoire, cinq erreurs jusqu’à la défaite, redémarrage, déclenchement audio, changements de modes et plein écran. Mise en page contrôlée aux formats étroit et grand écran. Le matériel iPad réel n’a pas été utilisé pour ces tests.

@@ -11,8 +11,8 @@ const JEUX = [
     "url": "../qui-est-ce-douleurs/"
   },
   {
-    "titre": "Corps de monstres",
-    "description": "Retourne les cartes en classe ou écoute dix descriptions avec trois cœurs en autonomie.",
+    "titre": "Qui est-ce ? Corps de monstres",
+    "description": "Retourne les cartes en classe ou écoute dix descriptions avec cinq cœurs en autonomie.",
     "categorie": "Le corps, le visage et les accessoires",
     "niveau": "Débutant",
     "emoji": "👾",

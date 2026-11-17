@@ -1,0 +1,3814 @@
+{
+  "1": {
+    "board": 15,
+    "characters": [
+      {
+        "id": 1,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "petite"
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Il a des yeux verts.",
+            "audio": "line-001"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "roux",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "bouche": "grande"
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "noirs",
+          "bouche": "grande",
+          "moustacheCouleur": "noire",
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": true,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande"
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "bruns",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite"
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Elle a des yeux noirs.",
+            "audio": "line-015"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "roux",
+          "bouche": "grande",
+          "moustacheCouleur": "rousse",
+          "barbeCouleur": "rousse",
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": true,
+          "barbe": true,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande"
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Il a des yeux verts.",
+            "audio": "line-001"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "blonds",
+          "bouche": [
+            "petite",
+            "grande"
+          ],
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs"
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": [
+            "marron",
+            "noirs"
+          ],
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "petite"
+        },
+        "lines": [
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "bruns",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": "brune",
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": true,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande"
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": [
+            "courts",
+            "longs",
+            "absents"
+          ],
+          "cheveuxCouleur": null,
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "bouche": "petite"
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Il a des yeux bleus.",
+            "audio": "line-019"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "noirs",
+          "bouche": [
+            "petite",
+            "grande"
+          ],
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs"
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Elle a des yeux verts.",
+            "audio": "line-020"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "roux",
+          "bouche": "grande",
+          "moustacheCouleur": "rousse",
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande"
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "bruns",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande"
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Il a des yeux noirs.",
+            "audio": "line-021"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "blonds",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "grande"
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Elle a des yeux verts.",
+            "audio": "line-020"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "absents",
+          "cheveuxCouleur": null,
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": true
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "bouche": "petite"
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "roux",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite"
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "board": 24,
+    "characters": [
+      {
+        "id": 1,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "petite",
+          "cheveuxCouleur": "blonds",
+          "chapeau": true
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Il a des yeux verts.",
+            "audio": "line-001"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et blonds",
+            "speech": "Il a des cheveux courts et blonds.",
+            "audio": "line-022"
+          },
+          {
+            "text": "un chapeau",
+            "speech": "Il a un chapeau.",
+            "audio": "line-023"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "roux",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "cheveuxCouleur": "roux",
+          "boucles": true
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs et roux",
+            "speech": "Elle a des cheveux longs et roux.",
+            "audio": "line-024"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "bruns",
+          "bouche": "grande",
+          "moustacheCouleur": "brune",
+          "barbeCouleur": "brune",
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": true,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "cheveuxCouleur": "bruns",
+          "moustacheCouleur": "brune",
+          "barbeCouleur": "brune",
+          "moustache": true,
+          "barbe": true,
+          "lunettes": true
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et bruns",
+            "speech": "Il a des cheveux courts et bruns.",
+            "audio": "line-026"
+          },
+          {
+            "text": "une moustache brune",
+            "speech": "Il a une moustache brune.",
+            "audio": "line-027"
+          },
+          {
+            "text": "une barbe brune",
+            "speech": "Il a une barbe brune.",
+            "audio": "line-028"
+          },
+          {
+            "text": "des lunettes",
+            "speech": "Il a des lunettes.",
+            "audio": "line-029"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": [
+            "courts",
+            "longs"
+          ],
+          "cheveuxCouleur": "noirs",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "bouche": "petite",
+          "cheveuxCouleur": "noirs",
+          "boucles": true
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Elle a des yeux noirs.",
+            "audio": "line-015"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux noirs",
+            "speech": "Elle a des cheveux noirs.",
+            "audio": "line-030"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "gris",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "lunettes": true
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Il a des yeux verts.",
+            "audio": "line-001"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          },
+          {
+            "text": "des lunettes",
+            "speech": "Il a des lunettes.",
+            "audio": "line-029"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": [
+            "blonds",
+            "blancs"
+          ],
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "bouche": "grande",
+          "chapeau": true
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          },
+          {
+            "text": "un chapeau",
+            "speech": "Elle a un chapeau.",
+            "audio": "line-031"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "roux",
+          "bouche": "grande",
+          "moustacheCouleur": "rousse",
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "cheveuxCouleur": "roux",
+          "moustacheCouleur": "rousse",
+          "moustache": true
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Il a des yeux noirs.",
+            "audio": "line-021"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts et roux",
+            "speech": "Il a des cheveux courts et roux.",
+            "audio": "line-032"
+          },
+          {
+            "text": "une moustache rousse",
+            "speech": "Il a une moustache rousse.",
+            "audio": "line-033"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "bruns",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "grande",
+          "cheveuxCouleur": "bruns",
+          "lunettes": true,
+          "boucles": true
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Elle a des yeux verts.",
+            "audio": "line-020"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs et bruns",
+            "speech": "Elle a des cheveux longs et bruns.",
+            "audio": "line-034"
+          },
+          {
+            "text": "des lunettes",
+            "speech": "Elle a des lunettes.",
+            "audio": "line-035"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "noirs",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "petite",
+          "cheveuxCouleur": "noirs",
+          "chapeau": true
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Il a des yeux bleus.",
+            "audio": "line-019"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et noirs",
+            "speech": "Il a des cheveux courts et noirs.",
+            "audio": "line-036"
+          },
+          {
+            "text": "un chapeau",
+            "speech": "Il a un chapeau.",
+            "audio": "line-023"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "marron",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": [
+            "courts",
+            "longs"
+          ],
+          "cheveuxCouleur": "gris",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "grand",
+          "oreilles": "petites",
+          "bouche": "petite",
+          "lunettes": true
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Elle a des yeux marron.",
+            "audio": "line-037"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des lunettes",
+            "speech": "Elle a des lunettes.",
+            "audio": "line-035"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blancs",
+          "bouche": "grande",
+          "moustacheCouleur": "blanche",
+          "barbeCouleur": "blanche",
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": true,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "moustache": true,
+          "barbe": true
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Il a des yeux noirs.",
+            "audio": "line-021"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          },
+          {
+            "text": "une moustache",
+            "speech": "Il a une moustache.",
+            "audio": "line-038"
+          },
+          {
+            "text": "une barbe",
+            "speech": "Il a une barbe.",
+            "audio": "line-039"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "cheveuxCouleur": "blonds",
+          "boucles": true
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Elle a des yeux verts.",
+            "audio": "line-020"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs et blonds",
+            "speech": "Elle a des cheveux longs et blonds.",
+            "audio": "line-040"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "bruns",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "cheveuxCouleur": "bruns"
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et bruns",
+            "speech": "Il a des cheveux courts et bruns.",
+            "audio": "line-026"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": [
+            "noirs",
+            "gris"
+          ],
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "grande",
+          "lunettes": true,
+          "chapeau": true
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Elle a des yeux noirs.",
+            "audio": "line-015"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          },
+          {
+            "text": "des lunettes",
+            "speech": "Elle a des lunettes.",
+            "audio": "line-035"
+          },
+          {
+            "text": "un chapeau",
+            "speech": "Elle a un chapeau.",
+            "audio": "line-031"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "gris",
+          "bouche": "grande",
+          "moustacheCouleur": "grise",
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "moustache": true
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Il a des yeux verts.",
+            "audio": "line-001"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          },
+          {
+            "text": "une moustache",
+            "speech": "Il a une moustache.",
+            "audio": "line-038"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": [
+            "courts",
+            "longs"
+          ],
+          "cheveuxCouleur": [
+            "blonds",
+            "blancs"
+          ],
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "bouche": "petite",
+          "boucles": true
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "petite",
+          "cheveuxCouleur": "blonds",
+          "lunettes": true
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et blonds",
+            "speech": "Il a des cheveux courts et blonds.",
+            "audio": "line-022"
+          },
+          {
+            "text": "des lunettes",
+            "speech": "Il a des lunettes.",
+            "audio": "line-029"
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "roux",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "cheveuxCouleur": "roux",
+          "boucles": true
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Elle a des yeux noirs.",
+            "audio": "line-015"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs et roux",
+            "speech": "Elle a des cheveux longs et roux.",
+            "audio": "line-024"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "noirs",
+          "bouche": [
+            "petite",
+            "grande"
+          ],
+          "moustacheCouleur": "noire",
+          "barbeCouleur": "noire",
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": true,
+          "barbe": true,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "noirs",
+          "moustacheCouleur": "noire",
+          "barbeCouleur": "noire",
+          "moustache": true,
+          "barbe": true,
+          "chapeau": true
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Il a des yeux bleus.",
+            "audio": "line-019"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts et noirs",
+            "speech": "Il a des cheveux courts et noirs.",
+            "audio": "line-036"
+          },
+          {
+            "text": "une moustache noire",
+            "speech": "Il a une moustache noire.",
+            "audio": "line-041"
+          },
+          {
+            "text": "une barbe noire",
+            "speech": "Il a une barbe noire.",
+            "audio": "line-042"
+          },
+          {
+            "text": "un chapeau",
+            "speech": "Il a un chapeau.",
+            "audio": "line-023"
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "gris",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "lunettes": true
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Elle a des yeux marron.",
+            "audio": "line-037"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          },
+          {
+            "text": "des lunettes",
+            "speech": "Elle a des lunettes.",
+            "audio": "line-035"
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blancs",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande"
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Il a des yeux noirs.",
+            "audio": "line-021"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "cheveuxCouleur": "blonds",
+          "chapeau": true,
+          "boucles": true
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Elle a des yeux verts.",
+            "audio": "line-020"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs et blonds",
+            "speech": "Elle a des cheveux longs et blonds.",
+            "audio": "line-040"
+          },
+          {
+            "text": "un chapeau",
+            "speech": "Elle a un chapeau.",
+            "audio": "line-031"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "absents",
+          "cheveuxCouleur": null,
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": true
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "bouche": "grande",
+          "lunettes": true
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Il a des yeux bleus.",
+            "audio": "line-019"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des lunettes",
+            "speech": "Il a des lunettes.",
+            "audio": "line-029"
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "absents",
+          "cheveuxCouleur": null,
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": true
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "bouche": "grande",
+          "boucles": true
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Elle a des yeux marron.",
+            "audio": "line-037"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "board": 24,
+    "characters": [
+      {
+        "id": 1,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "petite",
+          "cheveuxCouleur": "blonds",
+          "chapeau": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Il a des yeux verts.",
+            "audio": "line-001"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et blonds",
+            "speech": "Il a des cheveux courts et blonds.",
+            "audio": "line-022"
+          },
+          {
+            "text": "Il a un chapeau, mais il n’a pas de lunettes.",
+            "speech": "Il a un chapeau, mais il n’a pas de lunettes.",
+            "audio": "line-043"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "roux",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "cheveuxCouleur": "roux",
+          "boucles": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs et roux",
+            "speech": "Elle a des cheveux longs et roux.",
+            "audio": "line-024"
+          },
+          {
+            "text": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "speech": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "audio": "line-044"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "bruns",
+          "bouche": "grande",
+          "moustacheCouleur": "brune",
+          "barbeCouleur": "brune",
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": true,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "cheveuxCouleur": "bruns",
+          "moustacheCouleur": "brune",
+          "barbeCouleur": "brune",
+          "moustache": true,
+          "barbe": true,
+          "lunettes": true,
+          "chapeau": false
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et bruns",
+            "speech": "Il a des cheveux courts et bruns.",
+            "audio": "line-026"
+          },
+          {
+            "text": "une moustache brune",
+            "speech": "Il a une moustache brune.",
+            "audio": "line-027"
+          },
+          {
+            "text": "une barbe brune",
+            "speech": "Il a une barbe brune.",
+            "audio": "line-028"
+          },
+          {
+            "text": "Il a des lunettes, mais il n’a pas de chapeau.",
+            "speech": "Il a des lunettes, mais il n’a pas de chapeau.",
+            "audio": "line-045"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": [
+            "courts",
+            "longs"
+          ],
+          "cheveuxCouleur": "noirs",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "bouche": "petite",
+          "cheveuxCouleur": "noirs",
+          "boucles": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Elle a des yeux noirs.",
+            "audio": "line-015"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux noirs",
+            "speech": "Elle a des cheveux noirs.",
+            "audio": "line-030"
+          },
+          {
+            "text": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "speech": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "audio": "line-044"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "gris",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "lunettes": true,
+          "chapeau": false
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Il a des yeux verts.",
+            "audio": "line-001"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          },
+          {
+            "text": "Il a des lunettes, mais il n’a pas de chapeau.",
+            "speech": "Il a des lunettes, mais il n’a pas de chapeau.",
+            "audio": "line-045"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": [
+            "blonds",
+            "blancs"
+          ],
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "bouche": "grande",
+          "chapeau": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          },
+          {
+            "text": "Elle a un chapeau, mais elle n’a pas de lunettes.",
+            "speech": "Elle a un chapeau, mais elle n’a pas de lunettes.",
+            "audio": "line-046"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "roux",
+          "bouche": "grande",
+          "moustacheCouleur": "rousse",
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "cheveuxCouleur": "roux",
+          "moustacheCouleur": "rousse",
+          "moustache": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Il a des yeux noirs.",
+            "audio": "line-021"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts et roux",
+            "speech": "Il a des cheveux courts et roux.",
+            "audio": "line-032"
+          },
+          {
+            "text": "Il a une moustache rousse, mais il n’a pas de lunettes.",
+            "speech": "Il a une moustache rousse, mais il n’a pas de lunettes.",
+            "audio": "line-047"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "bruns",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "grande",
+          "cheveuxCouleur": "bruns",
+          "lunettes": true,
+          "boucles": true,
+          "chapeau": false
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Elle a des yeux verts.",
+            "audio": "line-020"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs et bruns",
+            "speech": "Elle a des cheveux longs et bruns.",
+            "audio": "line-034"
+          },
+          {
+            "text": "Elle a des lunettes, mais elle n’a pas de chapeau.",
+            "speech": "Elle a des lunettes, mais elle n’a pas de chapeau.",
+            "audio": "line-048"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "noirs",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "petite",
+          "cheveuxCouleur": "noirs",
+          "chapeau": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Il a des yeux bleus.",
+            "audio": "line-019"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et noirs",
+            "speech": "Il a des cheveux courts et noirs.",
+            "audio": "line-036"
+          },
+          {
+            "text": "Il a un chapeau, mais il n’a pas de lunettes.",
+            "speech": "Il a un chapeau, mais il n’a pas de lunettes.",
+            "audio": "line-043"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "marron",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": [
+            "courts",
+            "longs"
+          ],
+          "cheveuxCouleur": "gris",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "grand",
+          "oreilles": "petites",
+          "bouche": "petite",
+          "lunettes": true,
+          "chapeau": false
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Elle a des yeux marron.",
+            "audio": "line-037"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "Elle a des lunettes, mais elle n’a pas de chapeau.",
+            "speech": "Elle a des lunettes, mais elle n’a pas de chapeau.",
+            "audio": "line-048"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blancs",
+          "bouche": "grande",
+          "moustacheCouleur": "blanche",
+          "barbeCouleur": "blanche",
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": true,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "moustache": true,
+          "barbe": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Il a des yeux noirs.",
+            "audio": "line-021"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          },
+          {
+            "text": "une moustache",
+            "speech": "Il a une moustache.",
+            "audio": "line-038"
+          },
+          {
+            "text": "Il a une barbe, mais il n’a pas de lunettes.",
+            "speech": "Il a une barbe, mais il n’a pas de lunettes.",
+            "audio": "line-049"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "cheveuxCouleur": "blonds",
+          "boucles": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Elle a des yeux verts.",
+            "audio": "line-020"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs et blonds",
+            "speech": "Elle a des cheveux longs et blonds.",
+            "audio": "line-040"
+          },
+          {
+            "text": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "speech": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "audio": "line-044"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "bruns",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "cheveuxCouleur": "bruns",
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "Il a des cheveux courts et bruns, mais il n’a pas de lunettes.",
+            "speech": "Il a des cheveux courts et bruns, mais il n’a pas de lunettes.",
+            "audio": "line-050"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": [
+            "noirs",
+            "gris"
+          ],
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "grande",
+          "lunettes": true,
+          "chapeau": true,
+          "boucles": false
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Elle a des yeux noirs.",
+            "audio": "line-015"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          },
+          {
+            "text": "Elle a des lunettes, mais elle n’a pas de boucles d’oreilles.",
+            "speech": "Elle a des lunettes, mais elle n’a pas de boucles d’oreilles.",
+            "audio": "line-051"
+          },
+          {
+            "text": "un chapeau",
+            "speech": "Elle a un chapeau.",
+            "audio": "line-031"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "gris",
+          "bouche": "grande",
+          "moustacheCouleur": "grise",
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": true,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "moustache": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Il a des yeux verts.",
+            "audio": "line-001"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts",
+            "speech": "Il a des cheveux courts.",
+            "audio": "line-005"
+          },
+          {
+            "text": "Il a une moustache, mais il n’a pas de lunettes.",
+            "speech": "Il a une moustache, mais il n’a pas de lunettes.",
+            "audio": "line-052"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": [
+            "courts",
+            "longs"
+          ],
+          "cheveuxCouleur": [
+            "blonds",
+            "blancs"
+          ],
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "bouche": "petite",
+          "boucles": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Elle a des yeux bleus.",
+            "audio": "line-006"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "speech": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "audio": "line-044"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "petite",
+          "cheveuxCouleur": "blonds",
+          "lunettes": true,
+          "chapeau": false
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Il a des yeux marron.",
+            "audio": "line-011"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Il a une petite bouche.",
+            "audio": "line-002"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "des cheveux courts et blonds",
+            "speech": "Il a des cheveux courts et blonds.",
+            "audio": "line-022"
+          },
+          {
+            "text": "Il a des lunettes, mais il n’a pas de chapeau.",
+            "speech": "Il a des lunettes, mais il n’a pas de chapeau.",
+            "audio": "line-045"
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "roux",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "grand",
+          "oreilles": "petites",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "cheveuxCouleur": "roux",
+          "boucles": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Elle a des yeux noirs.",
+            "audio": "line-015"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Elle a des petites oreilles.",
+            "audio": "line-008"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs et roux",
+            "speech": "Elle a des cheveux longs et roux.",
+            "audio": "line-024"
+          },
+          {
+            "text": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "speech": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "audio": "line-044"
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "noirs",
+          "bouche": [
+            "petite",
+            "grande"
+          ],
+          "moustacheCouleur": "noire",
+          "barbeCouleur": "noire",
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": false,
+          "moustache": true,
+          "barbe": true,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "noirs",
+          "moustacheCouleur": "noire",
+          "barbeCouleur": "noire",
+          "moustache": true,
+          "barbe": true,
+          "chapeau": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Il a des yeux bleus.",
+            "audio": "line-019"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "des cheveux courts et noirs",
+            "speech": "Il a des cheveux courts et noirs.",
+            "audio": "line-036"
+          },
+          {
+            "text": "une moustache noire",
+            "speech": "Il a une moustache noire.",
+            "audio": "line-041"
+          },
+          {
+            "text": "une barbe noire",
+            "speech": "Il a une barbe noire.",
+            "audio": "line-042"
+          },
+          {
+            "text": "Il a un chapeau, mais il n’a pas de lunettes.",
+            "speech": "Il a un chapeau, mais il n’a pas de lunettes.",
+            "audio": "line-043"
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "gris",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "lunettes": true,
+          "chapeau": false
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Elle a des yeux marron.",
+            "audio": "line-037"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "des cheveux longs",
+            "speech": "Elle a des cheveux longs.",
+            "audio": "line-010"
+          },
+          {
+            "text": "Elle a des lunettes, mais elle n’a pas de chapeau.",
+            "speech": "Elle a des lunettes, mais elle n’a pas de chapeau.",
+            "audio": "line-048"
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "cheveuxCouleur": "blancs",
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "noirs",
+          "nez": "petit",
+          "oreilles": "petites",
+          "cheveuxLongueur": "courts",
+          "bouche": "grande",
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux noirs",
+            "speech": "Il a des yeux noirs.",
+            "audio": "line-021"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des petites oreilles",
+            "speech": "Il a des petites oreilles.",
+            "audio": "line-003"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Il a un petit nez.",
+            "audio": "line-014"
+          },
+          {
+            "text": "Il a des cheveux courts, mais il n’a pas de lunettes.",
+            "speech": "Il a des cheveux courts, mais il n’a pas de lunettes.",
+            "audio": "line-053"
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "cheveuxCouleur": "blonds",
+          "bouche": "petite",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": true,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": false
+        },
+        "clues": {
+          "yeux": "verts",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "longs",
+          "bouche": "petite",
+          "cheveuxCouleur": "blonds",
+          "chapeau": true,
+          "boucles": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux verts",
+            "speech": "Elle a des yeux verts.",
+            "audio": "line-020"
+          },
+          {
+            "text": "une petite bouche",
+            "speech": "Elle a une petite bouche.",
+            "audio": "line-016"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Elle a un grand nez.",
+            "audio": "line-018"
+          },
+          {
+            "text": "des cheveux longs et blonds",
+            "speech": "Elle a des cheveux longs et blonds.",
+            "audio": "line-040"
+          },
+          {
+            "text": "Elle a un chapeau, mais elle n’a pas de lunettes.",
+            "speech": "Elle a un chapeau, mais elle n’a pas de lunettes.",
+            "audio": "line-046"
+          },
+          {
+            "text": "des boucles d’oreilles",
+            "speech": "Elle a des boucles d’oreilles.",
+            "audio": "line-025"
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "pronoun": "Il",
+        "traits": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "absents",
+          "cheveuxCouleur": null,
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": true,
+          "chapeau": false,
+          "boucles": false,
+          "moustache": false,
+          "barbe": false,
+          "chauve": true
+        },
+        "clues": {
+          "yeux": "bleus",
+          "nez": "grand",
+          "oreilles": "grandes",
+          "bouche": "grande",
+          "lunettes": true,
+          "chauve": true,
+          "chapeau": false
+        },
+        "lines": [
+          {
+            "text": "des yeux bleus",
+            "speech": "Il a des yeux bleus.",
+            "audio": "line-019"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Il a une grande bouche.",
+            "audio": "line-012"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Il a des grandes oreilles.",
+            "audio": "line-013"
+          },
+          {
+            "text": "un grand nez",
+            "speech": "Il a un grand nez.",
+            "audio": "line-004"
+          },
+          {
+            "text": "Il a des lunettes, mais il n’a pas de chapeau.",
+            "speech": "Il a des lunettes, mais il n’a pas de chapeau.",
+            "audio": "line-045"
+          },
+          {
+            "text": "Il est chauve.",
+            "speech": "Il est chauve.",
+            "audio": "line-054"
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "pronoun": "Elle",
+        "traits": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "cheveuxLongueur": "absents",
+          "cheveuxCouleur": null,
+          "bouche": "grande",
+          "moustacheCouleur": null,
+          "barbeCouleur": null,
+          "lunettes": false,
+          "chapeau": false,
+          "boucles": true,
+          "moustache": false,
+          "barbe": false,
+          "chauve": true
+        },
+        "clues": {
+          "yeux": "marron",
+          "nez": "petit",
+          "oreilles": "grandes",
+          "bouche": "grande",
+          "boucles": true,
+          "chauve": true,
+          "lunettes": false
+        },
+        "lines": [
+          {
+            "text": "des yeux marron",
+            "speech": "Elle a des yeux marron.",
+            "audio": "line-037"
+          },
+          {
+            "text": "une grande bouche",
+            "speech": "Elle a une grande bouche.",
+            "audio": "line-007"
+          },
+          {
+            "text": "des grandes oreilles",
+            "speech": "Elle a des grandes oreilles.",
+            "audio": "line-017"
+          },
+          {
+            "text": "un petit nez",
+            "speech": "Elle a un petit nez.",
+            "audio": "line-009"
+          },
+          {
+            "text": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "speech": "Elle a des boucles d’oreilles, mais elle n’a pas de lunettes.",
+            "audio": "line-044"
+          },
+          {
+            "text": "Elle est chauve.",
+            "speech": "Elle est chauve.",
+            "audio": "line-055"
+          }
+        ]
+      }
+    ]
+  }
+}
