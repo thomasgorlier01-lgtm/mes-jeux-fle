@@ -4,7 +4,7 @@ const BASIC=['yeux','cheveux','nez','oreilles','bouche'];
 export const signature=s=>Object.entries(s).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>k+':'+v).join('|');
 const shuffle=(a,r)=>{a=[...a];for(let i=a.length-1;i;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 export const availableCategories=(catalog,level)=>catalog.categories.filter(x=>level>1||BASIC.includes(x.id));
-export const availableItems=(catalog,category,avatar,level=1)=>catalog.elements.filter(x=>x.categorie===category&&(!x.avatar||x.avatar===avatar)&&(!x.levels||x.levels.includes(level)));
+export const availableItems=(catalog,category,avatar,level=1)=>catalog.elements.filter(x=>x.categorie===category&&(!x.avatar||x.avatar===avatar)&&(!x.levels||x.levels.includes(level))&&(level!==2||category!=='chapeau'||x.id.startsWith('chapeau_classique_')));
 export function generateRounds(catalog,random=Math.random,level=1){
  if(!LEVELS.some(x=>x.id===level))throw Error('Niveau inconnu');
  const colors=shuffle(['blonds','bruns','noirs','roux'],random),eyes=shuffle(['bleus','verts','marron','noirs'],random),sizes=shuffle(['petit','grand'],random),seen=new Set(),accessoryOrder=shuffle(['chapeau','lunettes','boucles'],random),lengths={garcon:shuffle(['courts','longs','courts','longs','courts'],random),fille:shuffle(['longs','courts','longs','courts','longs'],random)};
