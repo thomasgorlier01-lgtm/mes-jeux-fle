@@ -1,11 +1,19 @@
 # Qui est-ce ? Les douleurs
 
-Un seul niveau. Les quinze portraits de la planche validée restent affichés. Chaque partie propose dix personnages différents à retrouver en lisant une phrase qui réunit leurs trois douleurs : « Il a mal au genou, à la tête et au doigt. »
+Deux modes utilisent les mêmes quinze portraits numérotés et les mêmes combinaisons de trois douleurs.
 
-Les pronoms suivent les personnages de la planche : numéros impairs « Il », numéros pairs « Elle ». Chaque combinaison de trois douleurs est unique, indépendamment du pronom. Les quinze correspondances proviennent du tableau d’origine et ont été vérifiées visuellement sur le PDF.
+## En classe
 
-Trois cœurs pour la partie entière, un point par bonne réponse. Une erreur retire un cœur ; le même mauvais personnage ne peut pas retirer deux cœurs dans la même question. Après une bonne réponse, la question suivante apparaît automatiquement. À zéro cœur, la partie s’arrête et le bon personnage est indiqué. Le bouton « Nouvelle partie » remet le score et les trois cœurs à zéro/trois et change les questions.
+Mode affiché à l’ouverture. Un élève choisit un personnage en secret, hors de l’interface. Les autres produisent leurs questions à l’oral et retournent manuellement les cartes éliminées. Un second clic rétablit chaque carte ; le bouton Tout rétablir prépare une nouvelle partie. Le nombre de cartes visibles est annoncé. Les numéros restent visibles sur les dos des cartes. À la fin, les élèves décrivent le personnage trouvé. Pas de vies, score, description automatique ni personnage secret sélectionné par l’ordinateur.
 
-Les illustrations sont extraites sans régénération du document fourni « Qui_est_ce_douleurs_15_personnages_index_blanc.pdf », dont les trois pages ont été vérifiées. Les quinze fichiers WebP conservent les bandages blancs, tous les pansements et les numéros d’origine. Aucun renseignement de l’élève n’est envoyé à un service externe.
+## En autonomie
 
-Interface responsive, navigation au clavier, messages accessibles, bouton plein écran commun aux jeux du portail. Tests : `node --test tests/core.test.mjs`. Site statique, sans compilation ni compte.
+Dix personnages différents à retrouver en lisant une phrase qui réunit leurs trois douleurs. Cinq cœurs pour la partie entière ; une erreur retire un cœur, sans double pénalité sur une même carte. Un point par bonne réponse. À zéro cœur, le bon personnage est indiqué. Nouvelle partie change les questions et remet le score et les cinq cœurs à leur valeur initiale.
+
+Les pronoms suivent la planche : numéros impairs Il, numéros pairs Elle. Chaque combinaison est unique, indépendamment du pronom. Changer de mode annule la transition automatique en cours. Entrer en autonomie démarre une nouvelle partie ; revenir en classe rétablit les quinze cartes.
+
+## Images et accessibilité
+
+Les portraits proviennent du document validé Qui_est_ce_douleurs_15_personnages_index_blanc.pdf. Les pansements du nez et du ventre ont été remplacés par un pansement blanc plus contrasté ; celui du nez est légèrement élargi, sans couvrir les yeux ou la bouche. Les autres attributs et numéros sont conservés. Une sauvegarde avant modification est conservée dans tmp/backup-douleurs-20261118.
+
+Navigation au clavier, états des cartes et du mode accessibles, compteur annoncé et bouton plein écran commun au portail. Site statique, sans compte ni compilation. Tests : node --test tests/core.test.mjs et contrôle navigateur des deux modes.
