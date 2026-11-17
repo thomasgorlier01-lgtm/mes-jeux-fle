@@ -53,6 +53,17 @@ const JEUX = [
         bulle1: '🥕',
         bulle2: '✓',
         url: '../atelier-repas/?nourriture=1'
+      },
+      {
+        titre: 'Je compose ma salade',
+        description: 'Reconnais les quantités puis compose ta salade : un peu de, beaucoup de, mais pas de.',
+        categorie: 'Jeu 6',
+        niveau: 'Débutant',
+        emoji: '🥗',
+        couleur: 'vest',
+        bulle1: '🔊',
+        bulle2: '✓',
+        url: '../compose-salade/'
       }
 ];
 const games=document.getElementById('games'),player=document.getElementById('player'),frame=document.getElementById('frame'),playertitle=document.getElementById('playertitle'),extern=document.getElementById('extern');

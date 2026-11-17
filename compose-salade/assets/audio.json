@@ -1,0 +1,520 @@
+{
+  "garcon-request": {
+    "text": "Je voudrais",
+    "file": "assets/indices-garcon.m4a",
+    "start": 0.0,
+    "end": 0.6732426303854875,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-tomates-0": {
+    "text": "Il n’y a pas de tomates.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 0.9732426303854875,
+    "end": 2.2015873015873018,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-tomates-1": {
+    "text": "Il y a un peu de tomates.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 2.5015873015873016,
+    "end": 3.9156916099773245,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-tomates-5": {
+    "text": "Il y a beaucoup de tomates.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 4.215691609977324,
+    "end": 5.662539682539682,
+    "voice": "Thomas"
+  },
+  "garcon-portion-tomates-1": {
+    "text": "un peu de tomates",
+    "file": "assets/indices-garcon.m4a",
+    "start": 5.962539682539682,
+    "end": 6.990340136054422,
+    "voice": "Thomas"
+  },
+  "garcon-portion-tomates-5": {
+    "text": "beaucoup de tomates",
+    "file": "assets/indices-garcon.m4a",
+    "start": 7.2903401360544215,
+    "end": 8.448798185941044,
+    "voice": "Thomas"
+  },
+  "garcon-absent-tomates": {
+    "text": "mais pas de tomates",
+    "file": "assets/indices-garcon.m4a",
+    "start": 8.748798185941043,
+    "end": 9.825895691609977,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-carottes-0": {
+    "text": "Il n’y a pas de carottes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 10.125895691609978,
+    "end": 11.365850340136054,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-carottes-1": {
+    "text": "Il y a un peu de carottes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 11.665850340136055,
+    "end": 13.09156462585034,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-carottes-5": {
+    "text": "Il y a beaucoup de carottes.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 13.39156462585034,
+    "end": 14.848390022675737,
+    "voice": "Thomas"
+  },
+  "garcon-portion-carottes-1": {
+    "text": "un peu de carottes",
+    "file": "assets/indices-garcon.m4a",
+    "start": 15.148390022675738,
+    "end": 16.191065759637187,
+    "voice": "Thomas"
+  },
+  "garcon-portion-carottes-5": {
+    "text": "beaucoup de carottes",
+    "file": "assets/indices-garcon.m4a",
+    "start": 16.491065759637188,
+    "end": 17.661133786848072,
+    "voice": "Thomas"
+  },
+  "garcon-absent-carottes": {
+    "text": "mais pas de carottes",
+    "file": "assets/indices-garcon.m4a",
+    "start": 17.961133786848073,
+    "end": 19.04984126984127,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-concombre-0": {
+    "text": "Il n’y a pas de concombre.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 19.34984126984127,
+    "end": 20.78716553287982,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-concombre-1": {
+    "text": "Il y a un peu de concombre.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 21.08716553287982,
+    "end": 22.710249433106576,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-concombre-5": {
+    "text": "Il y a beaucoup de concombre.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 23.010249433106576,
+    "end": 24.668163265306124,
+    "voice": "Thomas"
+  },
+  "garcon-portion-concombre-1": {
+    "text": "un peu de concombre",
+    "file": "assets/indices-garcon.m4a",
+    "start": 24.96816326530612,
+    "end": 26.208208616780045,
+    "voice": "Thomas"
+  },
+  "garcon-portion-concombre-5": {
+    "text": "beaucoup de concombre",
+    "file": "assets/indices-garcon.m4a",
+    "start": 26.508208616780045,
+    "end": 27.8756462585034,
+    "voice": "Thomas"
+  },
+  "garcon-absent-concombre": {
+    "text": "mais pas de concombre",
+    "file": "assets/indices-garcon.m4a",
+    "start": 28.175646258503402,
+    "end": 29.472834467120183,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-oeufs-0": {
+    "text": "Il n’y a pas d’œufs.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 29.77283446712018,
+    "end": 30.560045351473924,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-oeufs-1": {
+    "text": "Il y a un peu d’œufs.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 30.86004535147392,
+    "end": 31.79814058956916,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-oeufs-5": {
+    "text": "Il y a beaucoup d’œufs.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 32.09814058956916,
+    "end": 33.09428571428571,
+    "voice": "Thomas"
+  },
+  "garcon-portion-oeufs-1": {
+    "text": "un peu d’œufs",
+    "file": "assets/indices-garcon.m4a",
+    "start": 33.394285714285715,
+    "end": 33.93773242630385,
+    "voice": "Thomas"
+  },
+  "garcon-portion-oeufs-5": {
+    "text": "beaucoup d’œufs",
+    "file": "assets/indices-garcon.m4a",
+    "start": 34.23773242630386,
+    "end": 34.93179138321995,
+    "voice": "Thomas"
+  },
+  "garcon-absent-oeufs": {
+    "text": "mais pas d’œufs",
+    "file": "assets/indices-garcon.m4a",
+    "start": 35.23179138321996,
+    "end": 35.84448979591837,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-fromage-0": {
+    "text": "Il n’y a pas de fromage.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 36.14448979591837,
+    "end": 37.50054421768707,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-fromage-1": {
+    "text": "Il y a un peu de fromage.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 37.800544217687076,
+    "end": 39.34235827664399,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-fromage-5": {
+    "text": "Il y a beaucoup de fromage.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 39.64235827664399,
+    "end": 41.21900226757369,
+    "voice": "Thomas"
+  },
+  "garcon-portion-fromage-1": {
+    "text": "un peu de fromage",
+    "file": "assets/indices-garcon.m4a",
+    "start": 41.5190022675737,
+    "end": 42.666167800453515,
+    "voice": "Thomas"
+  },
+  "garcon-portion-fromage-5": {
+    "text": "beaucoup de fromage",
+    "file": "assets/indices-garcon.m4a",
+    "start": 42.96616780045351,
+    "end": 44.25233560090703,
+    "voice": "Thomas"
+  },
+  "garcon-absent-fromage": {
+    "text": "mais pas de fromage",
+    "file": "assets/indices-garcon.m4a",
+    "start": 44.55233560090703,
+    "end": 45.75714285714286,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-brocoli-0": {
+    "text": "Il n’y a pas de brocoli.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 46.05714285714286,
+    "end": 47.29709750566894,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-brocoli-1": {
+    "text": "Il y a un peu de brocoli.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 47.597097505668934,
+    "end": 48.999591836734695,
+    "voice": "Thomas"
+  },
+  "garcon-recognize-brocoli-5": {
+    "text": "Il y a beaucoup de brocoli.",
+    "file": "assets/indices-garcon.m4a",
+    "start": 49.29959183673469,
+    "end": 50.76013605442177,
+    "voice": "Thomas"
+  },
+  "garcon-portion-brocoli-1": {
+    "text": "un peu de brocoli",
+    "file": "assets/indices-garcon.m4a",
+    "start": 51.06013605442177,
+    "end": 52.10281179138322,
+    "voice": "Thomas"
+  },
+  "garcon-portion-brocoli-5": {
+    "text": "beaucoup de brocoli",
+    "file": "assets/indices-garcon.m4a",
+    "start": 52.40281179138322,
+    "end": 53.57283446712018,
+    "voice": "Thomas"
+  },
+  "garcon-absent-brocoli": {
+    "text": "mais pas de brocoli",
+    "file": "assets/indices-garcon.m4a",
+    "start": 53.87283446712018,
+    "end": 54.96154195011338,
+    "voice": "Thomas"
+  },
+  "fille-request": {
+    "text": "Je voudrais",
+    "file": "assets/indices-fille.m4a",
+    "start": 0.0,
+    "end": 0.6458956916099773,
+    "voice": "Amélie"
+  },
+  "fille-recognize-tomates-0": {
+    "text": "Il n’y a pas de tomates.",
+    "file": "assets/indices-fille.m4a",
+    "start": 0.9458956916099773,
+    "end": 2.2308843537414966,
+    "voice": "Amélie"
+  },
+  "fille-recognize-tomates-1": {
+    "text": "Il y a un peu de tomates.",
+    "file": "assets/indices-fille.m4a",
+    "start": 2.5308843537414965,
+    "end": 3.874013605442177,
+    "voice": "Amélie"
+  },
+  "fille-recognize-tomates-5": {
+    "text": "Il y a beaucoup de tomates.",
+    "file": "assets/indices-fille.m4a",
+    "start": 4.174013605442177,
+    "end": 5.563582766439909,
+    "voice": "Amélie"
+  },
+  "fille-portion-tomates-1": {
+    "text": "un peu de tomates",
+    "file": "assets/indices-fille.m4a",
+    "start": 5.863582766439909,
+    "end": 6.927301587301588,
+    "voice": "Amélie"
+  },
+  "fille-portion-tomates-5": {
+    "text": "beaucoup de tomates",
+    "file": "assets/indices-fille.m4a",
+    "start": 7.227301587301588,
+    "end": 8.349478458049887,
+    "voice": "Amélie"
+  },
+  "fille-absent-tomates": {
+    "text": "mais pas de tomates",
+    "file": "assets/indices-fille.m4a",
+    "start": 8.649478458049886,
+    "end": 9.748571428571429,
+    "voice": "Amélie"
+  },
+  "fille-recognize-carottes-0": {
+    "text": "Il n’y a pas de carottes.",
+    "file": "assets/indices-fille.m4a",
+    "start": 10.048571428571428,
+    "end": 11.287120181405896,
+    "voice": "Amélie"
+  },
+  "fille-recognize-carottes-1": {
+    "text": "Il y a un peu de carottes.",
+    "file": "assets/indices-fille.m4a",
+    "start": 11.587120181405895,
+    "end": 12.883809523809523,
+    "voice": "Amélie"
+  },
+  "fille-recognize-carottes-5": {
+    "text": "Il y a beaucoup de carottes.",
+    "file": "assets/indices-fille.m4a",
+    "start": 13.183809523809524,
+    "end": 14.51532879818594,
+    "voice": "Amélie"
+  },
+  "fille-portion-carottes-1": {
+    "text": "un peu de carottes",
+    "file": "assets/indices-fille.m4a",
+    "start": 14.815328798185941,
+    "end": 15.832607709750567,
+    "voice": "Amélie"
+  },
+  "fille-portion-carottes-5": {
+    "text": "beaucoup de carottes",
+    "file": "assets/indices-fille.m4a",
+    "start": 16.132607709750566,
+    "end": 17.208344671201814,
+    "voice": "Amélie"
+  },
+  "fille-absent-carottes": {
+    "text": "mais pas de carottes",
+    "file": "assets/indices-fille.m4a",
+    "start": 17.508344671201815,
+    "end": 18.560997732426305,
+    "voice": "Amélie"
+  },
+  "fille-recognize-concombre-0": {
+    "text": "Il n’y a pas de concombre.",
+    "file": "assets/indices-fille.m4a",
+    "start": 18.860997732426306,
+    "end": 20.238866213151926,
+    "voice": "Amélie"
+  },
+  "fille-recognize-concombre-1": {
+    "text": "Il y a un peu de concombre.",
+    "file": "assets/indices-fille.m4a",
+    "start": 20.538866213151927,
+    "end": 21.97487528344671,
+    "voice": "Amélie"
+  },
+  "fille-recognize-concombre-5": {
+    "text": "Il y a beaucoup de concombre.",
+    "file": "assets/indices-fille.m4a",
+    "start": 22.27487528344671,
+    "end": 23.745714285714286,
+    "voice": "Amélie"
+  },
+  "fille-portion-concombre-1": {
+    "text": "un peu de concombre",
+    "file": "assets/indices-fille.m4a",
+    "start": 24.045714285714286,
+    "end": 25.20231292517007,
+    "voice": "Amélie"
+  },
+  "fille-portion-concombre-5": {
+    "text": "beaucoup de concombre",
+    "file": "assets/indices-fille.m4a",
+    "start": 25.502312925170067,
+    "end": 26.71736961451247,
+    "voice": "Amélie"
+  },
+  "fille-absent-concombre": {
+    "text": "mais pas de concombre",
+    "file": "assets/indices-fille.m4a",
+    "start": 27.01736961451247,
+    "end": 28.209342403628117,
+    "voice": "Amélie"
+  },
+  "fille-recognize-oeufs-0": {
+    "text": "Il n’y a pas d’œufs.",
+    "file": "assets/indices-fille.m4a",
+    "start": 28.509342403628118,
+    "end": 29.283401360544218,
+    "voice": "Amélie"
+  },
+  "fille-recognize-oeufs-1": {
+    "text": "Il y a un peu d’œufs.",
+    "file": "assets/indices-fille.m4a",
+    "start": 29.58340136054422,
+    "end": 30.41551020408163,
+    "voice": "Amélie"
+  },
+  "fille-recognize-oeufs-5": {
+    "text": "Il y a beaucoup d’œufs.",
+    "file": "assets/indices-fille.m4a",
+    "start": 30.71551020408163,
+    "end": 31.5940589569161,
+    "voice": "Amélie"
+  },
+  "fille-portion-oeufs-1": {
+    "text": "un peu d’œufs",
+    "file": "assets/indices-fille.m4a",
+    "start": 31.8940589569161,
+    "end": 32.44698412698413,
+    "voice": "Amélie"
+  },
+  "fille-portion-oeufs-5": {
+    "text": "beaucoup d’œufs",
+    "file": "assets/indices-fille.m4a",
+    "start": 32.746984126984124,
+    "end": 33.358321995464856,
+    "voice": "Amélie"
+  },
+  "fille-absent-oeufs": {
+    "text": "mais pas d’œufs",
+    "file": "assets/indices-fille.m4a",
+    "start": 33.65832199546485,
+    "end": 34.24657596371882,
+    "voice": "Amélie"
+  },
+  "fille-recognize-fromage-0": {
+    "text": "Il n’y a pas de fromage.",
+    "file": "assets/indices-fille.m4a",
+    "start": 34.54657596371882,
+    "end": 35.83156462585034,
+    "voice": "Amélie"
+  },
+  "fille-recognize-fromage-1": {
+    "text": "Il y a un peu de fromage.",
+    "file": "assets/indices-fille.m4a",
+    "start": 36.13156462585034,
+    "end": 37.47469387755102,
+    "voice": "Amélie"
+  },
+  "fille-recognize-fromage-5": {
+    "text": "Il y a beaucoup de fromage.",
+    "file": "assets/indices-fille.m4a",
+    "start": 37.77469387755102,
+    "end": 39.164263038548754,
+    "voice": "Amélie"
+  },
+  "fille-portion-fromage-1": {
+    "text": "un peu de fromage",
+    "file": "assets/indices-fille.m4a",
+    "start": 39.46426303854875,
+    "end": 40.52798185941043,
+    "voice": "Amélie"
+  },
+  "fille-portion-fromage-5": {
+    "text": "beaucoup de fromage",
+    "file": "assets/indices-fille.m4a",
+    "start": 40.82798185941043,
+    "end": 41.95015873015873,
+    "voice": "Amélie"
+  },
+  "fille-absent-fromage": {
+    "text": "mais pas de fromage",
+    "file": "assets/indices-fille.m4a",
+    "start": 42.25015873015873,
+    "end": 43.34925170068027,
+    "voice": "Amélie"
+  },
+  "fille-recognize-brocoli-0": {
+    "text": "Il n’y a pas de brocoli.",
+    "file": "assets/indices-fille.m4a",
+    "start": 43.649251700680274,
+    "end": 44.899410430839005,
+    "voice": "Amélie"
+  },
+  "fille-recognize-brocoli-1": {
+    "text": "Il y a un peu de brocoli.",
+    "file": "assets/indices-fille.m4a",
+    "start": 45.199410430839,
+    "end": 46.507709750566896,
+    "voice": "Amélie"
+  },
+  "fille-recognize-brocoli-5": {
+    "text": "Il y a beaucoup de brocoli.",
+    "file": "assets/indices-fille.m4a",
+    "start": 46.80770975056689,
+    "end": 48.150839002267574,
+    "voice": "Amélie"
+  },
+  "fille-portion-brocoli-1": {
+    "text": "un peu de brocoli",
+    "file": "assets/indices-fille.m4a",
+    "start": 48.45083900226757,
+    "end": 49.479727891156465,
+    "voice": "Amélie"
+  },
+  "fille-portion-brocoli-5": {
+    "text": "beaucoup de brocoli",
+    "file": "assets/indices-fille.m4a",
+    "start": 49.77972789115646,
+    "end": 50.85546485260771,
+    "voice": "Amélie"
+  },
+  "fille-absent-brocoli": {
+    "text": "mais pas de brocoli",
+    "file": "assets/indices-fille.m4a",
+    "start": 51.15546485260771,
+    "end": 52.21972789115646,
+    "voice": "Amélie"
+  }
+}
