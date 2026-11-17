@@ -4,12 +4,28 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f4ff">
 <meta name="description" content="Jouez en classe avec les quinze cartes à retourner ou retrouvez les personnages en autonomie.">
 <title>Qui est-ce ? Les douleurs — Mes jeux de français</title>
-<link rel="stylesheet" href="styles.css?v=3"><script type="module" src="app.js?v=3"></script><script src="../fullscreen.js?v=1" data-fle-fullscreen-script defer></script>
+<link rel="stylesheet" href="styles.css?v=4"><script type="module" src="app.js?v=4"></script><script src="../fullscreen.js?v=1" data-fle-fullscreen-script defer></script>
 </head>
 <body><main class="shell">
 <header><div><a class="back" href="../">← Mes jeux de français</a><h1>Qui est-ce ? <span>Les douleurs</span></h1><p class="sub" id="instructions">Choisissez un personnage en secret, posez vos questions et retournez les cartes éliminées.</p></div>
-<div class="stats" id="solo-stats" hidden><span id="progress">Question 1/10</span><span id="score">⭐ 0 point</span><span class="hearts" id="hearts" role="img" aria-label="5 vies"></span></div></header>
+<div class="stats" id="solo-stats" hidden><span id="progress">Question 1/10</span><span id="score">⭐ 0 point</span><span class="hearts" id="hearts" role="img" aria-label="5 vies"></span></div><div class="header-actions" data-fullscreen-slot></div></header>
 <nav class="mode-bar" aria-label="Mode de jeu"><div class="mode-buttons"><button type="button" id="class-mode" aria-pressed="true">En classe</button><button type="button" id="solo-mode" aria-pressed="false">En autonomie</button></div><div id="class-tools"><span id="remaining" role="status" aria-live="polite">15 cartes visibles</span><button type="button" id="reset">↻ Tout rétablir</button></div></nav>
-<div class="play-layout"><section class="grid" id="grid" aria-label="Les quinze personnages"></section><aside class="prompt" id="solo-panel" aria-labelledby="prompt-title" hidden><div class="small" id="prompt-title">À toi de trouver !</div><p class="description" id="description"></p><p class="hint" id="hint">Observe les pansements et les bandages.</p><div class="message" id="message" role="status" aria-live="polite" aria-atomic="true"></div><button class="btn" id="restart" type="button">↻ Nouvelle partie</button></aside></div>
+<section id="class-menu" class="class-menu" aria-label="Activités en classe">
+<button id="choose-cards" class="activity-choice" type="button"><span aria-hidden="true">▦</span><strong>Qui est-ce ?</strong><small>Pose des questions et retourne les cartes.</small></button>
+<button id="choose-infirmary" class="activity-choice" type="button"><span aria-hidden="true">✚</span><strong>L’infirmerie</strong><small>Écoute les douleurs et place les pansements.</small></button>
+</section>
+<section id="infirmary" class="infirmary" aria-labelledby="infirmary-title" hidden>
+<div class="infirmary-heading"><h2 id="infirmary-title">L’infirmerie</h2><div class="infirmary-stats"><span id="patient-progress"></span><span id="patient-hearts" class="hearts" role="img" aria-label="3 vies"></span></div></div>
+<div class="infirmary-layout">
+<div class="patient-board"><div id="patient-stage" class="patient-stage" tabindex="0" role="group" aria-label="Personnage à soigner. Choisis un soin, puis place-le. Les flèches déplacent le soin sélectionné."><img id="patient-image" alt="" draggable="false"><div id="patient-placements"></div></div></div>
+<aside class="care-panel"><h3>Où a-t-il mal ?</h3><ul id="patient-clues" class="patient-clues"></ul><p class="audio-hint">Touche une phrase pour l’écouter.</p>
+<div class="care-supplies" role="group" aria-label="Les soins à placer"><button id="tool-plaster" class="care-tool" type="button" aria-pressed="true" data-type="plaster"><span class="care-mark plaster-mark" aria-hidden="true"></span><span>Pansement</span></button><button id="tool-wrap" class="care-tool" type="button" aria-pressed="false" data-type="wrap"><span class="care-mark wrap-mark" aria-hidden="true"></span><span>Bandage</span></button></div>
+<p class="place-hint">Fais glisser un soin sur le personnage.<br>Tu peux aussi choisir un soin, puis toucher l’endroit.</p>
+<div class="placement-actions"><span id="placed-count">0 / 3 soins placés</span><button id="remove-care" type="button" disabled>Retirer le soin sélectionné</button></div>
+<button id="verify-care" class="btn" type="button" disabled>Vérifier</button><button id="next-patient" class="btn" type="button" hidden>Personnage suivant →</button>
+<p id="care-message" class="care-message" role="status" aria-live="polite" aria-atomic="true"></p>
+<button id="restart-care" class="secondary-btn" type="button">↻ Nouvelle partie</button>
+</aside></div></section>
+<div class="play-layout" id="portrait-game" hidden><section class="grid" id="grid" aria-label="Les quinze personnages"></section><aside class="prompt" id="solo-panel" aria-labelledby="prompt-title" hidden><div class="small" id="prompt-title">À toi de trouver !</div><ul class="description" id="description"></ul><p class="hint" id="hint">Observe les pansements et les bandages.</p><div class="message" id="message" role="status" aria-live="polite" aria-atomic="true"></div><button class="btn" id="restart" type="button">↻ Nouvelle partie</button></aside></div>
 <footer id="note">15 personnages · Un clic pour retourner, un autre pour rétablir · À la fin, décrivez le personnage trouvé.</footer>
 <noscript>Active JavaScript pour jouer.</noscript></main></body></html>
