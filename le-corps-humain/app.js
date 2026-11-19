@@ -31,6 +31,17 @@ const JEUX = [
     "bulle1": "👀",
     "bulle2": "🎨",
     "url": "../atelier-visages/?visages=6"
+  },
+  {
+    "titre": "Fabrique ton monstre !",
+    "description": "Réponds aux questions illustrées et assemble ton monstre pièce par pièce.",
+    "categorie": "Le corps et la révision du français",
+    "niveau": "Débutant",
+    "emoji": "👾",
+    "couleur": "corp",
+    "bulle1": "🎨",
+    "bulle2": "🩹",
+    "url": "../fabrique-ton-monstre/"
   }
 ];
 const games=document.getElementById('games'),player=document.getElementById('player'),frame=document.getElementById('frame'),playertitle=document.getElementById('playertitle'),extern=document.getElementById('extern');

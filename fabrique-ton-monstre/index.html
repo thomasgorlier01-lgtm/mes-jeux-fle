@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLE Lab — Fabrique ton monstre !</title>
+<style>
+:root{font-family:"Avenir Next",system-ui,sans-serif;color:#321e30;background:#101014}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#101014}button{font:inherit;cursor:pointer}button:focus-visible{outline:4px solid #efc88f;outline-offset:3px}.shell{max-width:1500px;margin:auto;padding:22px 28px}.top{display:flex;align-items:center;justify-content:center;position:relative;min-height:80px;margin-bottom:18px}.brand,.counter{position:absolute;top:12px;border-radius:50px;padding:14px 20px;background:#fff0e9;color:#754d68;font-weight:900}.brand{left:0}.counter{right:0;background:#fff0df;color:#40273d}.top h1{margin:0;border-radius:50px;background:#fff0df;color:#2d192c;padding:16px 36px;font-size:clamp(26px,3.1vw,43px);letter-spacing:-.04em}.stage{min-height:650px;display:grid;grid-template-columns:minmax(320px,1.05fr) minmax(420px,.95fr);gap:20px}.monster-panel,.question-panel{border-radius:32px;overflow:hidden}.monster-panel{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-between;background:radial-gradient(ellipse at 50% 42%,#26343a 0,#191b20 67%);padding:20px;color:#e9ddd4}.monster-panel:before{content:"";position:absolute;width:55%;height:42px;bottom:50px;background:#0007;filter:blur(18px);border-radius:50%}.monster-title,.monster-foot{z-index:1;font-weight:700;color:#c9b7b6}.monster-art{z-index:1;width:100%;min-height:490px;display:flex;align-items:center;justify-content:center}.monster-art svg{width:100%;height:auto;max-height:560px;overflow:visible;filter:drop-shadow(0 15px 12px #0007)}.question-panel{border:4px solid #d69caf;background:#17171c;padding:clamp(20px,3vw,38px);display:flex;align-items:center;justify-content:center}.build,.quiz{width:100%;display:flex;flex-direction:column;gap:18px}.build .prompt{margin:0;background:#925e78;color:#fff4e3;text-align:center;border-radius:50px;padding:16px;font-size:clamp(26px,3vw,40px)}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.options.many{grid-template-columns:repeat(2,minmax(0,1fr))}.option{border:4px solid #fff7e9;background:#fff0df;color:#2d192c;border-radius:26px;min-height:100px;padding:14px;font-size:clamp(18px,2.1vw,28px);font-weight:900;line-height:1.22;box-shadow:0 5px 0 #0003}.option:hover{transform:translateY(-2px)}.option.selected{background:#dff1d6;border-color:#a2c8a3}.choice-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}.audio{border:3px solid #f8e9e4;background:#8e536f;color:#fff6e8;border-radius:32px;padding:9px 18px;min-height:44px;font-weight:850}.hint,.status{color:#d8c4cf;text-align:center;line-height:1.45;margin:0}.next{align-self:center;border:3px solid #fff6e8;background:#8e536f;color:#fff6e8;border-radius:40px;padding:13px 25px;font-size:21px;font-weight:900}.next:disabled{opacity:.45;cursor:not-allowed}.review-mode{background:radial-gradient(circle at 80% 10%,#c5eeee,#a6dfdd 53%,#8ac9c9);color:#321e30}.review-mode .shell{max-width:1300px}.review-mode .top h1{display:none}.review-mode .brand{top:0}.review-mode .counter{right:0;top:0}.review-mode .stage{display:block;min-height:600px}.review-mode .monster-panel{display:none}.review-mode .question-panel{border:0;background:transparent;padding:4px;min-height:600px}.quiz-prompt{display:flex;align-items:center;justify-content:center;gap:15px;background:#fff4e9;color:#301a2b;border-radius:55px;padding:14px 20px;font-size:clamp(25px,4vw,47px);font-weight:950;text-align:center}.quiz-body{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.scene{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:370px;border:9px solid #fff6ea;border-radius:34px;background:#f4e5cf;box-shadow:0 8px 14px #427b7d33;color:#245b62;text-align:center;padding:20px}.scene-emoji{font-size:clamp(90px,14vw,170px);line-height:1.15}.scene-label{font-size:22px;font-weight:850;color:#315d60}.answers{display:flex;flex-direction:column;justify-content:center;gap:16px}.answer{min-height:90px;width:100%;border:4px solid #fff9f0;background:#fff4e9;color:#2e1929;border-radius:26px;font-size:clamp(20px,2.6vw,31px);font-weight:950;padding:14px;line-height:1.2}.answer.correct{background:#d7f3c7;color:#264d35}.answer.wrong{background:#dddce0;color:#77747a}.feedback{background:#fff7e7;border:2px solid #d58e9c;border-radius:18px;padding:14px;text-align:center;color:#482d35}.feedback .audio{display:block;margin:10px auto}.end{text-align:center;color:#fff2df}.end h2{font-size:38px}.end button{margin:7px}.intro-mode .top,.intro-mode .monster-panel,.intro-mode .counter{display:none}.intro-mode .stage{display:block;min-height:0}.intro-mode .question-panel{min-height:calc(100vh - 40px);border:0;background:#101014}.intro{min-height:calc(100vh - 100px);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;text-align:center;color:#fff0df}.intro h2{font-size:clamp(45px,7vw,86px);margin:0;line-height:1.03}.intro .monster-art{width:min(55vw,560px);min-height:390px;height:46vh}.intro .monster-art svg{max-height:470px}.intro button{border:3px solid #fff5e8;border-radius:42px;background:#8e536f;color:#fff6e8;padding:15px 34px;font-size:25px;font-weight:950}.footnote{color:#a8a3ab;font-size:13px;margin:14px 4px}.hidden{display:none!important}@media(max-width:850px){.shell{padding:12px}.stage{grid-template-columns:1fr;min-height:0}.monster-panel{min-height:340px}.monster-art{min-height:260px;max-height:330px}.monster-art svg{max-height:330px}.question-panel{min-height:430px}.quiz-body{grid-template-columns:1fr}.scene{min-height:220px}.scene-emoji{font-size:100px}.answers{display:grid;grid-template-columns:1fr 1fr}.top{min-height:66px}.top h1{font-size:24px;padding:12px}.brand,.counter{font-size:12px;padding:10px}.quiz .question-panel{min-height:0}}@media(max-width:520px){.brand{display:none}.answers{grid-template-columns:1fr}.options.many{grid-template-columns:repeat(2,minmax(0,1fr))}.option{min-height:80px}.quiz-prompt{font-size:24px}.shell{padding:8px}}
+.review-word{font-size:clamp(34px,6vw,72px);line-height:1.1;color:#224b55;overflow-wrap:anywhere}
+.review-illustration{
+ width:100%;height:auto;max-height:470px;object-fit:contain;border-radius:18px;display:block
+}
+.intro .cover-image{width:100%;height:100%;max-height:470px;object-fit:contain;filter:drop-shadow(0 18px 18px #0008)}
+
+
+.end input{font:inherit;border:2px solid #f0decc;border-radius:12px;padding:10px 14px;width:min(100%,290px)}
+@media(max-width:520px){
+ .top{display:grid;justify-items:center;gap:8px}
+ .top .counter{position:static}
+ .intro .monster-art{width:min(85vw,480px);min-height:0;height:45vh}
+ .monster-panel{min-height:0}
+ .monster-art{min-height:150px;max-height:230px}
+ .monster-art svg{max-height:220px}
+ .review-mode .monster-panel:has(.monster-art svg:empty){display:none}
+ .scene{padding:10px}
+}
+@media print{
+ :root,body,.monster-panel{background:white!important;color:#222!important}
+ .top,.footnote,.question-panel,.monster-title{display:none!important}
+ .shell{padding:0}
+ .stage{display:block;min-height:0}
+ .monster-panel{display:block;border:0;box-shadow:none;text-align:center}
+ .monster-art{height:155mm;max-height:none}
+ .monster-art svg{height:100%;max-height:none}
+ .monster-foot{color:#222;font-size:24pt}
+}
+.game-fullscreen{position:fixed;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));z-index:20}
+.game-fullscreen .fle-fullscreen-button.is-fullscreen{position:static!important}
+@media print{.game-fullscreen{display:none!important}}
+</style></head>
+<body>
+<div class="shell"><header class="top"><div class="brand">FLE LAB · JEU DE LANGUE</div><h1>Fabrique ton monstre !</h1><div class="counter" id="progress" aria-live="polite"></div></header>
+<main class="stage"><section class="monster-panel"><div class="monster-title">Ton monstre prend forme…</div><div class="monster-art" id="monsterArt"></div><div class="monster-foot" id="monsterFoot"></div></section><section class="question-panel"><div id="screen"></div></section></main><div class="footnote">FLE Lab · Le monstre se construit une étape à la fois. Les questions de révision reviennent sans répétition jusqu’à ce que la banque soit parcourue.</div></div>
+<div class="game-fullscreen" data-fullscreen-slot></div>
+<script src="./illustrations-1.js" defer></script>
+<script src="./illustrations-2.js" defer></script>
+<script src="./illustrations-3.js" defer></script>
+<script src="./illustrations-4.js" defer></script>
+<script src="./illustrations-5.js" defer></script>
+<script src="./illustrations-6.js" defer></script>
+<script src="./illustrations-7.js" defer></script>
+<script src="./illustrations-8.js" defer></script>
+<script src="./illustrations-9.js" defer></script>
+<script src="./illustrations-10.js" defer></script>
+<script src="./illustrations-11.js" defer></script>
+<script src="./illustrations-12.js" defer></script>
+<script src="./illustrations-13.js" defer></script>
+<script src="./illustrations-14.js" defer></script>
+<script src="./questions-1.js" defer></script>
+<script src="./questions-2.js" defer></script>
+<script src="./questions-3.js" defer></script>
+<script src="./questions-4.js" defer></script>
+<script src="./questions-5.js" defer></script>
+<script src="./questions-6.js" defer></script>
+<script src="./questions-7.js" defer></script>
+<script src="./questions-8.js" defer></script>
+<script src="./questions-9.js" defer></script>
+<script src="./questions-10.js" defer></script>
+<script src="./jeu.js" defer></script>
+<script src="../fullscreen.js?v=1" defer></script>
+
+</body></html>
