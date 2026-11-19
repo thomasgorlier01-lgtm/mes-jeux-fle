@@ -158,16 +158,18 @@ function renderMonster(){
   const earSize=m.ears==="large"?90:63;
   const earCenter=250+headW*.44+(longHair?15:0);
   const earY=headY+headH*.34;
+  const hairColor=m.hairColor||"red";
+  const hairIndex=({blond:0,red:1,brown:2,black:3})[hairColor];
+  if(longHair){
+   svg+=part("long-hair",centered(ART.hair[hairIndex+4],250,headY-headH*.128,headW*1.23,headH*1.43));
+  }
   if(m.ears){
    svg+=part("ear",centered(ART.ears[variant][0],500-earCenter,earY,earSize,earSize));
    svg+=part("ear",centered(ART.ears[variant][1],earCenter,earY,earSize,earSize));
   }
   svg+=part("head",centered(ART.heads[variant],250,headY,headW,headH));
   if(m.hairLength){
-   const color=({blond:0,red:1,brown:2,black:3})[m.hairColor]??1;
-   const hair=ART.hair[color+(longHair?4:0)];
-   const hairTop=headY-headH*(longHair?.095:.12);
-   svg+=part("hair",centered(hair,250,hairTop,headW*(longHair?1.13:.79),headH*(longHair?.79:.41)));
+   svg+=part("hair",centered(ART.hair[hairIndex],250,headY-headH*.12,headW*.79,headH*.41));
   }
   if(pains.includes("head"))svg+=bandage("head",250,headY+headH*.18,headW*.72,headH*.106,4);
   const eyeCount=m.eyes||0;
@@ -237,7 +239,21 @@ function renderMonster(){
     svg+=part("earring",'<circle cx="'+x+'" cy="'+(earY+earSize*.78)+'" r="10" fill="none" stroke="#f4bf61" stroke-width="5"/>');
    }
   }
-  if(moustache)svg+=part("moustache",centered(ART.accessories[1],250,headY+headH*.754,headW*.46,headH*.087));
+  if(moustache||beard){
+   const shades={
+    blond:["070d11","171c21","a36531","db944f","f7be75","fbd896","fce5b2","fff0cc","fff6dd"],
+    brown:["060b0d","181b1d","573923","75472e","945b38","ae704b","c48960","d8a879","edc398"],
+    red:["070b0d","161b1f","8d3416","b74819","d36425","e78137","f49e50","f9b869","ffd09a"],
+    black:["070b0d","15191e","242830","303238","41434a","53555d","6c6d74","87858a","aba6ab"]
+   }[hairColor];
+   const tint=["R","G","B"].map((channel,i)=>'<feFunc'+channel+' type="table" tableValues="'+
+    shades.map(hex=>(parseInt(hex.slice(2*i,2*i+2),16)/255).toFixed(3)).join(" ")+'"/>').join("");
+   svg+='<defs><filter id="facial-hair-color" color-interpolation-filters="sRGB">'+
+    '<feColorMatrix type="matrix" values=".24 .66 .10 0 0 .24 .66 .10 0 0 .24 .66 .10 0 0 0 0 0 1 0"/>'+
+    '<feComponentTransfer>'+tint+'</feComponentTransfer></filter></defs>';
+  }
+  if(moustache)svg+=part("moustache",'<g filter="url(#facial-hair-color)">'+
+   centered(ART.accessories[1],250,headY+headH*.754,headW*.46,headH*.087)+'</g>');
   if(beard){
    const width=headW*.47;
    const topEdge="M0 83 Q200 123 400 83";
@@ -245,7 +261,7 @@ function renderMonster(){
     '<defs><clipPath id="beard-chin"><path d="'+topEdge+' V268 H0Z"/></clipPath></defs>'+
     '<g clip-path="url(#beard-chin)">'+piece(ART.accessories[2],0,0,400,268)+'</g>'+
     '<path d="'+topEdge+'" fill="none" stroke="#713416" stroke-width="4"/></svg>';
-   svg+=part("beard",beardArt);
+   svg+=part("beard",'<g filter="url(#facial-hair-color)">'+beardArt+'</g>');
   }
  }
  $("monsterArt").innerHTML=svg+"</svg>";
