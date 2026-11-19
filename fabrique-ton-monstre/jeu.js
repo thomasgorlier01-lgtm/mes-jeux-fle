@@ -151,7 +151,7 @@ function renderMonster(){
  }
  if(m.belly){
   svg+=part("belly",centered(ART.bodies[bodyTile],250,bodyY,bodyW,bodyH));
-  if(pains.includes("belly"))svg+=adhesive("belly",250,bodyY+bodyH*.53,46,19,-15);
+  if(pains.includes("belly"))svg+=adhesive("belly",250,bodyY+bodyH*.53,59,24,-15);
  }
  if(m.head){
   const longHair=m.hairLength==="long";
@@ -171,7 +171,12 @@ function renderMonster(){
   if(m.hairLength){
    svg+=part("hair",centered(ART.hair[hairIndex],250,headY-headH*.12,headW*.79,headH*.41));
   }
-  if(pains.includes("head"))svg+=bandage("head",250,headY+headH*.18,headW*.72,headH*.106,4);
+  if(pains.includes("head")){
+   svg+=part("bandage-head",'<g transform="translate(250 '+(headY+headH*.165)+') scale('+(headW/250)+' '+(headH/220)+')">'+
+    '<path d="M-98 0 Q0 -28 98 0 Q104 7 97 18 Q0 -3 -97 18 Q-104 7 -98 0Z" fill="#fff2db" stroke="#6c594e" stroke-width="2.5" stroke-linejoin="round"/>'+
+    '<path d="M-98 8 Q0 -17 98 8 M-60 -8 Q-49 -1 -46 9 M63 -8 Q56 -1 53 9" fill="none" stroke="#c2a88e" stroke-width="2" stroke-linecap="round"/>'+
+    '<path d="M-43 -6 Q0 -15 42 -6" fill="none" stroke="#fffaf0" stroke-width="2" stroke-linecap="round"/></g>');
+  }
   const eyeCount=m.eyes||0;
   const eyeY=headY+headH*.45;
   const eyeSize=headW*(eyeCount===1?.28:eyeCount===2?.23:.185);
@@ -201,11 +206,11 @@ function renderMonster(){
   if(m.nose){
    svg+=part("nose",'<ellipse cx="250" cy="'+noseY+'" rx="'+noseRx+'" ry="'+noseRy+'" fill="#d87d4c" stroke="'+p.line+'" stroke-width="2"/>'+
     '<ellipse cx="'+(250-noseRx*.23)+'" cy="'+(noseY-noseRy*.32)+'" rx="'+(noseRx*.48)+'" ry="'+(noseRy*.30)+'" fill="#f7c998" opacity=".85"/>');
-   if(pains.includes("nose"))svg+=adhesive("nose",250,noseY,Math.max(17,noseRx*1.35),9,-8);
+   if(pains.includes("nose"))svg+=adhesive("nose",250,noseY,Math.max(21,noseRx*1.58),11,-8);
   }
   if(pains.includes("eye")&&eyeCount){
    const [x,y]=eyeCenters[0];
-   svg+=adhesive("eye",x,y,eyeSize*.72,eyeSize*.25,-19);
+   svg+=adhesive("eye",x,y,eyeSize*.87,eyeSize*.32,-19);
   }
   if(m.accessory1==="glasses"&&eyeCount){
    const single=eyeCount===1;
@@ -233,7 +238,7 @@ function renderMonster(){
   }
   if(m.accessory1==="hat")svg+=part("hat",centered(ART.accessories[0],229,headY-28,headW*.58,headH*.37));
   const earDetailX=earCenter+earSize*.15;
-  if(m.ears&&pains.includes("ear"))svg+=adhesive("ear",earDetailX,earY+earSize*.46,earSize*.33,13,18);
+  if(m.ears&&pains.includes("ear"))svg+=adhesive("ear",earDetailX,earY+earSize*.46,earSize*.43,16,18);
   if(m.accessory2==="earrings"&&m.ears){
    for(const x of [500-earDetailX,earDetailX]){
     svg+=part("earring",'<circle cx="'+x+'" cy="'+(earY+earSize*.78)+'" r="10" fill="none" stroke="#f4bf61" stroke-width="5"/>');
