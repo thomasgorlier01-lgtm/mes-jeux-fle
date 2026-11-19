@@ -11,3 +11,7 @@
     @media(max-width:620px){.topnote{display:none}.hero{min-height:212px}.hero-deco{font-size:88px;right:-10px;top:35%;opacity:.30}.hero-text{max-width:100%}.hero h1{max-width:330px}.hero p{max-width:310px}.grid{grid-template-columns:1fr;gap:16px}.art{height:190px}.art .character{font-size:130px}.sectionhead{align-items:center}.counter{font-size:12px}.footer{align-items:flex-start}}
     @media(prefers-reduced-motion:reduce){.game{transition:none}}
 .folder-back{font-size:14px;color:#6851ae;text-decoration:none;font-weight:750}.folder-back:focus-visible{outline:3px solid #ffba61;outline-offset:4px}.hero-deco{opacity:.85}
+
+.art.corp.with-thumbnail{background:var(--thumbnail-background,#f5eedf)}
+.art.with-thumbnail::before,.art.with-thumbnail::after{display:none}
+.art .thumbnail{display:block;width:100%;height:100%;padding:7px;object-fit:contain}

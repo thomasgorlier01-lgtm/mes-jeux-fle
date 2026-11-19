@@ -4,44 +4,50 @@ const JEUX = [
     "description": "Lis les trois douleurs et retrouve le bon personnage parmi les quinze portraits.",
     "categorie": "Le corps et les douleurs",
     "niveau": "Débutant",
-    "emoji": "🩹",
     "couleur": "corp",
-    "bulle1": "🤕",
-    "bulle2": "✓",
-    "url": "../qui-est-ce-douleurs/"
+    "url": "../qui-est-ce-douleurs/",
+    "miniature": "miniatures/qui-est-ce-douleurs.webp",
+    "fondMiniature": "#f8ecd5"
   },
   {
     "titre": "Qui est-ce ? Corps de monstres",
     "description": "Retourne les cartes en classe ou écoute dix descriptions avec cinq cœurs en autonomie.",
     "categorie": "Le corps, le visage et les accessoires",
     "niveau": "Débutant",
-    "emoji": "👾",
     "couleur": "corp",
-    "bulle1": "👥",
-    "bulle2": "🔊",
-    "url": "../qui-est-ce-monstres/"
+    "url": "../qui-est-ce-monstres/",
+    "miniature": "miniatures/qui-est-ce-monstres.webp",
+    "fondMiniature": "#eee8fa"
   },
   {
     "titre": "L’atelier des visages",
     "description": "Écoute ou lis la description et crée le visage de Léo ou Lina : traits, couleurs et accessoires, en trois niveaux.",
     "categorie": "Le visage et les couleurs",
     "niveau": "Débutant",
-    "emoji": "🙂",
     "couleur": "corp",
-    "bulle1": "👀",
-    "bulle2": "🎨",
-    "url": "../atelier-visages/?visages=6"
+    "url": "../atelier-visages/?visages=6",
+    "miniature": "miniatures/atelier-des-visages.webp",
+    "fondMiniature": "#eee9dd"
   },
   {
     "titre": "Fabrique ton monstre !",
     "description": "Réponds aux questions illustrées et assemble ton monstre pièce par pièce.",
     "categorie": "Le corps et la révision du français",
     "niveau": "Débutant",
-    "emoji": "👾",
     "couleur": "corp",
-    "bulle1": "🎨",
-    "bulle2": "🩹",
-    "url": "../fabrique-ton-monstre/"
+    "url": "../fabrique-ton-monstre/",
+    "miniature": "miniatures/fabrique-ton-monstre.webp",
+    "fondMiniature": "#000"
+  },
+  {
+    "titre": "Qui est-ce ? Visages",
+    "description": "Retourne les cartes en classe ou écoute les indices, ligne par ligne, dans trois niveaux avec cinq cœurs.",
+    "categorie": "Le visage",
+    "niveau": "Débutant",
+    "couleur": "corp",
+    "url": "../qui-est-ce-visages/",
+    "miniature": "miniatures/qui-est-ce-visages.webp",
+    "fondMiniature": "#faecd3"
   }
 ];
 const games=document.getElementById('games'),player=document.getElementById('player'),frame=document.getElementById('frame'),playertitle=document.getElementById('playertitle'),extern=document.getElementById('extern');
@@ -55,9 +61,20 @@ window.addEventListener('popstate',closeGame);
       if (!jeu.dossier) card.addEventListener('click', e=>{e.preventDefault();openGame(jeu);});
       // La navigation se fait dans la même fenêtre : pratique pour l'iPad.
       const art = document.createElement('div'); art.className = 'art ' + (jeu.couleur || 'corp');
-      const ch = document.createElement('span'); ch.className = 'character'; ch.textContent = jeu.emoji || '🎯'; art.append(ch);
-      for(const [i, e] of [jeu.bulle1,jeu.bulle2].entries()){
-        if(e){const bubble=document.createElement('span');bubble.className='bubble '+(i===0?'one':'two');bubble.textContent=e;art.append(bubble)}
+      if (jeu.miniature) {
+        art.classList.add('with-thumbnail');
+        art.style.setProperty('--thumbnail-background', jeu.fondMiniature);
+        const thumbnail = document.createElement('img');
+        thumbnail.className = 'thumbnail';
+        thumbnail.src = jeu.miniature;
+        thumbnail.alt = '';
+        thumbnail.decoding = 'async';
+        art.append(thumbnail);
+      } else {
+        const character = document.createElement('span');
+        character.className = 'character';
+        character.textContent = jeu.emoji || '🎯';
+        art.append(character);
       }
       const details = document.createElement('div');details.className='details';
       const content = document.createElement('div');content.className='details-content';
