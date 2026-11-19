@@ -252,7 +252,7 @@ function renderMonster(){
 }
 
 function sceneForQuestion(q){
- if(q.word)return '<strong class="review-word">'+esc(q.word)+'</strong>';
+ if(q.number!=null)return '<strong class="review-number">'+esc(q.number)+'</strong>';
  return '<img class="review-illustration" src="'+q.src+'" alt="'+esc(q.visual)+'">';
 }
 function prepIntro(){
