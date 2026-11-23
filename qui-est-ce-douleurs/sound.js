@@ -1,9 +1,10 @@
+import extraAudio from './grammar-audio-data.js?v=5';
 import audioData from './audio-data.js?v=4';
 import {sentence} from './infirmary-logic.js?v=4';
 let player=null,token=0,stopTimer=null,activeButton=null;
 export function stopClue(){token++;clearTimeout(stopTimer);if(player){player.pause();player.onended=null;player.onerror=null;player=null;}window.speechSynthesis?.cancel();if(activeButton){activeButton.setAttribute('aria-busy','false');activeButton.classList.remove('speaking');activeButton=null;}}
 export async function listen(pronoun,pain,button){
- stopClue();const ownToken=token,record=audioData[`${pronoun.toLowerCase()}-${pain}`];if(!record)return;
+ stopClue();const ownToken=token,record={...audioData,...extraAudio}[`${pronoun.toLowerCase()}-${pain}`];if(!record)return;
  activeButton=button;button?.setAttribute('aria-busy','true');button?.classList.add('speaking');
  const done=()=>{if(ownToken===token)stopClue();};
  let fallbackStarted=false;

@@ -1,5 +1,5 @@
-import {createInfirmary} from './infirmary.js?v=4';
-import {renderClues,stopClue} from './sound.js?v=4';
+import {createInfirmary} from './infirmary.js?v=5';
+import {renderClues,stopClue} from './sound.js?v=5';
 import characters from './data.js?v=3';
 import {startGame,chooseCharacter,nextRound} from './logic.js?v=4';
 const $=id=>document.getElementById(id),grid=$('grid');let state,timer=null,mode=null;
