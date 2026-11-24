@@ -3,3 +3,30 @@
 @media(max-height:800px) and (min-width:651px){.oral-order .oral-title{font-size:24px;margin-top:9px}.oral-question{font-size:20px}.oral-instructions{font-size:12px;margin-bottom:9px}.oral-food{min-height:81px;padding:5px}.oral-food>img{height:48px}.oral-picker{gap:6px;grid-template-columns:repeat(auto-fit,minmax(88px,1fr))}.oral-food-label{font-size:11px}.oral-customer{max-width:290px}.oral-model{font-size:16px;margin:5px 0 9px}.oral-receipt-remove{font-size:11px}.oral-receipt-remove img{width:25px;height:25px}}
 @media(max-width:650px){.oral-layout{grid-template-columns:1fr}.oral-customer-panel{display:grid;grid-template-columns:125px minmax(0,1fr);gap:6px 12px;align-items:start;padding:10px}.oral-customer{grid-row:1/5;width:125px}.oral-model{font-size:16px;text-align:left;margin:4px 0}.oral-order .oral-order-heading{font-size:14px;margin:0}.oral-empty{font-size:12px;margin:0}.oral-receipt{grid-column:2}.oral-top{gap:7px}.oral-top button{padding:9px 11px;font-size:12px}.oral-mode-label{font-size:11px}.oral-order .oral-title{margin-top:10px}.oral-question{font-size:19px}.oral-instructions{font-size:12px}.oral-picker{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.oral-food{min-height:89px}.oral-food>img{height:55px}.oral-home-menu{flex-direction:column}.choices.oral-home-choices,.step-cards.oral-home-choices,.level-grid.oral-home-choices{grid-template-columns:1fr}.oral-launch{min-height:110px}.oral-quantity{gap:3px;padding-right:3px}.oral-quantity button{width:27px;height:29px}.oral-receipt-remove{gap:4px;font-size:11px}.oral-receipt-remove img{width:24px;height:24px}.oral-customer-panel:has(.oral-receipt-item:nth-child(n+6)){display:block}.oral-customer-panel:has(.oral-receipt-item:nth-child(n+6)) .oral-customer{width:150px}.oral-customer-panel:has(.oral-receipt-item:nth-child(n+6)) .oral-receipt{margin-top:8px}}
 @media(min-width:651px){.oral-picker[data-count="6"]{grid-template-columns:repeat(3,minmax(0,1fr))}.oral-picker[data-count="8"]{grid-template-columns:repeat(4,minmax(0,1fr))}.oral-picker[data-count="10"]{grid-template-columns:repeat(5,minmax(0,1fr))}.oral-picker[data-count="6"] .oral-food,.oral-picker[data-count="8"] .oral-food{min-height:130px}.oral-picker[data-count="6"] .oral-food>img,.oral-picker[data-count="8"] .oral-food>img{height:92px}.oral-picker[data-count="10"] .oral-food{min-height:112px}.oral-picker[data-count="10"] .oral-food>img{height:73px}}
+
+/* Scoped menu layout: the native .choices grid must not split Et toi ?. */
+.oral-home-choices>button.oral-launch{display:grid;grid-template-columns:40px minmax(0,1fr);grid-template-rows:auto auto;align-items:center;justify-content:stretch;gap:5px 12px;padding:20px;min-height:145px;text-align:left}
+.oral-home-choices>button.oral-launch>.oral-entry-number{position:static;left:auto;top:auto;grid-column:1;grid-row:1 / 3;align-self:center;justify-self:center;margin:0;width:34px;height:34px;display:grid;place-items:center;font-size:20px;line-height:1}
+.oral-home-choices>button.oral-launch>strong{grid-column:2;grid-row:1;position:static;display:block;min-width:0;margin:0;font-size:20px;line-height:1.3;white-space:nowrap}
+.oral-home-choices>button.oral-launch>small{grid-column:2;grid-row:2;position:static;display:block;min-width:0;margin:0;font-size:13px;line-height:1.4;white-space:normal}
+.oral-context-picture,.oral-context-front,.oral-cafe-background{display:block;width:100%;height:100%}
+.oral-context-picture{position:absolute;inset:0;z-index:0}
+.oral-context-front{position:absolute;inset:0;z-index:3;pointer-events:none}
+.oral-scene-picnic .oral-tray,.oral-scene-market .oral-tray,.oral-scene-cafe .oral-tray{position:absolute;inset:0;left:0;top:0;width:100%;height:100%;padding:0;display:block;z-index:2;pointer-events:none}
+.oral-scene-picnic .oral-on-tray,.oral-scene-market .oral-on-tray{position:absolute;transform:translate(-50%,-50%);pointer-events:auto}
+.oral-scene-picnic .oral-customer{width:min(100%,calc((100dvh - 330px)*.766))}
+.oral-scene-market .oral-customer{width:min(100%,calc((100dvh - 330px)*.579))}
+.oral-scene-cafe .oral-layout{grid-template-columns:minmax(0,1.5fr) minmax(250px,1fr)}
+.oral-scene-cafe .oral-customer{width:100%;max-width:none}
+.oral-scene-cafe .oral-cafe-background{object-fit:contain;border-radius:15px}
+.oral-scene-cafe .oral-on-tray.oral-served-drink{position:absolute;width:14%;height:26%;transform:translate(-50%,-100%);pointer-events:auto;min-width:0;min-height:0}
+.oral-served-drink>img{object-position:center bottom;filter:drop-shadow(0 2px 2px #47311c28)}
+.oral-friends{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}
+.oral-friend{display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center;min-width:0;min-height:65px;padding:9px 5px;border:2px solid #dfd2e6;border-radius:12px;background:#fffcf6;color:#705580;font:inherit;cursor:pointer;text-align:center}
+.oral-friend strong{font-size:13px;line-height:1.3}
+.oral-friend span{font-size:12px;line-height:1.3}
+.oral-friend[aria-pressed=true]{border-color:#9f80b3;background:#f0e6f6}
+.oral-scene-cafe .oral-model{margin:6px 0;font-size:16px}
+.oral-scene-cafe .oral-empty{font-weight:700;text-align:center}
+@media(max-width:800px){.oral-home-choices>button.oral-launch{padding:14px;grid-template-columns:34px minmax(0,1fr);gap:4px 10px}.oral-home-choices>button.oral-launch>strong{font-size:17px}.oral-home-choices>button.oral-launch>small{font-size:12px}}
+@media(max-width:650px){.oral-scene-cafe .oral-layout{grid-template-columns:1fr}.oral-scene-cafe .oral-customer-panel{display:block}.oral-scene-cafe .oral-customer{width:100%}.oral-friend{padding:7px 3px}.oral-friend strong{font-size:12px}.oral-friend span{font-size:11px}.oral-home-choices>button.oral-launch{min-height:110px}.oral-scene-picnic .oral-customer,.oral-scene-market .oral-customer{width:125px}}

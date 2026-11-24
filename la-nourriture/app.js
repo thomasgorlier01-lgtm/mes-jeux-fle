@@ -8,7 +8,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🔊',
         bulle2: '✓',
-        url: '../pique-nique-famille/?et-toi=1'
+        url: '../pique-nique-famille/?et-toi=2'
       },
       {
         titre: 'Au marché',
@@ -19,18 +19,18 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🍎',
         bulle2: '🔊',
-        url: '../marche-fruits/?et-toi=1'
+        url: '../marche-fruits/?et-toi=2'
       },
       {
         titre: 'Au café',
-        description: 'Découvre les boissons, sers les parents, puis commande à l’oral avec « Et toi ? ».',
+        description: 'Découvre les boissons, sers les parents, puis choisis trois boissons pour les amis en terrasse.',
         categorie: 'Jeu 3',
         niveau: 'Débutant',
         emoji: '☕',
         couleur: 'vest',
         bulle1: '🥛',
         bulle2: '🔊',
-        url: '../cafe-boissons/?et-toi=1'
+        url: '../cafe-boissons/?et-toi=2'
       },
       {
         titre: 'A la cantine',
@@ -41,7 +41,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🥦',
         bulle2: '🔊',
-        url: '../cantine-menus/?et-toi=1'
+        url: '../cantine-menus/?et-toi=2'
       },
       {
         titre: 'A table',
@@ -52,7 +52,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🥕',
         bulle2: '✓',
-        url: '../atelier-repas/?et-toi=1'
+        url: '../atelier-repas/?et-toi=2'
       },
       {
         titre: 'Je compose ma salade',
@@ -63,7 +63,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🔊',
         bulle2: '✓',
-        url: '../compose-salade/?et-toi=1'
+        url: '../compose-salade/?et-toi=2'
       }
 ];
 const games=document.getElementById('games'),player=document.getElementById('player'),frame=document.getElementById('frame'),playertitle=document.getElementById('playertitle'),extern=document.getElementById('extern');
