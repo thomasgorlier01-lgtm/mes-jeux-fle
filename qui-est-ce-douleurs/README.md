@@ -43,3 +43,9 @@ Le bouton Vérifier s’active une fois toutes les prépositions choisies et tou
 Chaque phrase complète devient écoutable après validation correcte de la préposition et du placement correspondant. À zéro cœur, la correction est montrée et les phrases deviennent réécoutables. Les huit enregistrements supplémentaires (épaule, yeux, oreilles, dents ; Il et Elle) complètent les fichiers existants sans les remplacer. Après dix réussites, le niveau suivant est proposé. Le choix des niveaux reste accessible directement.
 
 Vérifications : 18 tests de logique, deux parties complètes de dix manches dans le navigateur, erreurs de grammaire et de placement séparées, pluriels avec deux soins, disponibilité différée de l’audio, anciens modes, clavier et plein écran. iPad 1024×768 et 768×1024 : corps entier et bouton Vérifier visibles, sélection de préposition et déplacement tactile contrôlés. Sauvegarde locale avant modification : tmp/douleurs-avant-prepositions-20261123.
+
+## Tolérance des placements — 24 novembre 2026
+
+Pour la jambe, les cuisses et les mollets sont acceptés des deux côtés, avec une marge plus large. Pour le doigt, le pouce ainsi que les quatre autres doigts sont acceptés sur les deux mains. Les zones sont communes aux trois niveaux et aux deux personnages. La précision demandée pour le genou est conservée. Le placement reste libre, sans déplacement automatique du soin.
+
+Contrôles : points relevés sur les portraits, validation sans perte de cœur dans les trois niveaux, 23 tests de logique réussis ; essais réels dans le navigateur sur les deux cuisses, les deux mollets, les deux pouces et plusieurs autres doigts. Sauvegarde avant modification : tmp/douleurs-avant-tolerance-20261124.

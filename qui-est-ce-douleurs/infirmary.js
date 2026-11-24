@@ -1,6 +1,6 @@
 import {newGrammar,verifyGrammar,nextGrammar,expectedCare,grammarFingerprint,careTargets,solvedPains,VOCABULARY,PREPOSITIONS,fullSentence} from './grammar-logic.js?v=5';
 import {newInfirmary,verifyInfirmary,nextPatient,fingerprint} from './infirmary-logic.js?v=4';
-import {BODY_ZONES} from './body-zones.js?v=5';
+import {BODY_ZONES} from './body-zones.js?v=6';
 import {renderClues,stopClue,listen} from './sound.js?v=5';
 export function createInfirmary(){
  const $=id=>document.getElementById(id),stage=$('patient-stage'),layer=$('patient-placements');

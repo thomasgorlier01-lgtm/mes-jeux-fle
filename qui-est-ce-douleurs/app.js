@@ -1,4 +1,4 @@
-import {createInfirmary} from './infirmary.js?v=5';
+import {createInfirmary} from './infirmary.js?v=6';
 import {renderClues,stopClue} from './sound.js?v=5';
 import characters from './data.js?v=3';
 import {startGame,chooseCharacter,nextRound} from './logic.js?v=4';
