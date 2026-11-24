@@ -1,69 +1,69 @@
 const JEUX = [
       {
         titre: 'Le pique nique en famille',
-        description: 'Écoute les mots, retrouve les objets et prépare les sandwichs de la famille.',
+        description: 'Découvre les mots, prépare les sandwichs, puis commande à l’oral avec « Et toi ? ».',
         categorie: 'Jeu 1',
         niveau: 'Débutant',
         emoji: '🥪',
         couleur: 'vest',
         bulle1: '🔊',
         bulle2: '✓',
-        url: '../pique-nique-famille/?nourriture=1'
+        url: '../pique-nique-famille/?et-toi=1'
       },
       {
         titre: 'Au marché',
-        description: 'Écoute les fruits, associe les mots aux cagettes et prépare dix paniers avec les bonnes quantités.',
+        description: 'Découvre les fruits, prépare les paniers, puis fais tes propres achats à l’oral.',
         categorie: 'Jeu 2',
         niveau: 'Débutant',
         emoji: '🧺',
         couleur: 'vest',
         bulle1: '🍎',
         bulle2: '🔊',
-        url: '../marche-fruits/?nourriture=1'
+        url: '../marche-fruits/?et-toi=1'
       },
       {
         titre: 'Au café',
-        description: 'Écoute les huit boissons, puis sers les deux parents pendant cinq tournées.',
+        description: 'Découvre les boissons, sers les parents, puis commande à l’oral avec « Et toi ? ».',
         categorie: 'Jeu 3',
         niveau: 'Débutant',
         emoji: '☕',
         couleur: 'vest',
         bulle1: '🥛',
         bulle2: '🔊',
-        url: '../cafe-boissons/?nourriture=1'
+        url: '../cafe-boissons/?et-toi=1'
       },
       {
         titre: 'A la cantine',
-        description: 'Écoute la commande des enfants et prépare dix plateaux complets : un plat, un dessert et une boisson.',
+        description: 'Prépare les plateaux, puis choisis ton propre repas dans « Et toi ? », en classe.',
         categorie: 'Jeu 4',
         niveau: 'Débutant',
         emoji: '🍽️',
         couleur: 'vest',
         bulle1: '🥦',
         bulle2: '🔊',
-        url: '../cantine-menus/?nourriture=1'
+        url: '../cantine-menus/?et-toi=1'
       },
       {
         titre: 'A table',
-        description: 'Lis la commande de Léo ou Lina et prépare son plateau : repas, desserts et boissons en trois niveaux.',
+        description: 'Prépare les repas de Léo et Lina ou commande librement à l’oral avec « Et toi ? ».',
         categorie: 'Jeu 5',
         niveau: 'Débutant',
         emoji: '🍽️',
         couleur: 'vest',
         bulle1: '🥕',
         bulle2: '✓',
-        url: '../atelier-repas/?nourriture=1'
+        url: '../atelier-repas/?et-toi=1'
       },
       {
         titre: 'Je compose ma salade',
-        description: 'Reconnais les quantités puis compose ta salade : un peu de, beaucoup de, mais pas de.',
+        description: 'Reconnais les quantités, compose une salade, puis dis à ton camarade ce que tu veux.',
         categorie: 'Jeu 6',
         niveau: 'Débutant',
         emoji: '🥗',
         couleur: 'vest',
         bulle1: '🔊',
         bulle2: '✓',
-        url: '../compose-salade/'
+        url: '../compose-salade/?et-toi=1'
       }
 ];
 const games=document.getElementById('games'),player=document.getElementById('player'),frame=document.getElementById('frame'),playertitle=document.getElementById('playertitle'),extern=document.getElementById('extern');
