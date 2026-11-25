@@ -1,4 +1,4 @@
-import {OBJECTS,ZONES,newRound,getObject,getZone,check,snap,shuffle} from './model.js';
+import {OBJECTS,ZONES,newRound,getObject,getZone,check,snap,shuffle} from './model.js?v=2';
 const $=id=>document.getElementById(id);
 let rounds=[],index=0,selected=null,placement=null,solved=false,doors={frigo:false,four:false};
 let speaking=null,audioGeneration=0;
@@ -32,7 +32,7 @@ function renderPlacement(){
  const o=getObject(placement.object),zone=snap(placement.x,placement.y),p=$('placement');
  p.style.left=placement.x*100+'%';p.style.top=placement.y*100+'%';
  let size=o.size;if(placement.y<.1)size=Math.min(size,4);
- if(zone?.id==='frigo-cote'||zone?.id==='plante-cote')size=Math.min(size,4);
+ if(zone?.id==='frigo-cote'||zone?.id==='plante-cote'||zone?.id==='plante-four-entre')size=Math.min(size,4);
  p.style.width=size+'%';p.replaceChildren(sprite(o));
  const behindTable=placement.y>=.55&&placement.y<=.64&&placement.x>.25&&placement.x<.71;
  const inSink=zone?.id==='evier';

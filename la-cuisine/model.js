@@ -1,9 +1,16 @@
-import {OBJECTS,ZONES,MISSIONS} from './data.js';
+import {OBJECTS,ZONES,MISSIONS} from './data.js?v=2';
 export {OBJECTS,ZONES,MISSIONS};
 export const getObject=id=>OBJECTS.find(o=>o.id===id);
 export const getZone=id=>ZONES.find(z=>z.id===id);
 export function shuffle(list,random=Math.random){const a=[...list];for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-export function newRound(random=Math.random){return shuffle(OBJECTS,random).slice(0,10).map(o=>{const options=MISSIONS.filter(m=>m.object===o.id);return options[Math.floor(random()*options.length)];});}
+export function newRound(random=Math.random){
+ const choose=list=>list[Math.floor(random()*list.length)];
+ const required=[choose(MISSIONS.filter(m=>m.zone==='fenetre')),choose(MISSIONS.filter(m=>m.zone==='plante-four-entre'))];
+ required.push(choose(MISSIONS.filter(m=>getZone(m.zone).label.startsWith('devant ')&&!required.some(r=>r.object===m.object))));
+ const used=new Set(required.map(m=>m.object));
+ const rest=shuffle(OBJECTS.filter(o=>!used.has(o.id)),random).slice(0,7).map(o=>choose(MISSIONS.filter(m=>m.object===o.id)));
+ return shuffle([...required,...rest],random);
+}
 export function contains(zone,x,y){const [l,t,r,b]=zone.bounds;return x>=l&&x<=r&&y>=t&&y<=b;}
 export function check(mission,placement,doors){
  if(!placement)return 'missing';
