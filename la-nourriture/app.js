@@ -64,6 +64,17 @@ const JEUX = [
         bulle1: '🔊',
         bulle2: '✓',
         url: '../compose-salade/?et-toi=2'
+      },
+      {
+        titre: 'Dans la cuisine',
+        description: 'Glisse les objets ou place-les en deux clics. Travaille les positions avec 10 consignes au niveau 1 et 25 au niveau 2.',
+        categorie: 'Jeu 7',
+        niveau: 'Deux niveaux',
+        emoji: '🍳',
+        couleur: 'vest',
+        bulle1: '🧺',
+        bulle2: '🔊',
+        url: '../la-cuisine/?cuisine=5'
       }
 ];
 const games=document.getElementById('games'),player=document.getElementById('player'),frame=document.getElementById('frame'),playertitle=document.getElementById('playertitle'),extern=document.getElementById('extern');

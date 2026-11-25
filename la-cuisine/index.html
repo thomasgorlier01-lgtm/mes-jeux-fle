@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="fr">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#75618b"><title>Dans la cuisine · FLE Lab</title><link rel="stylesheet" href="style.css?v=4"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#75618b"><title>Dans la cuisine · FLE Lab</title><link rel="stylesheet" href="style.css?v=5"></head>
 <body>
 <header><button id="home-button" class="quiet" hidden>Accueil</button><span class="brand">FLE <b>Lab</b><span class="dot">•</span> Dans la cuisine</span><span class="header-actions" data-fullscreen-slot></span></header>
 <main id="home">
- <div class="welcome"><span class="eyebrow">J’écoute, je comprends, je place</span><h1>Dans la cuisine</h1><p>Place les objets au bon endroit.<br>Choisis ton niveau !</p><div class="level-choices"><button id="start" class="level-choice"><strong>Niveau 1</strong><span>Les premiers mots · 10 consignes</span></button><button id="start-2" class="level-choice"><strong>Niveau 2</strong><span>16 aliments en plus · 25 consignes</span></button></div><p class="small">Écoute, place et vérifie · À ton rythme</p></div>
+ <div class="welcome"><span class="eyebrow">J’écoute, je comprends, je place</span><h1>Dans la cuisine</h1><p>Glisse les objets ou place-les en deux clics.<br>Choisis ton niveau !</p><div class="level-choices"><button id="start" class="level-choice"><strong>Niveau 1</strong><span>Les premiers mots · 10 consignes</span></button><button id="start-2" class="level-choice"><strong>Niveau 2</strong><span>16 aliments en plus · 25 consignes</span></button></div><p class="small">Écoute, place et vérifie · À ton rythme</p></div>
  <img src="assets/cuisine.png" alt="Une cuisine avec un frigo et un four ouverts, un évier, une table, deux chaises, une fenêtre et une plante." class="home-art">
 </main>
 <main id="game" hidden>
- <div id="scene-space"><div id="scene" aria-label="Cuisine : choisis un objet, puis touche son emplacement.">
+ <div id="scene-space"><div id="scene" aria-label="Cuisine : fais glisser un objet ou clique sur lui puis sur son emplacement.">
   <img class="background" src="assets/cuisine.png" alt="Cuisine vue de face" draggable="false">
   <div class="basket"><img src="assets/panier.png" alt="Un panier vide sur la gauche de la table" draggable="false"></div>
   <div id="placement" hidden></div>
@@ -28,5 +28,5 @@
  </section>
 </main>
 <dialog id="finish"><div class="finish-inner"><span class="eyebrow">Bravo !</span><h2>La cuisine est bien rangée !</h2><p id="finish-message">Tu as terminé la partie.</p><button id="restart" class="primary">Une nouvelle partie</button><button id="finish-home" class="quiet">Revenir à l’accueil</button></div></dialog>
-<script src="../fullscreen.js"></script><script type="module" src="app.js?v=4"></script>
+<script src="../fullscreen.js"></script><script type="module" src="app.js?v=5"></script>
 </body></html>
