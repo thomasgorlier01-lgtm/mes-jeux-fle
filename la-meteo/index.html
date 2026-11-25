@@ -134,6 +134,10 @@ h3 { font-size: clamp(1rem, 2.7vw, 1.27rem); line-height: 1.12; }
   .dress-layout { align-items: start; }
   .garment-listen .sound-text { font-size: .61rem; }
 }
+.weather-prompt .sound-text {
+  font-size: clamp(.88rem, 2.6vw, 1.08rem);
+  text-align: left;
+}
 
 </style>
 </head>
@@ -445,7 +449,7 @@ function assessOutfit(weather, selection) {
     const promptRow = main.querySelector('.prompt-row');
     let listen;
     if (!oral) {
-      listen = soundButton(phrase, level === 'CE1' ? phrase : 'Écouter');
+      listen = soundButton(phrase, phrase, 'weather-prompt');
       promptRow.append(listen);
     } else {
       promptRow.textContent = 'Écoute ton camarade, puis choisis une image.';
@@ -541,6 +545,8 @@ function assessOutfit(weather, selection) {
   function renderDress(autoPlay = false, focus = true) {
     const inClass = state.mode === 'class';
     const question = state.avatar === 'garcon' ? 'Que doit-il porter ?' : 'Que doit-elle porter ?';
+    // Use pronounced homophones so French system voices say the [t] in "doit-elle".
+    const spokenQuestion = state.avatar === 'fille' ? 'Que doigt telle porter ?' : question;
     main.innerHTML = `${toolbar()}
       <div class="dress-layout">
         <section class="panel dress-weather" aria-label="La météo"></section>
@@ -553,10 +559,14 @@ function assessOutfit(weather, selection) {
         </section>
       </div>`;
     bindHome();
-    const listen = soundButton(question);
+    const listen = soundButton(spokenQuestion);
     listen.setAttribute('aria-label', 'Écouter la question');
     main.querySelector('.dress-panel .title-row').append(listen);
-    main.querySelector('.dress-weather').append(photo(state.weather, 'scene-image'), soundButton(today(), level === 'CE1' ? today() : 'Écouter'));
+    const weatherPhrase = today();
+    main.querySelector('.dress-weather').append(
+      photo(state.weather, 'scene-image'),
+      soundButton(weatherPhrase, weatherPhrase, 'weather-prompt')
+    );
     const feedback = main.querySelector('.feedback');
     const wardrobe = main.querySelector('.wardrobe');
     for (const id of state.garments) {
@@ -617,7 +627,7 @@ function assessOutfit(weather, selection) {
       advance();
     };
     if (focus) main.querySelector('h3').focus({ preventScroll: true });
-    if (autoPlay) play(question, listen);
+    if (autoPlay) play(spokenQuestion, listen);
   }
 
   function advance() {
