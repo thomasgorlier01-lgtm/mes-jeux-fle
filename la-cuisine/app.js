@@ -1,6 +1,6 @@
-import {OBJECTS,ZONES,newRound,getObject,getZone,check,snap,shuffle} from './model.js?v=2';
+import {ZONES,newRound,getObject,getObjects,getZone,check,snap,shuffle} from './model.js?v=3';
 const $=id=>document.getElementById(id);
-let rounds=[],index=0,selected=null,placement=null,solved=false,doors={frigo:false,four:false};
+let rounds=[],index=0,level=1,selected=null,placement=null,solved=false,doors={frigo:false,four:false};
 let speaking=null,audioGeneration=0;
 function stopAudio(){audioGeneration++;if('speechSynthesis'in window)speechSynthesis.cancel();speaking?.classList.remove('playing');speaking=null;}
 function speak(text,button){
@@ -14,9 +14,9 @@ function speak(text,button){
  speechSynthesis.speak(utterance);
 }
 function feedback(text,type=''){const f=$('feedback');f.textContent=text;f.className=type;}
-function sprite(o){const s=document.createElement('span');s.className='sprite';s.style.setProperty('--col',o.col);s.style.setProperty('--row',o.row);const img=new Image();img.src='assets/objets.png';img.alt='';img.draggable=false;s.append(img);return s;}
+function sprite(o){const s=document.createElement('span');s.className='sprite';s.style.setProperty('--col',o.col);s.style.setProperty('--row',o.row);const img=new Image();img.src=o.sheet||'assets/objets.png';img.style.width=(o.cols||5)*100+'%';img.style.height=(o.rows||4)*100+'%';img.alt='';img.draggable=false;s.append(img);return s;}
 function renderPalette(){
- $('palette').replaceChildren(...shuffle(OBJECTS).map(o=>{const b=document.createElement('button');b.type='button';b.className='object';b.dataset.object=o.id;b.setAttribute('aria-label',o.label);b.setAttribute('aria-pressed','false');b.title=o.label;b.append(sprite(o));b.addEventListener('click',()=>{if(solved)return;selected=o.id;placement=null;speak(o.label,b);renderPlacement();feedback('Touche maintenant sa place dans la cuisine.');});return b;}));
+ $('palette').replaceChildren(...shuffle(getObjects(level)).map(o=>{const b=document.createElement('button');b.type='button';b.className='object';b.dataset.object=o.id;b.setAttribute('aria-label',o.label);b.setAttribute('aria-pressed','false');b.title=o.label;b.append(sprite(o));b.addEventListener('click',()=>{if(solved)return;selected=o.id;placement=null;speak(o.label,b);renderPlacement();feedback('Touche maintenant sa place dans la cuisine.');});return b;}));
 }
 function renderDoors(){
  for(const id of ['frigo','four']){$(id+'-closed').hidden=doors[id];const b=$(id+'-toggle'),label=(doors[id]?'Fermer':'Ouvrir')+' le '+id;b.setAttribute('aria-expanded',String(doors[id]));b.setAttribute('aria-label',label);b.firstElementChild.textContent=label;}
@@ -33,10 +33,12 @@ function renderPlacement(){
  p.style.left=placement.x*100+'%';p.style.top=placement.y*100+'%';
  let size=o.size;if(placement.y<.1)size=Math.min(size,4);
  if(zone?.id==='frigo-cote'||zone?.id==='plante-cote'||zone?.id==='plante-four-entre')size=Math.min(size,4);
+ if(zone?.id==='panier-dans')size=Math.min(size,5);
+ if(zone?.id==='panier-devant')size=Math.min(size,6);
  p.style.width=size+'%';p.replaceChildren(sprite(o));
  const behindTable=placement.y>=.55&&placement.y<=.64&&placement.x>.25&&placement.x<.71;
  const inSink=zone?.id==='evier';
- p.className=(behindTable||inSink?'':'front ')+(solved?'valid':'');
+ p.className=(behindTable||inSink?'':'front ')+(zone?.id==='panier-devant'?'basket-front ':'')+(solved?'valid':'');
  if(zone?.door&&!doors[zone.door])p.hidden=true;
 }
 function place(x,y){
@@ -53,7 +55,7 @@ function renderMission(){
  $('next').hidden=true;$('check').hidden=false;
  feedback('Choisis un objet, puis touche sa place dans la cuisine.');renderPlacement();
 }
-function start(){rounds=newRound();index=0;doors={frigo:false,four:false};$('finish').close();$('home').hidden=true;$('game').hidden=false;$('home-button').hidden=false;renderPalette();renderDoors();renderMission();}
+function start(selectedLevel=level){level=selectedLevel===2?2:1;rounds=newRound(Math.random,level);index=0;doors={frigo:false,four:false};$('finish').close();$('home').hidden=true;$('game').hidden=false;$('game').classList.toggle('level-two',level===2);$('level-badge').textContent='Niveau '+level;$('home-button').hidden=false;renderPalette();renderDoors();renderMission();}
 function home(){stopAudio();$('finish').close();$('home').hidden=false;$('game').hidden=true;$('home-button').hidden=true;$('start').focus();}
 for(const zone of ZONES){const b=document.createElement('button');b.type='button';b.className='destination';b.dataset.zone=zone.id;b.style.left=zone.point[0]*100+'%';b.style.top=zone.point[1]*100+'%';b.setAttribute('aria-label',zone.label);b.tabIndex=-1;b.addEventListener('click',e=>{e.stopPropagation();place(...zone.point);});$('destinations').append(b);}
 $('scene').addEventListener('click',e=>{if(!selected||solved)return;const r=$('scene').getBoundingClientRect();place(Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)),Math.max(0,Math.min(1,(e.clientY-r.top)/r.height)));});
@@ -67,5 +69,5 @@ $('check').onclick=()=>{
  solved=true;stopAudio();feedback('Bravo, il est à la bonne place !','success');$('check').hidden=true;$('next').hidden=false;$('next').textContent=index===rounds.length-1?'Terminer':'Suivant';renderPlacement();
 };
 $('next').onclick=()=>{if(index===rounds.length-1){stopAudio();$('finish').showModal();$('restart').focus();}else{index++;renderMission();$('listen').focus();}};
-$('start').onclick=start;$('restart').onclick=start;$('home-button').onclick=home;$('finish-home').onclick=home;
+$('start').onclick=()=>start(1);$('start-2').onclick=()=>start(2);$('restart').onclick=()=>start(level);$('home-button').onclick=home;$('finish-home').onclick=home;
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAudio();});
