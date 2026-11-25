@@ -24,7 +24,7 @@
 [hidden] { display: none !important; }
 body { margin: 0; min-height: 100dvh; background: radial-gradient(ellipse at 88% -20%, #d9efeb, transparent 65%), #faf8ee; }
 button { font: inherit; cursor: pointer; color: inherit; touch-action: manipulation; }
-button:focus-visible { outline: 3px solid #6b499a; outline-offset: 3px; }
+button:focus-visible, .portal-back:focus-visible { outline: 3px solid #6b499a; outline-offset: 3px; }
 button:disabled { cursor: default; }
 img { display: block; max-width: 100%; }
 h1, h2, h3, p { margin: 0; }
@@ -34,8 +34,9 @@ h2 { font-size: clamp(1.65rem, 4.6vw, 2.85rem); }
 h3 { font-size: clamp(1rem, 2.7vw, 1.27rem); line-height: 1.12; }
 .shell { width: min(1200px, 100%); padding: 0 clamp(10px, 3vw, 28px) 20px; margin: 0 auto; }
 .masthead { display: flex; align-items: center; gap: 10px; min-height: 65px; border-bottom: 1px solid var(--edge); }
-.wordmark { border: 0; background: none; color: var(--green); padding: 6px 0; font-size: 1.12rem; font-weight: 860; margin-right: auto; }
+.wordmark { border: 0; background: none; color: var(--green); padding: 6px 0; font-size: 1.12rem; font-weight: 860; white-space: nowrap; }
 .wordmark span { font-weight: 600; }
+.portal-back { color: var(--green); margin-right: auto; text-decoration: none; white-space: nowrap; }
 .level-switch { display: flex; padding: 3px; gap: 2px; border: 1px solid var(--edge); border-radius: 22px; background: var(--paper); }
 .level-switch button { border: 0; border-radius: 17px; padding: 5px 12px; background: transparent; color: var(--muted); font-size: .83rem; font-weight: 780; }
 .level-switch button[aria-pressed="true"] { color: white; background: var(--green); }
@@ -128,6 +129,12 @@ h3 { font-size: clamp(1rem, 2.7vw, 1.27rem); line-height: 1.12; }
   .lesson-footer { margin-top: 5px; gap: 4px; }
   .lesson-footer button { min-height: 36px; padding: 5px 8px; font-size: .81rem; }
 }
+@media (max-width: 380px) {
+  .masthead { gap: 6px; }
+  .wordmark { font-size: .9rem; }
+  .portal-back.small { font-size: .72rem; padding-inline: 7px; }
+  .level-switch button { padding-inline: 8px; }
+}
 @media (min-width: 721px) and (max-height: 820px) {
   .figure { height: clamp(160px, 35dvh, 290px); }
   .wardrobe { grid-template-columns: repeat(6, minmax(0, 52px)); }
@@ -145,6 +152,7 @@ h3 { font-size: clamp(1rem, 2.7vw, 1.27rem); line-height: 1.12; }
   <div class="shell">
     <header class="masthead">
       <button type="button" class="wordmark" id="brand" aria-label="FLE Lab, accueil du jeu">FLE <span>Lab</span></button>
+      <a class="secondary small portal-back" href="https://thomasgorlier01-lgtm.github.io/mes-jeux-fle/">← Tous les jeux</a>
       <div class="level-switch" role="group" aria-label="Niveau">
         <button type="button" data-level="CP" aria-pressed="true">CP</button>
         <button type="button" data-level="CE1" aria-pressed="false">CE1</button>
