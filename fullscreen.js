@@ -3,6 +3,7 @@
  'use strict';
  if(window.FLEFullscreen)return;
  const doc=document,root=doc.documentElement,buttons=[];
+ const sharedScript=doc.currentScript;
  const expand='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg>';
  const collapse='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h5V3M21 8h-5V3M16 21v-5h5M8 21v-5H3"/></svg>';
  let fallback=false,busy=false,modeTarget=null,headerButton=null,playerButton=null,player=null,wasOpen=false;
@@ -57,6 +58,11 @@
   if(slot){slot.classList.add('fle-fullscreen-host');slot.closest('header')?.classList.add('fle-fullscreen-header');}
   headerButton=makeButton(slot?'header':'floating');(slot||doc.body).append(headerButton);
   player=doc.querySelector('#player');const bar=doc.querySelector('.playerbar');
+  if(sharedScript?.src&&window.self===window.top&&!player){
+   const navigation=doc.createElement('script');
+   navigation.src=new URL('portal-back.js',sharedScript.src).href;
+   doc.head.append(navigation);
+  }
   if(player&&bar){
    playerButton=makeButton('player');bar.append(playerButton);wasOpen=player.classList.contains('open');
    const frame=player.querySelector('iframe');if(frame){frame.setAttribute('allowfullscreen','');const allow=frame.getAttribute('allow')||'';if(!allow.includes('fullscreen'))frame.setAttribute('allow',allow+(allow?'; ':'')+'fullscreen');}
