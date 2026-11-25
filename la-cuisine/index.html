@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="fr">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#75618b"><title>Dans la cuisine · FLE Lab</title><link rel="stylesheet" href="style.css?v=3"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#75618b"><title>Dans la cuisine · FLE Lab</title><link rel="stylesheet" href="style.css?v=4"></head>
 <body>
 <header><button id="home-button" class="quiet" hidden>Accueil</button><span class="brand">FLE <b>Lab</b><span class="dot">•</span> Dans la cuisine</span><span class="header-actions" data-fullscreen-slot></span></header>
 <main id="home">
- <div class="welcome"><span class="eyebrow">J’écoute, je comprends, je place</span><h1>Dans la cuisine</h1><p>Place les objets au bon endroit.<br>Choisis ton niveau !</p><div class="level-choices"><button id="start" class="level-choice"><strong>Niveau 1</strong><span>Les premiers mots</span></button><button id="start-2" class="level-choice"><strong>Niveau 2</strong><span>Les mêmes mots + 16 aliments</span></button></div><p class="small">10 consignes · À ton rythme</p></div>
+ <div class="welcome"><span class="eyebrow">J’écoute, je comprends, je place</span><h1>Dans la cuisine</h1><p>Place les objets au bon endroit.<br>Choisis ton niveau !</p><div class="level-choices"><button id="start" class="level-choice"><strong>Niveau 1</strong><span>Les premiers mots · 10 consignes</span></button><button id="start-2" class="level-choice"><strong>Niveau 2</strong><span>16 aliments en plus · 25 consignes</span></button></div><p class="small">Écoute, place et vérifie · À ton rythme</p></div>
  <img src="assets/cuisine.png" alt="Une cuisine avec un frigo et un four ouverts, un évier, une table, deux chaises, une fenêtre et une plante." class="home-art">
 </main>
 <main id="game" hidden>
@@ -27,6 +27,6 @@
   <div class="action-line"><p id="feedback" role="status">Choisis un objet, puis touche sa place dans la cuisine.</p><div class="actions"><button id="cancel" class="quiet">Reposer</button><button id="check" class="primary" disabled>Vérifier</button><button id="next" class="primary" hidden>Suivant</button></div></div>
  </section>
 </main>
-<dialog id="finish"><div class="finish-inner"><span class="eyebrow">Bravo !</span><h2>La cuisine est bien rangée !</h2><p>Tu as terminé les dix consignes.</p><button id="restart" class="primary">Une nouvelle partie</button><button id="finish-home" class="quiet">Revenir à l’accueil</button></div></dialog>
-<script src="../fullscreen.js"></script><script type="module" src="app.js?v=3"></script>
+<dialog id="finish"><div class="finish-inner"><span class="eyebrow">Bravo !</span><h2>La cuisine est bien rangée !</h2><p id="finish-message">Tu as terminé la partie.</p><button id="restart" class="primary">Une nouvelle partie</button><button id="finish-home" class="quiet">Revenir à l’accueil</button></div></dialog>
+<script src="../fullscreen.js"></script><script type="module" src="app.js?v=4"></script>
 </body></html>

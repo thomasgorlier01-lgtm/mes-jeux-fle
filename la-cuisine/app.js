@@ -1,4 +1,4 @@
-import {ZONES,newRound,getObject,getObjects,getZone,check,snap,shuffle} from './model.js?v=3';
+import {ZONES,newRound,getObject,getObjects,getZone,check,snap,shuffle} from './model.js?v=4';
 const $=id=>document.getElementById(id);
 let rounds=[],index=0,level=1,selected=null,placement=null,solved=false,doors={frigo:false,four:false};
 let speaking=null,audioGeneration=0;
@@ -68,6 +68,6 @@ $('check').onclick=()=>{
  if(result!=='correct'){feedback('Essaie encore. Écoute la consigne et change l’objet ou sa place.','error');return;}
  solved=true;stopAudio();feedback('Bravo, il est à la bonne place !','success');$('check').hidden=true;$('next').hidden=false;$('next').textContent=index===rounds.length-1?'Terminer':'Suivant';renderPlacement();
 };
-$('next').onclick=()=>{if(index===rounds.length-1){stopAudio();$('finish').showModal();$('restart').focus();}else{index++;renderMission();$('listen').focus();}};
+$('next').onclick=()=>{if(index===rounds.length-1){stopAudio();$('finish-message').textContent='Tu as terminé les '+rounds.length+' consignes.';$('finish').showModal();$('restart').focus();}else{index++;renderMission();$('listen').focus();}};
 $('start').onclick=()=>start(1);$('start-2').onclick=()=>start(2);$('restart').onclick=()=>start(level);$('home-button').onclick=home;$('finish-home').onclick=home;
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAudio();});
