@@ -20,14 +20,31 @@ export function newRound(random=Math.random,level=1){
  return shuffle([...required,...rest],random);
 }
 export function contains(zone,x,y){const [l,t,r,b]=zone.bounds;return x>=l&&x<=r&&y>=t&&y<=b;}
+export function accepts(zone,x,y){
+ // These are acceptance margins, not additional destinations. Near an edge,
+ // either neighbouring zone can be reasonable; deep inside another zone cannot.
+ let mx=.025,my=.03;
+ if(/^frigo-[hb][gd]$/.test(zone.id)){mx=.012;my=.025;}
+ if(zone.id==='four-sur'){mx=.035;my=.045;}
+ if(zone.id==='four-devant'||zone.id==='frigo-devant')my=.04;
+ if(zone.id.startsWith('panier-')){mx=.018;my=.014;}
+ const [l,t,r,b]=zone.bounds;
+ let top=t-my,bottom=b+my;
+ if(zone.id==='table-sous'||zone.id==='chaises-entre')bottom=.985;
+ if(zone.id==='table-devant')top=.965;
+ return Number.isFinite(x)&&Number.isFinite(y)&&x>=Math.max(0,l-mx)&&x<=Math.min(1,r+mx)&&y>=Math.max(0,top)&&y<=Math.min(1,bottom);
+}
 export function check(mission,placement,doors){
  if(!placement)return 'missing';
  const zone=getZone(mission.zone);
  if(zone.door&&!doors[zone.door])return 'closed';
- return placement.object===mission.object&&contains(zone,placement.x,placement.y)?'correct':'incorrect';
+ // Validate the learner's actual tap/drop, so snapping towards a neighbour
+ // never turns a reasonable border placement into an error.
+ const input=placement.input||placement;
+ return placement.object===mission.object&&accepts(zone,input.x,input.y)?'correct':'incorrect';
 }
 export function snap(x,y){
  // A tap chooses a generous destination. The object is seated on its surface.
- const matches=ZONES.filter(z=>contains(z,x,y));
- return matches.length?matches.sort((a,b)=>Math.hypot(x-a.point[0],y-a.point[1])-Math.hypot(x-b.point[0],y-b.point[1]))[0]:null;
+ const matches=ZONES.filter(z=>accepts(z,x,y));
+ return matches.length?matches.sort((a,b)=>Math.hypot((x-a.point[0])*1672/941,y-a.point[1])-Math.hypot((x-b.point[0])*1672/941,y-b.point[1]))[0]:null;
 }

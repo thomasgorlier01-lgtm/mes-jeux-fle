@@ -74,7 +74,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🧺',
         bulle2: '🔊',
-        url: '../la-cuisine/?cuisine=5'
+        url: '../la-cuisine/?cuisine=6'
       }
 ];
 const games=document.getElementById('games'),player=document.getElementById('player'),frame=document.getElementById('frame'),playertitle=document.getElementById('playertitle'),extern=document.getElementById('extern');

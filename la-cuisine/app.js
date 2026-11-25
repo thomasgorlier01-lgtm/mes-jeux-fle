@@ -1,4 +1,4 @@
-import {ZONES,newRound,getObject,getObjects,getZone,check,snap,shuffle} from './model.js?v=4';
+import {ZONES,newRound,getObject,getObjects,getZone,check,snap,shuffle} from './model.js?v=6';
 import {createPointerDrag} from './drag.js?v=5';
 const $=id=>document.getElementById(id);
 let rounds=[],index=0,level=1,selected=null,placement=null,solved=false,doors={frigo:false,four:false};
@@ -57,7 +57,7 @@ function place(x,y){
  const zone=snap(x,y);
  if(zone?.door&&!doors[zone.door]){selected=null;renderPlacement();feedback('Ouvre d’abord le '+zone.door+', puis choisis de nouveau l’objet.');return;}
  // Anchor taps to furniture surfaces while keeping the choice of zone independent of the answer.
- placement={object:selected,x:zone?zone.point[0]:x,y:zone?zone.point[1]:y};
+ placement={object:selected,x:zone?zone.point[0]:x,y:zone?zone.point[1]:y,input:{x,y}};
  renderPlacement();feedback('Tu peux déplacer l’objet ou vérifier ton choix.');
 }
 function renderMission(){
@@ -80,6 +80,7 @@ $('check').onclick=()=>{
  const result=check(rounds[index],placement,doors);
  if(result==='closed'){feedback('Ouvre le '+getZone(rounds[index].zone).door+' pour placer l’objet à l’intérieur.','error');return;}
  if(result!=='correct'){feedback('Essaie encore. Écoute la consigne et change l’objet ou sa place.','error');return;}
+ const target=getZone(rounds[index].zone);placement={...placement,x:target.point[0],y:target.point[1]};
  solved=true;stopAudio();feedback('Bravo, il est à la bonne place !','success');$('check').hidden=true;$('next').hidden=false;$('next').textContent=index===rounds.length-1?'Terminer':'Suivant';renderPlacement();
 };
 $('next').onclick=()=>{if(index===rounds.length-1){stopAudio();$('finish-message').textContent='Tu as terminé les '+rounds.length+' consignes.';$('finish').showModal();$('restart').focus();}else{index++;renderMission();$('listen').focus();}};
