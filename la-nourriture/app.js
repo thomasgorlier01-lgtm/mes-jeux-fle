@@ -8,7 +8,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🔊',
         bulle2: '✓',
-        url: '../pique-nique-famille/?et-toi=2'
+        url: '../pique-nique-famille/?et-toi=4'
       },
       {
         titre: 'Au marché',
@@ -19,7 +19,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🍎',
         bulle2: '🔊',
-        url: '../marche-fruits/?et-toi=2'
+        url: '../marche-fruits/?et-toi=4'
       },
       {
         titre: 'Au café',
@@ -30,7 +30,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🥛',
         bulle2: '🔊',
-        url: '../cafe-boissons/?et-toi=2'
+        url: '../cafe-boissons/?et-toi=4'
       },
       {
         titre: 'A la cantine',
@@ -41,7 +41,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🥦',
         bulle2: '🔊',
-        url: '../cantine-menus/?et-toi=2'
+        url: '../cantine-menus/?et-toi=4'
       },
       {
         titre: 'A table',
@@ -52,7 +52,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🥕',
         bulle2: '✓',
-        url: '../atelier-repas/?et-toi=2'
+        url: '../atelier-repas/?et-toi=4'
       },
       {
         titre: 'Je compose ma salade',
@@ -63,7 +63,7 @@ const JEUX = [
         couleur: 'vest',
         bulle1: '🔊',
         bulle2: '✓',
-        url: '../compose-salade/?et-toi=2'
+        url: '../compose-salade/?et-toi=4'
       },
       {
         titre: 'Dans la cuisine',

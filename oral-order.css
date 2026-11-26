@@ -30,3 +30,6 @@
 .oral-scene-cafe .oral-empty{font-weight:700;text-align:center}
 @media(max-width:800px){.oral-home-choices>button.oral-launch{padding:14px;grid-template-columns:34px minmax(0,1fr);gap:4px 10px}.oral-home-choices>button.oral-launch>strong{font-size:17px}.oral-home-choices>button.oral-launch>small{font-size:12px}}
 @media(max-width:650px){.oral-scene-cafe .oral-layout{grid-template-columns:1fr}.oral-scene-cafe .oral-customer-panel{display:block}.oral-scene-cafe .oral-customer{width:100%}.oral-friend{padding:7px 3px}.oral-friend strong{font-size:12px}.oral-friend span{font-size:11px}.oral-home-choices>button.oral-launch{min-height:110px}.oral-scene-picnic .oral-customer,.oral-scene-market .oral-customer{width:125px}}
+
+/* Production orale : les mots-cibles et la phrase modèle ne sont pas affichés. */
+.oral-order [hidden]{display:none!important}.oral-friend-choice img{display:block;width:40px;height:40px;object-fit:contain;margin:0 auto}
