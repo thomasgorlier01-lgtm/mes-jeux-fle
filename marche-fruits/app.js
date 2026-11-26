@@ -1,3 +1,4 @@
+import {marketBasketLayout,mountMarketBasketZoom} from '../market-basket.js?v=1';
 import {shuffleVocabulary} from '../word-order.js?v=1';
 import {FRUITS,fruitById,limit,orderItems,orderText,orderAudio,matches,adjust,newOrders} from './logic.js?v=1';
 import {SpeechPlayer} from './audio.js?v=1';
@@ -5,6 +6,8 @@ const $=id=>document.getElementById(id);
 const speech=new SpeechPlayer(text=>message(text,false));
 const CRATE_X=[35.7,49.3,63.1,76.8,90.7];
 let mode='home',series=0,selectedWord=null,solved=new Set(),allLabels=new Set(),basket={},round=0,orders=[],locked=false;
+const basketUnits=()=>orderItems(basket).flatMap(({id,count})=>Array.from({length:count},()=>({id,image:`assets/${id}.webp`})));
+const basketZoom=mountMarketBasketZoom({host:document.querySelector('.topline'),image:document.querySelector('#scene .background').getAttribute('src'),getItems:basketUnits});
 function message(text,success){$('feedback').textContent=text;$('feedback').className=success===true?'success':success===false?'error':'';}
 function showPlay(nextMode){speech.stop();mode=nextMode;$('home').hidden=true;$('play').hidden=false;$('words').hidden=mode!=='words';$('dialogue').hidden=mode!=='orders';$('cart').hidden=mode!=='orders';$('verify').hidden=mode!=='orders';$('next').hidden=true;document.body.classList.toggle('command-mode',mode==='orders');message('');renderTargets();renderBasket();renderLabels();}
 function renderTargets(){
@@ -38,13 +41,15 @@ function changeQuantity(id,delta,restoreFocus=false){
 }
 function renderBasket(){
  const items=orderItems(basket);$('basket-fruits').replaceChildren();$('cart-items').replaceChildren();$('empty').hidden=items.length>0;$('clear').disabled=locked||items.length===0;
- items.forEach(({id,count},group)=>{
-  for(let n=0;n<count;n++){const img=document.createElement('img');img.className='basket-fruit';img.src=`assets/${id}.webp`;img.alt='';img.dataset.id=id;const spots=count===1?[[0,72]]:count===2?[[-.8,70.5],[.9,74]]:[[-.9,70],[1,72.4],[-.4,75]];img.style.cssText=`left:${7.9+group*4.6+spots[n][0]}%;top:${spots[n][1]}%;z-index:${3+n};`;$('basket-fruits').append(img);}
+ const slots=marketBasketLayout(basketUnits().length);let unitIndex=0;
+ items.forEach(({id,count})=>{
+  for(let n=0;n<count;n++){const img=document.createElement('img');img.className='basket-fruit';img.src=`assets/${id}.webp`;img.alt='';img.dataset.id=id;const spot=slots[unitIndex++];img.style.cssText=`left:${spot.x}%;top:${spot.y}%;width:${spot.w}%;height:${spot.h}%;z-index:4;`;$('basket-fruits').append(img);}
   const f=fruitById(id),row=document.createElement('div');row.className='cart-item';row.dataset.id=id;const img=document.createElement('img');img.src=`assets/${id}.webp`;img.alt=f.word;row.append(img);const controls=document.createElement('div');controls.className='quantity';
   const minus=document.createElement('button');minus.textContent='−';minus.dataset.delta='-1';minus.setAttribute('aria-label','Retirer : '+f.word);minus.disabled=locked;minus.onclick=()=>changeQuantity(id,-1,true);
   const output=document.createElement('output');output.textContent=f.portion?'✓':String(count);output.setAttribute('aria-label',f.portion?'Une portion : '+f.word:`${count} : ${f.word}`);
   const plus=document.createElement('button');plus.textContent='+';plus.dataset.delta='1';plus.setAttribute('aria-label','Ajouter : '+f.word);plus.disabled=locked||count>=limit(id);plus.onclick=()=>changeQuantity(id,1,true);controls.append(minus,output,plus);row.append(controls);$('cart-items').append(row);
  });
+ basketZoom.button.hidden=mode!=='orders';basketZoom.refresh();
  document.querySelectorAll('.crate').forEach(b=>{b.classList.toggle('chosen',mode==='orders'&&!!basket[b.dataset.id]);b.disabled=mode==='orders'&&locked;if(mode==='orders')b.setAttribute('aria-pressed',String(!!basket[b.dataset.id]));else b.removeAttribute('aria-pressed');});
 }
 function updateTail(){if(mode!=='orders')return;const scene=$('scene').getBoundingClientRect(),bubble=$('command').getBoundingClientRect();$('command').style.setProperty('--tail',Math.max(20,Math.min(bubble.width-30,scene.left+scene.width*.15-bubble.left))+'px');}

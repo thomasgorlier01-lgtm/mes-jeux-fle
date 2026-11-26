@@ -1,0 +1,7 @@
+# Panier du marché : visibilité de chaque unité
+
+Les courses guidées et Et toi utilisent la même disposition, calculée selon le nombre total d’unités. Chaque fruit a son propre emplacement dans une grille centrée ; les dimensions sont ajustées au nombre d’unités et des espaces séparent les images. Les fruits restent au-dessus de la paroi avant du panier. Les quantités, les limites de sélection et les règles de commande sont conservées. Aucun nom d’aliment n’est ajouté dans Et toi.
+
+Le bouton Agrandir le panier ouvre une vue rapprochée du panier original, avec les mêmes unités et la même disposition. Il permet de compter les fruits confortablement lorsque le panier est chargé. Sa fermeture conserve la sélection. Le bouton est désactivé si le panier est vide et absent de la découverte des mots. La vue utilise l’image du jeu, sans nouvelle illustration.
+
+Validation : deux tests vérifient tous les contenus de 1 à 30 unités, leurs limites, l’absence de chevauchement et la réduction de taille selon la charge. Dans le navigateur : 30 unités en mode libre sans rectangles superposés ; agrandissement avec 30 unités ; retrait puis actualisation à 29 ; remise à zéro ; courses guidées avec 12 unités distinctement placées ; vue agrandie avec 12 ; panier vide ; découverte sans bouton de zoom ; sélection au pique-nique sans bouton de panier. La fenêtre agrandie a été vérifiée dans les formats 1024×768 et 768×1024. Capture : marche-panier-30-fruits.jpg.

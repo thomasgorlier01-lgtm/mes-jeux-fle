@@ -1,10 +1,11 @@
+import {marketBasketLayout,mountMarketBasketZoom} from './market-basket.js?v=1';
 import {createCafeOrder} from './oral-order-model.js?v=2';
 // Shared classroom activity: the spoken request comes from the pupil.
 export function mountOralOrder(config){
  // Et toi is oral production: no written food/drink vocabulary or model sentence.
  config={...config,hideNames:true};
  const home=document.querySelector(config.home||'#home');if(!home||document.querySelector('#oral-order'))return;
- const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('./oral-order.css?v=3',import.meta.url);document.head.append(css);
+ const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('./oral-order.css?v=4',import.meta.url);document.head.append(css);
  const number=config.number||3;
  const launch=document.createElement('button');launch.type='button';launch.className='oral-launch';launch.dataset.activity=String(number);launch.innerHTML='<span class="oral-entry-number" aria-hidden="true">'+number+'</span><strong>Et toi ?</strong><small>En classe · Je commande, tu choisis</small>';
  let menu=document.querySelector(config.menu||'.choices');if(!menu){menu=document.createElement('div');menu.className='oral-home-menu';const old=home.querySelector('#start');if(old){old.before(menu);menu.append(old);}else home.append(menu);}
@@ -14,6 +15,8 @@ export function mountOralOrder(config){
  home.after(section);section.querySelector('.oral-model').hidden=true;section.querySelector('.oral-mode-label').textContent=number+' · En classe';if(config.scene)section.classList.add('oral-scene-'+config.scene.type);section.querySelector('.oral-question').textContent=config.question;section.querySelector('.oral-order-heading').textContent=config.orderTitle||'Ma commande';section.querySelector('.oral-picker-title').textContent=config.pickerTitle||'À toi de choisir';
  let selection=new Map(),student=0,opened=false,hiddenNodes=[];const cafe=config.scene&&config.scene.type==='cafe'?createCafeOrder(3):null;let currentCrop=null;const buttons=new Map(),foods=new Map(config.items.map(f=>[f.id,f]));
  const picker=section.querySelector('.oral-picker'),tray=section.querySelector('.oral-tray'),receipt=section.querySelector('.oral-receipt'),status=section.querySelector('.oral-status');
+ const basketUnits=()=>[...selection].flatMap(([id,count])=>Array.from({length:count},()=>({id,image:foods.get(id).image})));
+ const basketZoom=config.scene?.type==='market'?mountMarketBasketZoom({host:section.querySelector('.oral-top'),image:config.scene.image,getItems:basketUnits}):null;
  picker.dataset.count=String(config.items.length);if(config.pickerAction==='add')section.querySelector('.oral-picker-hint').textContent='Chaque clic ajoute un fruit (jusqu’à 3). Utilise − pour en retirer.';
  function picture(food,served=false){const img=new Image();img.src=served&&food.servedImage?food.servedImage:food.image;img.alt='';img.draggable=false;return img;}
  function toggle(id){if(!opened)return;if(cafe){cafe.choose(id);render();status.textContent=cafe.drinks.filter(Boolean).length+' / 3 boissons choisies.';return;}if(selection.has(id))selection.delete(id);else selection.set(id,1);render();status.textContent=config.hideNames?(selection.has(id)?'Élément ajouté au panier.':'Élément retiré du panier.'):(selection.has(id)?`${foods.get(id).label} : ajouté à la commande.`:`${foods.get(id).label} : retiré de la commande.`);}
@@ -24,13 +27,14 @@ export function mountOralOrder(config){
   tray.replaceChildren();receipt.replaceChildren();section.querySelector('.oral-empty').hidden=selection.size>0;
   for(const [id,b]of buttons){b.setAttribute('aria-pressed',String(selection.has(id)));if(config.pickerAction==='add')b.querySelector('.oral-check').textContent=selection.get(id)||'';}
   tray.dataset.count=selection.size;
-  let visualIndex=0;
-  for(const [id,count]of selection){const food=foods.get(id);const copies=config.scene&&config.scene.type==='market'?count:1;for(let copy=0;copy<copies;copy++){const onTray=document.createElement('button');onTray.type='button';onTray.className='oral-on-tray';onTray.dataset.trayFood=id;onTray.setAttribute('aria-label','Retirer '+food.label);onTray.append(picture(food,true));if(count>1&&copies===1){const badge=document.createElement('span');badge.className='oral-quantity-badge';badge.textContent=count;onTray.append(badge);}onTray.addEventListener('click',()=>copies>1?quantity(id,-1):toggle(id));positionItem(onTray,visualIndex++);tray.append(onTray);}
+  let visualIndex=0;const marketSlots=config.scene?.type==='market'?marketBasketLayout(basketUnits().length):null;
+  for(const [id,count]of selection){const food=foods.get(id);const copies=config.scene&&config.scene.type==='market'?count:1;for(let copy=0;copy<copies;copy++){const onTray=document.createElement('button');onTray.type='button';onTray.className='oral-on-tray';onTray.dataset.trayFood=id;onTray.setAttribute('aria-label','Retirer '+food.label);onTray.append(picture(food,true));if(count>1&&copies===1){const badge=document.createElement('span');badge.className='oral-quantity-badge';badge.textContent=count;onTray.append(badge);}onTray.addEventListener('click',()=>copies>1?quantity(id,-1):toggle(id));positionItem(onTray,visualIndex++,marketSlots);tray.append(onTray);}
    const item=document.createElement('div');item.className='oral-receipt-item';item.dataset.receipt=id;
    const remove=document.createElement('button');remove.type='button';remove.className='oral-receipt-remove';remove.setAttribute('aria-label','Retirer '+food.label);const label=document.createElement('span');label.textContent=food.quantityLabel?food.quantityLabel(count):food.label;label.hidden=!!config.hideNames;remove.append(picture(food),label);remove.addEventListener('click',()=>toggle(id));item.append(remove);
    if((food.max||1)>1){const controls=document.createElement('div');controls.className='oral-quantity';for(const delta of [-1,1]){const b=document.createElement('button');b.type='button';b.dataset.delta=delta;b.textContent=delta<0?'−':'+';b.setAttribute('aria-label',`${delta<0?'Retirer':'Ajouter'} un : ${food.label}`);b.disabled=delta>0&&count>=food.max;b.addEventListener('click',()=>quantity(id,delta));if(delta>0){const n=document.createElement('span');n.className='oral-quantity-count';n.textContent=count;controls.append(n);}controls.append(b);}item.append(controls);}
    receipt.append(item);
   }
+  basketZoom?.refresh();
  }
  function sceneSvg(crop,front=false){
   const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox',[crop.x,crop.y,crop.w,crop.h].join(' '));svg.setAttribute('preserveAspectRatio','none');svg.setAttribute('aria-hidden','true');svg.classList.add(front?'oral-context-front':'oral-context-picture');
@@ -38,10 +42,10 @@ export function mountOralOrder(config){
   if(front){const defs=document.createElementNS(ns,'defs'),clip=document.createElementNS(ns,'clipPath'),polygon=document.createElementNS(ns,'polygon');clip.id='oral-basket-front-clip';polygon.setAttribute('points','3.3,75.4 7,78.2 14,80.1 20.4,78.4 26.1,75.4 25.7,84.3 23,88.7 9,90.5 5,87');clip.append(polygon);defs.append(clip);svg.append(defs);image.setAttribute('clip-path','url(#oral-basket-front-clip)');}
   svg.append(image);return svg;
  }
- function positionItem(button,index){
+ function positionItem(button,index,marketSlots){
   if(!currentCrop)return;const type=config.scene.type;let x,y,w,h;
   if(type==='picnic'){x=currentCrop.bread+(index%2)*6;y=59.2+Math.floor(index/2)*2;w=9.2;h=10;}
-  else if(type==='market'){x=8+(index%6)*2.8;y=74+Math.floor(index/6)*1.4;w=5.2;h=9;}
+  else if(type==='market'){const spot=marketSlots[index];({x,y,w,h}=spot);}
   else return;
   button.style.cssText='left:'+((x-currentCrop.x)/currentCrop.w*100)+'%;top:'+((y-currentCrop.y)/currentCrop.h*100)+'%;width:'+(w/currentCrop.w*100)+'%;height:'+(h/currentCrop.h*100)+'%;';
  }
