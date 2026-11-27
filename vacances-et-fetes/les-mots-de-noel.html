@@ -160,7 +160,6 @@
   .story h2 { font-size: clamp(22px, 3vw, 32px); }
   .story figure { margin: 12px 0; }
   .story-illustration {
-    position: relative;
     width: min(100%, 84dvh, 920px);
     margin-inline: auto;
     aspect-ratio: 3 / 2;
@@ -169,23 +168,30 @@
     background: #e6efef;
   }
   .story-illustration img { display: block; width: 100%; height: 100%; object-fit: contain; }
-  .story-letter {
-    position: absolute;
-    right: 4%;
-    bottom: 6%;
-    width: min(44%, 19rem);
-    padding: clamp(6px, 1.5vmin, 15px);
-    border: 1px solid #cfb08d;
-    border-radius: 6px;
-    background: #fff8e8;
-    color: #462f28;
-    box-shadow: 0 4px 16px #37484933;
-    font-size: clamp(.74rem, 2.5vmin, 1.22rem);
-    font-weight: 750;
-    line-height: 1.22;
-    text-align: left;
-    text-wrap: pretty;
+  .story-layout.with-letter {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(180px, 28%, 250px);
+    align-items: center;
+    gap: clamp(12px, 2.5vw, 28px);
+    width: min(100%, 116dvh, 1130px);
+    margin-inline: auto;
   }
+  .story-layout.with-letter .story-illustration { width: 100%; }
+  .story-letter {
+    aspect-ratio: 210 / 297;
+    padding: 15% 10% 10% 13%;
+    border: 1px solid #e1d6c6;
+    background: linear-gradient(90deg, transparent 8.6%, #e8bcbc70 8.6% 9%, transparent 9%),
+      linear-gradient(140deg, #fffefa, #fff9ee);
+    color: #2d4268;
+    box-shadow: 0 5px 15px #54473520;
+    font-family: "Chalkboard SE", "Comic Sans MS", "Trebuchet MS", sans-serif;
+    font-size: clamp(1rem, 2.5vmin, 1.28rem);
+    font-weight: 600;
+    line-height: 1.37;
+    text-align: left;
+  }
+  .story-letter p + p { margin-top: .9em; }
   .story-caption {
     margin: 10px auto 0;
     max-width: 44ch;
@@ -258,6 +264,8 @@
   @media (max-width: 600px) {
     .weeks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
     .week--story { grid-column: 1 / -1; }
+    .story-layout.with-letter { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+    .story-letter { width: min(100%, 225px); padding: 1.6rem 1.35rem 1.35rem 1.7rem; }
     .story-pagination { gap: 5px; }
     .story-pagination button { padding-inline: 7px; font-size: .85rem; }
     .controls { flex-direction: column; align-items: flex-start; margin-block: 10px; gap: 3px; }
@@ -584,10 +592,14 @@
   <section id="histoire" class="panel story" aria-labelledby="story-title" hidden>
     <h2 id="story-title">L’histoire de Noël</h2>
     <figure>
-      <div class="story-illustration">
-        <img id="story-image" alt="" width="960" height="640">
-        <aside id="story-letter" class="story-letter" aria-label="Lettre d’un enfant" hidden>
-          Je voudrais un vélo, un ballon et un ours en peluche.
+      <div id="story-layout" class="story-layout">
+        <div class="story-illustration">
+          <img id="story-image" alt="" width="960" height="640">
+        </div>
+        <aside id="story-letter" class="story-letter" aria-label="Lettre au père Noël" hidden>
+          <p>Cher père Noël,</p>
+          <p>Comme cadeau nous voulons un vélo, un ours en peluche et un ballon.</p>
+          <p>Merci père Noël !</p>
         </aside>
       </div>
       <figcaption id="story-caption" class="story-caption" aria-live="polite" aria-atomic="true"></figcaption>
@@ -815,7 +827,9 @@ function renderStory() {
   const [image, caption] = storyScenes[storyIndex];
   storyImage.src = `assets/${image}.webp`;
   byId("story-caption").textContent = caption;
-  byId("story-letter").hidden = image !== "02-lettre";
+  const hasLetter = image === "02-lettre";
+  byId("story-letter").hidden = !hasLetter;
+  byId("story-layout").classList.toggle("with-letter", hasLetter);
   byId("story-counter").textContent = `${storyIndex + 1} / ${storyScenes.length}`;
   storyBack.disabled = storyIndex === 0;
   storyNext.disabled = storyIndex === storyScenes.length - 1;
